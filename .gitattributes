@@ -1,0 +1,2 @@
+data/corpus_final/** filter=lfs diff=lfs merge=lfs -text
+data/lexicon/** filter=lfs diff=lfs merge=lfs -text
