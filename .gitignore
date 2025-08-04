@@ -205,3 +205,14 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ignore files in data directory except in corpus final dractory, lexicon, and preprocessing scripts
+data/*
+!data/corpus_final/
+!data/lexicon/
+!data/preprocessing/
+
+# ignore results directory
+absa/results/
+
+.DS_Store
