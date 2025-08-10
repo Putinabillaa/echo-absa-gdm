@@ -1,11 +1,11 @@
 # preprocess.py
 
 import argparse
-from helper import (
+from .helper import (
     add_id, clean_csv_column, csv_to_txt,
     extract_unique_aspects, extract_corpus,
     filter_stopwords, merge_aspects_text,
-    replace_special_phrase
+    replace_special_phrase, normalize_csv
 )
 
 KEEP_NEGATORS = {"tidak", "tak", "bukan", "jangan", "belum", "enggak", "gak"}
@@ -32,7 +32,7 @@ def main():
     p3 = subparsers.add_parser("csvtotxt")
     p3.add_argument("input_csv")
     p3.add_argument("output_txt")
-    p3.add_argument("--text_column", default="normalized_text")
+    p3.add_argument("--text_column", default="text")
 
     p4 = subparsers.add_parser("extract_ac")
     p4.add_argument("input_csv")
@@ -56,6 +56,16 @@ def main():
     p8.add_argument("phrase")
     p8.add_argument("replacement")
 
+    p9 = subparsers.add_parser("norm")
+    p9.add_argument("input_csv")
+    p9.add_argument("output_csv")
+    p9.add_argument("--text_column", default="text")
+    p9.add_argument("--no_slangid", action="store_true")
+    p9.add_argument("--no_txt_dict", action="store_true")
+    p9.add_argument("--no_huggingface", action="store_true")
+    p9.add_argument("--no_stopwords", action="store_true")
+
+
     args = parser.parse_args()
 
     if args.command == "add_id":
@@ -74,6 +84,16 @@ def main():
         merge_aspects_text(args.text_csv, args.aspects_csv, args.output_csv)
     elif args.command == "replace_phrase":
         replace_special_phrase(args.input_csv, args.output_csv, args.phrase, args.replacement)
+    elif args.command == "norm":
+        normalize_csv(
+            input_csv=args.input_csv,
+            output_csv=args.output_csv,
+            text_column=args.text_column,
+            use_slangid=not args.no_slangid,
+            use_txt_dict=not args.no_txt_dict,
+            use_huggingface=not args.no_huggingface,
+            use_stopwords=not args.no_stopwords
+        )
     else:
         parser.print_help()
 

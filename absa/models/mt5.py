@@ -1,3 +1,4 @@
+
 import csv
 import os
 import time
@@ -6,12 +7,13 @@ import argparse
 from typing import List, Optional
 from pathlib import Path
 
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.output_parsers import PydanticOutputParser
+import torch
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from pydantic import BaseModel, Field
+from langchain.output_parsers import PydanticOutputParser
 
 # --------------------------
-# Pydantic Schema for JSON mode
+# Pydantic Schema
 # --------------------------
 
 class AspectSentiment(BaseModel):
@@ -35,10 +37,6 @@ def normalize_text(text):
     text = re.sub(r'\s+', ' ', text)
     return text
 
-# --------------------------
-# Build Prompt
-# --------------------------
-
 def build_prompt(tweets_batch, aspects, mode, parser):
     tweets_list = "\n".join([f'- "{t["text"]}"' for t in tweets_batch])
     aspects_list = "\n".join([f'- "{a["category"]}": {a["description"]}' for a in aspects])
@@ -60,7 +58,7 @@ Tugas:
 4. Format HARUS SESUAI skema berikut:
 {parser.get_format_instructions()}
 """
-    elif mode == "block":
+    else:
         return f"""
 Anda adalah pengklasifikasi sentimen berbasis aspek (ABSA).
 
@@ -96,12 +94,12 @@ Sentiment: [0.1, 0.3, 0.6]
 # --------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="ABSA Batch Pipeline with LangChain & Gemini")
+    parser = argparse.ArgumentParser(description="ABSA Batch Pipeline with mt5-base")
     parser.add_argument("--input", required=True, help="Input CSV file path")
     parser.add_argument("--aspects", required=True, help="Aspects CSV file path")
     parser.add_argument("--output", required=True, help="Output file OR folder path")
     parser.add_argument("--mode", choices=["json", "block"], default="json", help="Prompt mode")
-    parser.add_argument("--batch_size", type=int, default=5, help="Batch size")
+    parser.add_argument("--batch_size", type=int, default=2, help="Batch size")
     args = parser.parse_args()
 
     start_time = time.time()
@@ -109,25 +107,19 @@ def main():
     input_path = Path(args.input).resolve()
     output_path = Path(args.output).resolve()
 
-    # If output is a directory → build filename from input basename
     if output_path.is_dir() or args.output.endswith("/"):
         output_path = output_path / f"{input_path.stem}_{int(time.time())}.csv"
 
-    # Check if output == input → prevent overwrite
     if output_path.resolve() == input_path:
-        raise ValueError(f"❌ Output file must not overwrite input file!\nInput: {input_path}\nOutput: {output_path}")
+        raise ValueError("Output file must not overwrite input file!")
 
     os.makedirs(output_path.parent, exist_ok=True)
 
-    # Setup LLM
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash",
-        google_api_key=GOOGLE_API_KEY
-    )
+    tokenizer = AutoTokenizer.from_pretrained("google/mt5-base")
+    model = AutoModelForSeq2SeqLM.from_pretrained("google/mt5-base")
+
     output_parser = PydanticOutputParser(pydantic_object=ABSAResponse)
 
-    # Load tweets
     tweets = []
     with open(input_path, newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -137,7 +129,6 @@ def main():
                 "text": row["text"]
             })
 
-    # Load aspects
     aspect_categories = []
     with open(args.aspects, newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -147,36 +138,39 @@ def main():
                 "description": row["desc"].strip()
             })
 
-    # Write CSV header
     fieldnames = ["id", "text", "aspect_category", "sentiment_prob"]
     with open(output_path, "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
 
-    # Process batches
     for i in range(0, len(tweets), args.batch_size):
         tweets_batch = tweets[i:i+args.batch_size]
         prompt_text = build_prompt(tweets_batch, aspect_categories, args.mode, output_parser)
 
-        raw_result = llm.invoke(prompt_text)
+        inputs = tokenizer(prompt_text, return_tensors="pt", max_length=1024, truncation=True)
+        outputs = model.generate(**inputs, max_new_tokens=512)
+        generated = tokenizer.decode(outputs[0], skip_special_tokens=True)
 
         parsed = []
         if args.mode == "json":
-            result: ABSAResponse = output_parser.invoke(raw_result)
-            for tweet_data in result.results:
-                parsed_text = normalize_text(tweet_data.tweet)
-                tweet_id = next((t["id"] for t in tweets_batch if normalize_text(t["text"]) == parsed_text), "NA")
-                for asp in tweet_data.aspects:
-                    if asp.present:
-                        parsed.append({
-                            "id": tweet_id,
-                            "text": tweet_data.tweet,
-                            "aspect_category": asp.aspect,
-                            "sentiment_prob": asp.sentiment
-                        })
+            try:
+                result: ABSAResponse = output_parser.invoke(generated)
+                for tweet_data in result.results:
+                    parsed_text = normalize_text(tweet_data.tweet)
+                    tweet_id = next((t["id"] for t in tweets_batch if normalize_text(t["text"]) == parsed_text), "NA")
+                    for asp in tweet_data.aspects:
+                        if asp.present:
+                            parsed.append({
+                                "id": tweet_id,
+                                "text": tweet_data.tweet,
+                                "aspect_category": asp.aspect,
+                                "sentiment_prob": asp.sentiment
+                            })
+            except Exception as e:
+                print("❌ Failed to parse JSON output:", e)
         else:
             pattern = re.compile(r"Tweet: (.*?)\nAspect: (.*?)\nSentiment: \[(.*?)\]", re.DOTALL)
-            matches = pattern.findall(raw_result.content if hasattr(raw_result, "content") else str(raw_result))
+            matches = pattern.findall(generated)
             for tweet_text, aspect, sent in matches:
                 probs = [round(float(x.strip()), 4) for x in sent.split(",")]
                 parsed_text = normalize_text(tweet_text)
@@ -188,7 +182,6 @@ def main():
                     "sentiment_prob": probs
                 })
 
-        # Append to CSV
         with open(output_path, "a", newline="", encoding="utf-8") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             for row in parsed:
@@ -196,11 +189,10 @@ def main():
                 writer.writerow(row)
 
         print(f"✅ Saved tweets {i+1}-{i+len(tweets_batch)} to {output_path}")
-        time.sleep(5)
+        time.sleep(3)
 
     print(f"✅ Done! Full results saved to {output_path}")
-    elapsed_time = time.time() - start_time
-    print(f"⏱️ Total time: {elapsed_time:.2f} seconds")
+    print(f"⏱️ Total time: {time.time() - start_time:.2f} seconds")
 
 if __name__ == "__main__":
     main()

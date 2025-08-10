@@ -5,6 +5,72 @@ import re
 import csv
 import pandas as pd
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+LEXICON_DIR = os.path.join(BASE_DIR, "data", "lexicon")
+
+def normalize_csv(
+    input_csv: str,
+    output_csv: str,
+    text_column: str = "text",
+    use_slangid: bool = True,
+    use_txt_dict: bool = True,
+    use_huggingface: bool = True,
+    use_stopwords: bool = True
+):
+    output_csv = resolve_output_path(input_csv, output_csv)
+
+    # === SlangID ===
+    if use_slangid:
+        from slangid import Translator
+        slangid_normalizer = Translator()
+    else:
+        slangid_normalizer = None
+
+    # === Local txt dict ===
+    slang_txt_map = {}
+    if use_txt_dict:
+        with open(os.path.join(LEXICON_DIR, "Indonesian_Slang_Dictionary.txt")) as f:
+            for line in f:
+                line = line.strip()
+                if line and ":" in line:
+                    slang, formal = line.split(":", 1)
+                    slang_txt_map[slang.strip()] = formal.strip()
+
+    # === Hugging Face dict ===
+    slang_hf_map = {}
+    if use_huggingface:
+        slang_df = pd.read_csv(os.path.join(LEXICON_DIR, "slang-indo.csv"))
+        slang_hf_map = dict(zip(slang_df['slang'], slang_df['formal']))
+
+    # === Stopwords ===
+    stopwords = set()
+    if use_stopwords:
+        with open(os.path.join(LEXICON_DIR, "stop_words.txt"), encoding="utf-8") as f:
+            stopwords = {line.strip() for line in f if line.strip()}
+
+    # === Combine maps ===
+    combined_map = {}
+    combined_map.update(slang_txt_map)
+    combined_map.update(slang_hf_map)
+
+    def normalize_text(text: str) -> str:
+        if pd.isnull(text) or not isinstance(text, str):
+            return ""
+        if slangid_normalizer:
+            text = slangid_normalizer.translate(text)
+        tokens = text.split()
+        tokens = [combined_map.get(tok, tok) for tok in tokens]
+        if use_stopwords:
+            tokens = [tok for tok in tokens if tok.lower() not in stopwords]
+        return " ".join(tokens)
+
+    df = pd.read_csv(input_csv)
+    print(f"Input rows: {len(df)}")
+
+    df["text"] = df[text_column].apply(normalize_text)
+    df.to_csv(output_csv, index=False)
+    print(f"✅ Done! Normalized CSV saved to {output_csv}")
+    
 def resolve_output_path(input_path: str, output_arg: str) -> str:
     """
     If output_arg is a folder, reuse input filename.
@@ -26,7 +92,7 @@ def resolve_output_path(input_path: str, output_arg: str) -> str:
 def add_id(input_csv: str, output_csv: str):
     output_csv = resolve_output_path(input_csv, output_csv)
     df = pd.read_csv(input_csv)
-    df['id'] = df.groupby('cleaned_text').ngroup() + 1
+    df['id'] = df.groupby('text').ngroup() + 1
     df.to_csv(output_csv, index=False)
     print(f"✅ Done! IDs added and saved to {output_csv}")
 
@@ -48,11 +114,11 @@ def clean_csv_column(input_csv: str, output_csv: str, text_column: str, id_colum
     df = pd.read_csv(input_csv)
     if text_column not in df.columns or id_column not in df.columns:
         raise ValueError(f"Columns '{text_column}' or '{id_column}' not found in {df.columns.tolist()}")
-    df['cleaned_text'] = df[text_column].apply(clean_line)
-    df[[id_column, 'cleaned_text']].to_csv(output_csv, index=False, encoding='utf-8-sig')
+    df['text'] = df[text_column].apply(clean_line)
+    df[[id_column, 'text']].to_csv(output_csv, index=False, encoding='utf-8-sig')
     print(f"✅ Done! Cleaned text saved to {output_csv}")
 
-def csv_to_txt(input_csv: str, output_txt: str, text_column: str = 'normalized_text'):
+def csv_to_txt(input_csv: str, output_txt: str, text_column: str = 'text'):
     output_txt = resolve_output_path(input_csv, output_txt)
     with open(input_csv, 'r', encoding='utf-8') as csvfile, open(output_txt, 'w', encoding='utf-8') as txtfile:
         reader = csv.DictReader(csvfile)
@@ -79,7 +145,7 @@ def extract_unique_aspects(input_csv: str, output_csv: str, aspect_column: str =
 def extract_corpus(input_csv: str, output_csv: str):
     output_csv = resolve_output_path(input_csv, output_csv)
     df = pd.read_csv(input_csv)
-    df_selected = df[["id", "normalized_text"]].drop_duplicates()
+    df_selected = df[["id", "text"]].drop_duplicates()
     df_selected.to_csv(output_csv, index=False)
     print(f"✅ Saved {len(df_selected)} unique rows to {output_csv}")
 
@@ -109,6 +175,6 @@ def replace_special_phrase(input_csv: str, output_csv: str, phrase: str, replace
         writer = csv.DictWriter(outfile, fieldnames=reader.fieldnames)
         writer.writeheader()
         for row in reader:
-            row['normalized_text'] = row['normalized_text'].replace(phrase, replacement)
+            row['text'] = row['text'].replace(phrase, replacement)
             writer.writerow(row)
     print(f"✅ Replaced '{phrase}' with '{replacement}' and saved to {output_csv}")

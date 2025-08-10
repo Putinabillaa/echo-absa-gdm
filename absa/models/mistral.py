@@ -6,12 +6,13 @@ import argparse
 from typing import List, Optional
 from pathlib import Path
 
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_ollama import OllamaLLM
+from langchain.schema import HumanMessage
 from langchain.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 
 # --------------------------
-# Pydantic Schema for JSON mode
+# Pydantic Schema
 # --------------------------
 
 class AspectSentiment(BaseModel):
@@ -55,10 +56,12 @@ Daftar aspek:
 
 Tugas:
 1. Untuk setiap tweet, evaluasi SEMUA aspek satu per satu.
-2. Jika aspek relevan, tulis "present": true dan tentukan "sentiment": [pos, neu, neg] (jumlah 1.0).
+2. Jika aspek relevan, tulis "present": true dan tentukan "sentiment": [positif, netral, negatif] (jumlah 1.0).
 3. Jika aspek TIDAK relevan, tulis "present": false.
 4. Format HARUS SESUAI skema berikut:
 {parser.get_format_instructions()}
+
+Balas hanya dalam format JSON. Jangan tambahkan penjelasan lain.
 """
     elif mode == "block":
         return f"""
@@ -67,7 +70,7 @@ Anda adalah pengklasifikasi sentimen berbasis aspek (ABSA).
 Tweets:
 {tweets_list}
 
-Aspects (with description):
+Aspek (dengan deskripsi):
 {aspects_list}
 
 Setiap tweet di bawah ini mungkin membahas satu atau lebih aspek.
@@ -80,15 +83,6 @@ Tugas Anda:
    Sentiment: [x.x, x.x, x.x] (jumlah 1.0)
 3. Lewati aspek yang tidak relevan.
 4. Jangan ubah teks tweet aslinya.
-
-Contoh:
-Tweet: Program Kampus Merdeka bermanfaat bagi mahasiswa namun anggarannya bengkak.
-Aspect: Kebijakan dan Dampak
-Sentiment: [0.8, 0.1, 0.1]
-
-Tweet: Program Kampus Merdeka bermanfaat bagi mahasiswa namun anggarannya bengkak.
-Aspect: Anggaran
-Sentiment: [0.1, 0.3, 0.6]
 """
 
 # --------------------------
@@ -96,7 +90,7 @@ Sentiment: [0.1, 0.3, 0.6]
 # --------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="ABSA Batch Pipeline with LangChain & Gemini")
+    parser = argparse.ArgumentParser(description="ABSA Batch Pipeline with LangChain & Mistral (Ollama)")
     parser.add_argument("--input", required=True, help="Input CSV file path")
     parser.add_argument("--aspects", required=True, help="Aspects CSV file path")
     parser.add_argument("--output", required=True, help="Output file OR folder path")
@@ -115,16 +109,13 @@ def main():
 
     # Check if output == input → prevent overwrite
     if output_path.resolve() == input_path:
-        raise ValueError(f"❌ Output file must not overwrite input file!\nInput: {input_path}\nOutput: {output_path}")
+        raise ValueError("❌ Output file must not overwrite input file!")
 
     os.makedirs(output_path.parent, exist_ok=True)
 
-    # Setup LLM
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-    llm = ChatGoogleGenerativeAI(
-        model="gemini-2.0-flash",
-        google_api_key=GOOGLE_API_KEY
-    )
+    # Setup Ollama (Mistral)
+    llm = OllamaLLM(model="mistral")
+
     output_parser = PydanticOutputParser(pydantic_object=ABSAResponse)
 
     # Load tweets
@@ -158,25 +149,32 @@ def main():
         tweets_batch = tweets[i:i+args.batch_size]
         prompt_text = build_prompt(tweets_batch, aspect_categories, args.mode, output_parser)
 
-        raw_result = llm.invoke(prompt_text)
+        # Call Mistral via Ollama
+        
+        
+        _result = llm.invoke(prompt_text) 
 
         parsed = []
         if args.mode == "json":
-            result: ABSAResponse = output_parser.invoke(raw_result)
-            for tweet_data in result.results:
-                parsed_text = normalize_text(tweet_data.tweet)
-                tweet_id = next((t["id"] for t in tweets_batch if normalize_text(t["text"]) == parsed_text), "NA")
-                for asp in tweet_data.aspects:
-                    if asp.present:
-                        parsed.append({
-                            "id": tweet_id,
-                            "text": tweet_data.tweet,
-                            "aspect_category": asp.aspect,
-                            "sentiment_prob": asp.sentiment
-                        })
+            try:
+                result: ABSAResponse = output_parser.invoke(raw_result)
+                for tweet_data in result.results:
+                    parsed_text = normalize_text(tweet_data.tweet)
+                    tweet_id = next((t["id"] for t in tweets_batch if normalize_text(t["text"]) == parsed_text), "NA")
+                    for asp in tweet_data.aspects:
+                        if asp.present:
+                            parsed.append({
+                                "id": tweet_id,
+                                "text": tweet_data.tweet,
+                                "aspect_category": asp.aspect,
+                                "sentiment_prob": asp.sentiment
+                            })
+            except Exception as e:
+                print(f"⚠️ Failed to parse JSON response for batch {i}: {e}")
+                print(raw_result)
         else:
             pattern = re.compile(r"Tweet: (.*?)\nAspect: (.*?)\nSentiment: \[(.*?)\]", re.DOTALL)
-            matches = pattern.findall(raw_result.content if hasattr(raw_result, "content") else str(raw_result))
+            matches = pattern.findall(str(raw_result))
             for tweet_text, aspect, sent in matches:
                 probs = [round(float(x.strip()), 4) for x in sent.split(",")]
                 parsed_text = normalize_text(tweet_text)
@@ -188,7 +186,7 @@ def main():
                     "sentiment_prob": probs
                 })
 
-        # Append to CSV
+        # Write results
         with open(output_path, "a", newline="", encoding="utf-8") as csvfile:
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             for row in parsed:
@@ -196,7 +194,7 @@ def main():
                 writer.writerow(row)
 
         print(f"✅ Saved tweets {i+1}-{i+len(tweets_batch)} to {output_path}")
-        time.sleep(5)
+        time.sleep(2)
 
     print(f"✅ Done! Full results saved to {output_path}")
     elapsed_time = time.time() - start_time

@@ -1,0 +1,21 @@
+[project]
+name = "echo_absa_gdm"
+version = "0.1.0"
+description = "CLI for echo_absa_gdm"
+authors = [{ name = "Puti Nabilla Aidira", email = "aidiraputiabil@gmail.com" }]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pandas",
+    "slangid",
+    "langchain",
+    "langchain-community",
+    "pydantic"
+]
+
+[project.scripts]
+preprocess = "preprocess.preprocess:main"
+mistral = "absa.models.mistral:main"
+
+[tool.setuptools.packages.find]
+include = ["preprocess", "absa"]
