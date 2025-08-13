@@ -214,5 +214,8 @@ data/*
 
 # ignore results directory
 absa/results/
+main/results/
+
+_not_used/
 
 .DS_Store

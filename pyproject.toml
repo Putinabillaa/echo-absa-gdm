@@ -10,12 +10,22 @@ dependencies = [
     "slangid",
     "langchain",
     "langchain-community",
-    "pydantic"
+    "pydantic",
+    "networkx",
+    "python-louvain"
 ]
 
 [project.scripts]
 preprocess = "preprocess.preprocess:main"
 mistral = "absa.models.mistral:main"
+gemini = "absa.models.gemini:main"
+pyabsa = "absa.models.pyabsa:main"
+dp = "absa.models.dp:main"
+metric_calc = "absa.metrics.metric_calc:main"
+community = "gdm.community:main"
+absa_community_merge = "gdm.absa_community_merge:main"
+consensus = "gdm.consensus:main"
+main = "main.main:main"
 
 [tool.setuptools.packages.find]
-include = ["preprocess", "absa"]
+include = ["preprocess", "absa", "gdm", "main"]

@@ -5,7 +5,8 @@ from .helper import (
     add_id, clean_csv_column, csv_to_txt,
     extract_unique_aspects, extract_corpus,
     filter_stopwords, merge_aspects_text,
-    replace_special_phrase, normalize_csv
+    replace_special_phrase, normalize_csv,
+    drop_columns_by_names, drop_rows_by_condition, min_clean
 )
 
 KEEP_NEGATORS = {"tidak", "tak", "bukan", "jangan", "belum", "enggak", "gak"}
@@ -65,6 +66,22 @@ def main():
     p9.add_argument("--no_huggingface", action="store_true")
     p9.add_argument("--no_stopwords", action="store_true")
 
+    p10 = subparsers.add_parser("drop_columns")
+    p10.add_argument("input_csv")
+    p10.add_argument("output_csv")
+    p10.add_argument("columns", nargs='+')
+    p10.add_argument("--invert", action="store_true", help="Invert column selection")
+
+    p11 = subparsers.add_parser("drop_rows")
+    p11.add_argument("input_csv")
+    p11.add_argument("output_csv")
+    p11.add_argument("condition", help="Condition to filter rows, e.g. 'text == \"example\"'")
+    p11.add_argument("--invert", action="store_true", help="Invert row selection")
+
+    p12 = subparsers.add_parser("min_clean")
+    p12.add_argument("input_csv")
+    p12.add_argument("output_csv")
+    p12.add_argument("--text_column", default="text")
 
     args = parser.parse_args()
 
@@ -94,6 +111,12 @@ def main():
             use_huggingface=not args.no_huggingface,
             use_stopwords=not args.no_stopwords
         )
+    elif args.command == "drop_columns":
+        drop_columns_by_names(args.input_csv, args.output_csv, args.columns, invert=args.invert)
+    elif args.command == "drop_rows":
+        drop_rows_by_condition(args.input_csv, args.output_csv, args.condition, invert=args.invert)
+    elif args.command == "min_clean":
+        min_clean(args.input_csv, args.output_csv, args.text_column)
     else:
         parser.print_help()
 

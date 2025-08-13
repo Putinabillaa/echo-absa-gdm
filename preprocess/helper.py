@@ -109,13 +109,25 @@ def clean_line(text: str) -> str:
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
+import re
+
+def min_clean_line(text: str) -> str:
+    if not isinstance(text, str):
+        return ''
+    text = re.sub(r'\s+', ' ', text).strip()
+    text = re.sub(r'[,]', '', text)
+    text = re.sub(r'http\S+', '', text)
+    text = ' '.join(text.splitlines())
+    return text
+
 def clean_csv_column(input_csv: str, output_csv: str, text_column: str, id_column: str = 'id'):
     output_csv = resolve_output_path(input_csv, output_csv)
     df = pd.read_csv(input_csv)
     if text_column not in df.columns or id_column not in df.columns:
         raise ValueError(f"Columns '{text_column}' or '{id_column}' not found in {df.columns.tolist()}")
+    df.dropna(subset=[text_column], inplace=True)
     df['text'] = df[text_column].apply(clean_line)
-    df[[id_column, 'text']].to_csv(output_csv, index=False, encoding='utf-8-sig')
+    df.to_csv(output_csv, index=False, encoding='utf-8')
     print(f"✅ Done! Cleaned text saved to {output_csv}")
 
 def csv_to_txt(input_csv: str, output_txt: str, text_column: str = 'text'):
@@ -164,7 +176,7 @@ def merge_aspects_text(text_csv: str, aspects_csv: str, output_csv: str):
     df_aspects = pd.read_csv(aspects_csv, dtype={'id': str})
     df_aspects['id'] = df_aspects['id'].str.strip().str.lstrip("'")
     df_merged = pd.merge(df_text, df_aspects, on='id', how='inner')
-    df_merged.to_csv(output_csv, index=False, encoding='utf-8-sig')
+    df_merged.to_csv(output_csv, index=False, encoding='utf-8')
     print(f"✅ Merged CSV saved to {output_csv}")
 
 def replace_special_phrase(input_csv: str, output_csv: str, phrase: str, replacement: str):
@@ -178,3 +190,43 @@ def replace_special_phrase(input_csv: str, output_csv: str, phrase: str, replace
             row['text'] = row['text'].replace(phrase, replacement)
             writer.writerow(row)
     print(f"✅ Replaced '{phrase}' with '{replacement}' and saved to {output_csv}")
+
+def drop_columns_by_names(input_csv, output_csv, columns, invert=False):
+    output_csv = resolve_output_path(input_csv, output_csv)
+    df = pd.read_csv(input_csv)
+    if invert:
+        # Keep only the listed columns (if exist)
+        cols_to_keep = [col for col in columns if col in df.columns]
+        df = df[cols_to_keep]
+    else:
+        # Drop listed columns if exist
+        df = df.drop(columns=columns, errors='ignore')
+    df.to_csv(output_csv, index=False, encoding='utf-8')
+    print(f"✅ Saved file after {'keeping' if invert else 'dropping'} columns {columns} to {output_csv}")
+
+def drop_rows_by_condition(input_csv, output_csv, condition, invert=False):
+    output_csv = resolve_output_path(input_csv, output_csv)
+    df = pd.read_csv(input_csv)
+    try:
+        filtered = df.query(condition)
+    except Exception as e:
+        print(f"⚠️ Error in condition '{condition}': {e}")
+        filtered = df  # fallback: no filtering
+
+    if not invert:
+        df_result = df.loc[~df.index.isin(filtered.index)]
+    else:
+        df_result = filtered
+
+    df_result.to_csv(output_csv, index=False, encoding='utf-8')
+    print(f"✅ Saved file after {'keeping' if not invert else 'dropping'} rows matching condition '{condition}' to {output_csv}")
+
+def min_clean(input_csv: str, output_csv: str, text_column: str = "text"):
+    output_csv = resolve_output_path(input_csv, output_csv)
+    df = pd.read_csv(input_csv)
+    if text_column not in df.columns:
+        raise ValueError(f"Column '{text_column}' not found in {df.columns.tolist()}")
+    df.dropna(subset=[text_column], inplace=True)
+    df[text_column] = df[text_column].apply(min_clean_line)
+    df.to_csv(output_csv, index=False, encoding='utf-8')
+    print(f"✅ Minimal cleaning done! Cleaned CSV saved to {output_csv}")
