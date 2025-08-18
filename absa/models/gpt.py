@@ -5,7 +5,7 @@ import re
 import argparse
 from typing import List, Optional
 from pathlib import Path
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
 from langchain.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field
 from difflib import SequenceMatcher
@@ -181,6 +181,7 @@ def build_prompt(tweets_batch, aspects, mode, parser, few_shots=None):
     if mode == "json":
         return f"""
 Anda adalah model ABSA (Aspect-Based Sentiment Analysis).
+
 Tweets:
 {tweets_list}
 
@@ -200,40 +201,40 @@ Tugas:
     elif mode == "block":
         return f"""
     Anda adalah model ABSA (Aspect-Based Sentiment Analysis).
-
+    
     Input:
     Tweets berikut:
     {tweets_list}
-
+    
     Daftar aspek (dengan deskripsi singkat):
     {aspects_list}
-
+    
     Instruksi:
     1. Baca setiap tweet dengan teliti.
     2. Tentukan aspek-aspek yang benar-benar disebutkan atau tersirat dalam tweet. 
     - Jika aspek tidak relevan dengan tweet, jangan keluarkan.
     - Jika ada beberapa aspek relevan, keluarkan semuanya.
     3. Untuk setiap aspek relevan, keluarkan hasil dalam format berikut:
-
+    
     Tweet: <tweet_text_exact>
     Aspect: <aspect_name>
     Sentiment: [p_pos, p_neu, p_neg]  # probabilitas untuk positif, netral, negatif (jumlah = 1.0)
     Confidence: <angka antara 0 dan 1>  # seberapa yakin model terhadap klasifikasi aspek
-
+    
     4. Probabilitas harus dalam format desimal 2 angka, misalnya [0.70, 0.20, 0.10].
     5. Jangan keluarkan aspek yang tidak relevan.
-
+    
     Contoh output:
     Tweet: Mobil ini sangat irit bensin tetapi performanya kurang
     Aspect: bensin
     Sentiment: [0.85, 0.10, 0.05]
     Confidence: 0.90
-
+    
     Tweet: Mobil ini sangat irit bensin tetapi performanya kurang
     Aspect: performa
     Sentiment: [0.10, 0.15, 0.75]
     Confidence: 0.90
-
+    
     {few_shot_text}
     """
 
@@ -241,7 +242,7 @@ Tugas:
 # Main CLI
 # --------------------------
 def main():
-    parser = argparse.ArgumentParser(description="ABSA Batch Pipeline with LangChain & Gemini")
+    parser = argparse.ArgumentParser(description="ABSA Batch Pipeline with LangChain & OpenAI GPT")
     parser.add_argument("--input", required=True, help="Input CSV file path")
     parser.add_argument("--aspects", required=True, help="Aspects CSV file path")
     parser.add_argument("--output", required=True, help="Output folder path")
@@ -256,20 +257,21 @@ def main():
     )
     parser.add_argument(
         "--model", 
-        choices=["gemini-2.5-pro", "gemini-2.0-pro", "gemini-2.5-flash", "gemini-2.0-flash"], 
-        required=True, 
-        help="Model to use"
+        choices=["gpt-4.1", "gpt-4.1-mini", "gpt-4o", "gpt-4o-mini"], 
+        default="gpt-4o-mini",
+        help="OpenAI model to use"
     )
     parser.add_argument("--max_retries", type=int, default=3, help="Maximum retries for API calls")
     parser.add_argument("--retry_delay", type=int, default=10, help="Delay between retries (seconds)")
-
+    
     args = parser.parse_args()
-
+    
     start_time = time.time()
+    
     input_path = Path(args.input).resolve()
     output_folder = Path(args.output).resolve()
     os.makedirs(output_folder, exist_ok=True)
-
+    
     # Validate inputs
     if not input_path.exists():
         raise FileNotFoundError(f"Input file not found: {input_path}")
@@ -279,13 +281,13 @@ def main():
 
     conf_thresholds = [float(t.strip()) for t in args.conf_thresholds.split(",")]
 
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
-    if not GOOGLE_API_KEY:
-        raise ValueError("GOOGLE_API_KEY environment variable not set")
+    OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+    if not OPENAI_API_KEY:
+        raise ValueError("OPENAI_API_KEY environment variable not set")
 
-    llm = ChatGoogleGenerativeAI(
+    llm = ChatOpenAI(
         model=args.model,
-        google_api_key=GOOGLE_API_KEY,
+        api_key=OPENAI_API_KEY,
         temperature=0.1  # Lower temperature for more consistent results
     )
 

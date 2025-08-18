@@ -157,7 +157,10 @@ def extract_unique_aspects(input_csv: str, output_csv: str, aspect_column: str =
 def extract_corpus(input_csv: str, output_csv: str):
     output_csv = resolve_output_path(input_csv, output_csv)
     df = pd.read_csv(input_csv)
-    df_selected = df[["id", "text"]].drop_duplicates()
+    if 'community' not in df.columns:
+        df_selected = df[["id", "text"]].drop_duplicates()
+    else:
+        df_selected = df[["id", "text", "community"]].drop_duplicates()
     df_selected.to_csv(output_csv, index=False)
     print(f"✅ Saved {len(df_selected)} unique rows to {output_csv}")
 
@@ -219,7 +222,7 @@ def drop_rows_by_condition(input_csv, output_csv, condition, invert=False):
         df_result = filtered
 
     df_result.to_csv(output_csv, index=False, encoding='utf-8')
-    print(f"✅ Saved file after {'keeping' if not invert else 'dropping'} rows matching condition '{condition}' to {output_csv}")
+    print(f"✅ Saved file after {'keeping' if invert else 'dropping'} rows matching condition '{condition}' to {output_csv}")
 
 def min_clean(input_csv: str, output_csv: str, text_column: str = "text"):
     output_csv = resolve_output_path(input_csv, output_csv)

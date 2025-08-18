@@ -219,3 +219,4 @@ main/results/
 _not_used/
 
 .DS_Store
+.zshrc
