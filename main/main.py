@@ -41,30 +41,19 @@ def create_absa_input_from_community(community_csv_path, absa_input_path):
 def main():
     parser = argparse.ArgumentParser(description="Pipeline Orchestrator")
     parser.add_argument("--community_input", required=True,
-                        help="CSV with columns: id,text,in_reply_to_status_id,in_reply_to_screen_name")
+                        help="CSV with columns: id,text,in_reply_to_status_id,in_reply_to_screen_name,name")
     parser.add_argument("--absa_aspect", required=True,
                         help="CSV with columns: aspect,desc")
     parser.add_argument("--workdir", default="pipeline_out",
                         help="Directory for intermediate outputs")
-
-    # NEW: model type
-    parser.add_argument("--model", choices=["gemini", "dp", "gpt"], default="gemini",
+    parser.add_argument("--model", choices=["gemini", "dp"], default="gemini",
                         help="Main model/algorithm for ABSA")
     parser.add_argument("--model_name",
-                        help="Specific model checkpoint (gemini: e.g., gemini-2.5-pro; gpt: gpt-4.1 or gpt-4.1-mini)")
-    
-    parser.add_argument("--batch_size", type=int, default=30,
-                        help="Batch size for ABSA models (default: 30)")
-    parser.add_argument("--consensus_p", type=float, default=0.5,
-                        help="Consensus threshold P")
-    parser.add_argument("--conf_threshold", type=float, default=0.6,
-                        help="Confidence threshold (Gemini only)")
-    parser.add_argument("--conf_thresholds",
-                        help="Comma separated list of confidence thresholds (GPT only, e.g. '0.5,0.6,0.7')")
-    parser.add_argument("--few_shot",
-                        help="Optional few-shot examples CSV (GPT only)")
-    parser.add_argument("--gpt_mode", choices=["json", "block"], default="block",
-                        help="Prompt mode for GPT ABSA (default: block)")
+                        help="Specific model checkpoint or nlp processor (gemini: gemini-2.5-flash, gemini-2.0-flash; dp: stanza, udpipe)")
+    parser.add_argument("--vector_mode", choices=["sentence", "tfidf", "fasttext"], default="tfidf",
+                        help="Vector mode for DP model (default: tfidf)")
+    parser.add_argument("--batch_size", type=int, default=25,
+                        help="Batch size for ABSA models (default: 25)")
     parser.add_argument("--algo", choices=["louvain", "metis"], default="louvain",
                         help="Community detection algorithm (default: louvain)")
     parser.add_argument("-k", type=int, default=2,
@@ -81,47 +70,33 @@ def main():
     aspect_output_folder = os.path.join(args.workdir, "aspect_out")
 
     if args.model == "gemini":
-        model_value = args.model_name if args.model_name else "gemini-2.5-pro"
+        model_value = args.model_name if args.model_name else "gemini-2.0-flash"
         run_cmd([
             "gemini",
             "--input", absa_input_csv,
             "--aspects", args.absa_aspect,
             "--output", aspect_output_folder,
             "--model", model_value,
-            "--mode", "block",
             "--batch_size", str(args.batch_size),
-            "--conf_thresholds", str(args.conf_threshold)
         ], "Component 1: Gemini")
 
     elif args.model == "dp":
+        vactor_mode_value = args.vector_mode if args.vector_mode else "tfidf"
+        model_value = args.model_name if args.model_name else "stanza"
         run_cmd([
             "dp",
             "--input", absa_input_csv,
             "--aspects", args.absa_aspect,
             "--lexicon", "lexicon.csv",   # ⚠️ must exist or be passed
             "--output", aspect_output_folder,
-            "--vector_mode", "tfidf",
-            "--max_iter", "50"
+            "--vector_mode", vactor_mode_value,
+            "--processor", model_value,
         ], "Component 1: Double Propagation (DP)")
-
-    elif args.model == "gpt":
-        model_value = args.model_name if args.model_name else "gpt-4.1"
-        cmd = [
-            "gptabsa",
-            "--input", absa_input_csv,
-            "--aspects", args.absa_aspect,
-            "--output", aspect_output_folder,
-            "--mode", args.gpt_mode,
-            "--batch_size", str(args.batch_size),
-            "--model", model_value,
-            "--conf_thresholds", str(args.conf_threshold)
-        ]
-        run_cmd(cmd, "Component 1: GPT ABSA")
 
     # Find ABSA output CSV
     if args.model == "gemini":
         pattern = os.path.join(aspect_output_folder,
-                               f"absa_input_{int(args.conf_threshold * 10):02d}_*.csv")
+                               f"absa_input_*.csv")
     else:
         pattern = os.path.join(aspect_output_folder, "*.csv")
 
@@ -156,7 +131,6 @@ def main():
     consensus_details_txt = os.path.join(args.workdir, "consensus_details.txt")
     run_cmd([
         "consensus",
-        "-p", str(args.consensus_p),
         "-o", consensus_output_txt,
         "--details", consensus_details_txt,
         edges_output_csv, 

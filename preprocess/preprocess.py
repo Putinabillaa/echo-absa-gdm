@@ -61,7 +61,6 @@ def main():
     p9.add_argument("input_csv")
     p9.add_argument("output_csv")
     p9.add_argument("--text_column", default="text")
-    p9.add_argument("--no_slangid", action="store_true")
     p9.add_argument("--no_txt_dict", action="store_true")
     p9.add_argument("--no_huggingface", action="store_true")
     p9.add_argument("--no_stopwords", action="store_true")
@@ -106,7 +105,6 @@ def main():
             input_csv=args.input_csv,
             output_csv=args.output_csv,
             text_column=args.text_column,
-            use_slangid=not args.no_slangid,
             use_txt_dict=not args.no_txt_dict,
             use_huggingface=not args.no_huggingface,
             use_stopwords=not args.no_stopwords

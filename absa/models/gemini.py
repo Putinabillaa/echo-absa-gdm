@@ -3,72 +3,123 @@ import os
 import time
 import re
 import argparse
-from typing import List, Optional
+from typing import List, Optional, Dict
 from pathlib import Path
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain.output_parsers import PydanticOutputParser
-from pydantic import BaseModel, Field
 from difflib import SequenceMatcher
 import logging
+import requests
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
 
 # --------------------------
-# Pydantic Schema for JSON mode
+# Google Generative AI Client
 # --------------------------
-class AspectSentiment(BaseModel):
-    aspect: str
-    present: bool
-    confidence: float
-    sentiment: Optional[List[float]] = Field(default=None)
-
-class TweetABSA(BaseModel):
-    tweet: str
-    aspects: List[AspectSentiment]
-
-class ABSAResponse(BaseModel):
-    results: List[TweetABSA]
+class GoogleGenerativeAI:
+    def __init__(self, model: str, api_key: str, temperature: float = 0.0):
+        self.model = model
+        self.api_key = api_key
+        self.temperature = temperature
+        self.base_url = "https://generativelanguage.googleapis.com/v1beta/models"
+    
+    def invoke(self, system_prompt: str, user_prompt: str) -> str:
+        """Call Google Generative AI API with system and user prompts"""
+        url = f"{self.base_url}/{self.model}:generateContent"
+        
+        headers = {"Content-Type": "application/json"}
+        
+        # Structure the conversation with system instruction and user message
+        data = {
+            "system_instruction": {
+                "parts": [{"text": system_prompt}]
+            },
+            "contents": [
+                {
+                    "role": "user",
+                    "parts": [{"text": user_prompt}]
+                }
+            ],
+            "generationConfig": {
+                "temperature": self.temperature,
+                "topK": 40,
+                "topP": 0.95,
+                "maxOutputTokens": 8192,
+            }
+        }
+        params = {"key": self.api_key}
+        
+        response = requests.post(url, headers=headers, json=data, params=params)
+        response.raise_for_status()
+        
+        result = response.json()
+        
+        if "candidates" in result and result["candidates"]:
+            candidate = result["candidates"][0]
+            if "content" in candidate and "parts" in candidate["content"]:
+                return candidate["content"]["parts"][0]["text"]
+        
+        raise Exception(f"No valid response from API: {result}")
 
 # --------------------------
-# Helpers
+# Unified Text Processing Utils
 # --------------------------
-def normalize_text(text):
-    """Normalize text for comparison"""
-    if not text:
-        return ""
-    text = str(text).strip().strip('"').strip("'")
-    text = re.sub(r'\s+', ' ', text)
-    return text
+class TextMatcher:
+    """Unified text matching utility with fuzzy matching capabilities"""
+    
+    @staticmethod
+    def normalize_text(text: str) -> str:
+        """Normalize text for comparison"""
+        if not text:
+            return ""
+        text = str(text).strip().strip('"').strip("'")
+        return re.sub(r'\s+', ' ', text)
+    
+    @staticmethod
+    def fuzzy_match(text1: str, text2: str, threshold: float = 0.8) -> float:
+        """Get fuzzy match ratio between two texts"""
+        norm1 = TextMatcher.normalize_text(text1)
+        norm2 = TextMatcher.normalize_text(text2)
+        return SequenceMatcher(None, norm1, norm2).ratio()
+    
+    @staticmethod
+    def find_best_match(target: str, candidates: List[Dict], 
+                       text_key: str, threshold: float = 0.8) -> Optional[Dict]:
+        """Find best matching candidate from a list"""
+        target_norm = TextMatcher.normalize_text(target)
+        
+        # Try exact match first
+        for candidate in candidates:
+            if TextMatcher.normalize_text(candidate[text_key]) == target_norm:
+                return candidate
+        
+        # Try fuzzy match
+        best_match = None
+        best_ratio = 0
+        
+        for candidate in candidates:
+            ratio = TextMatcher.fuzzy_match(target, candidate[text_key])
+            if ratio > best_ratio and ratio >= threshold:
+                best_ratio = ratio
+                best_match = candidate
+        
+        if best_match:
+            logger.info(f"Fuzzy matched '{target}' -> '{best_match[text_key]}' (ratio: {best_ratio:.3f})")
+        
+        return best_match
 
-def fuzzy_match_text(text1, text2, threshold=0.8):
-    """Check if two texts match with fuzzy matching"""
-    return SequenceMatcher(None, normalize_text(text1), normalize_text(text2)).ratio() >= threshold
-
-def safe_find_tweet_id(parsed_text, tweets_batch, fallback_index=None):
-    """Safely find tweet ID with multiple fallback strategies"""
-    parsed_norm = normalize_text(parsed_text)
+# --------------------------
+# Data Processing Utils
+# --------------------------
+def find_tweet_id(parsed_text: str, tweets_batch: List[Dict], 
+                 fallback_index: Optional[int] = None) -> str:
+    """Find tweet ID with fallback strategies"""
+    match = TextMatcher.find_best_match(parsed_text, tweets_batch, "text", threshold=0.8)
     
-    # Strategy 1: Exact match
-    for tweet in tweets_batch:
-        if normalize_text(tweet["text"]) == parsed_norm:
-            return tweet["id"]
+    if match:
+        return match["id"]
     
-    # Strategy 2: Fuzzy match
-    best_match_id = None
-    best_ratio = 0
-    for tweet in tweets_batch:
-        ratio = SequenceMatcher(None, parsed_norm, normalize_text(tweet["text"])).ratio()
-        if ratio > best_ratio and ratio >= 0.8:
-            best_ratio = ratio
-            best_match_id = tweet["id"]
-    
-    if best_match_id:
-        logger.warning(f"Using fuzzy match for tweet (ratio: {best_ratio:.3f}): {parsed_text[:50]}...")
-        return best_match_id
-    
-    # Strategy 3: Positional fallback
+    # Positional fallback
     if fallback_index is not None and 0 <= fallback_index < len(tweets_batch):
         logger.warning(f"Using positional fallback for tweet: {parsed_text[:50]}...")
         return tweets_batch[fallback_index]["id"]
@@ -76,50 +127,41 @@ def safe_find_tweet_id(parsed_text, tweets_batch, fallback_index=None):
     logger.error(f"Could not match tweet: {parsed_text[:50]}...")
     return "NA"
 
-def load_few_shots(few_shot_path):
-    """Load few-shot examples with error handling"""
-    examples = []
-    try:
-        with open(few_shot_path, newline="", encoding="utf-8") as csvfile:
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                examples.append({
-                    "text": row["text"].strip(),
-                    "aspect_category": row["aspect_category"].strip(),
-                    "sentiment_prob": row["sentiment_prob"].strip()
-                })
-        logger.info(f"Loaded {len(examples)} few-shot examples")
-    except Exception as e:
-        logger.error(f"Error loading few-shot examples: {e}")
-        raise
-    return examples
+def normalize_aspect_name(pred_aspect: str, aspect_categories: List[Dict]) -> Optional[str]:
+    """Normalize aspect name with fuzzy matching"""
+    if not pred_aspect:
+        logger.warning("Empty aspect name provided")
+        return None
+    
+    match = TextMatcher.find_best_match(pred_aspect, aspect_categories, "category", threshold=0.7)
+    
+    if match:
+        return match["category"]
+    
+    logger.warning(f"Could not match aspect '{pred_aspect}' to any category. Skipping.")
+    return None
 
-def parse_probs(sent: str):
-    """Parse probability string with better error handling"""
+def parse_sentiment_probabilities(sent: str) -> List[float]:
+    """Parse probability string with error handling"""
     if not sent:
         logger.warning("Empty sentiment string")
         return [0.0, 0.0, 0.0]
     
-    # remove brackets and labels if present
-    sent_clean = sent.strip().replace("[", "").replace("]", "")
-    # remove sentiment labels like "positive=", "neg=", etc.
-    sent_clean = re.sub(r"[a-zA-Z=]", "", sent_clean)
-    # split and filter out empty strings
-    parts = [p for p in sent_clean.split(",") if p.strip() != ""]
+    # Clean the string: remove brackets and labels
+    sent_clean = re.sub(r'[\[\]a-zA-Z=]', '', sent.strip())
+    parts = [p.strip() for p in sent_clean.split(",") if p.strip()]
     
     try:
-        probs = [round(float(x.strip()), 4) for x in parts]
+        probs = [round(float(x), 4) for x in parts]
         
-        # Validate probabilities
         if len(probs) != 3:
             logger.warning(f"Expected 3 probabilities, got {len(probs)}: {sent}")
             return [0.0, 0.0, 0.0]
         
-        # Check if probabilities sum to approximately 1.0
+        # Validate and normalize probabilities
         prob_sum = sum(probs)
         if abs(prob_sum - 1.0) > 0.1:
             logger.warning(f"Probabilities don't sum to 1.0 (sum={prob_sum}): {sent}")
-            # Normalize if close to 1.0
             if prob_sum > 0:
                 probs = [p/prob_sum for p in probs]
             else:
@@ -128,135 +170,195 @@ def parse_probs(sent: str):
         return probs
         
     except ValueError as e:
-        logger.error(f"Could not parse probabilities: {sent!r} -> {parts!r}. Error: {e}")
+        logger.error(f"Could not parse probabilities: {sent!r}. Error: {e}")
         return [0.0, 0.0, 0.0]
 
-def normalize_aspect_name(pred_aspect: str, aspect_categories: list) -> str:
-    """Normalize aspect name with fuzzy matching"""
-    if not pred_aspect:
-        return ""
+# --------------------------
+# Response Parser
+# --------------------------
+class ResponseParser:
+    """Unified response parser with multiple parsing strategies"""
     
-    pred_norm = pred_aspect.strip().lower()
+    def __init__(self, tweets_batch: List[Dict], aspect_categories: List[Dict]):
+        self.tweets_batch = tweets_batch
+        self.aspect_categories = aspect_categories
     
-    # Exact match first
-    for a in aspect_categories:
-        if pred_norm == a["category"].strip().lower():
-            return a["category"]
+    def parse(self, content: str) -> List[Dict]:
+        """Main parsing method with fallback strategies"""
+        # Strategy 1: Structured regex parsing
+        results = self._structured_parse(content)
+        if results:
+            logger.info(f"✅ Structured parsing successful: {len(results)} results")
+            return results
+        
+        # Strategy 2: Flexible block parsing
+        logger.warning("Structured parsing failed, trying flexible parsing...")
+        results = self._flexible_parse(content)
+        if results:
+            logger.info(f"✅ Flexible parsing successful: {len(results)} results")
+            return results
+        
+        logger.error("All parsing methods failed for this batch")
+        return []
     
-    # Fuzzy match as fallback
-    best_match = None
-    best_ratio = 0
-    for a in aspect_categories:
-        ratio = SequenceMatcher(None, pred_norm, a["category"].strip().lower()).ratio()
-        if ratio > best_ratio and ratio >= 0.8:
-            best_ratio = ratio
-            best_match = a["category"]
+    def _structured_parse(self, content: str) -> List[Dict]:
+        """Parse using structured regex pattern"""
+        pattern = r"(?i)(?:tweet|text):\s*[\"']?(.*?)[\"']?\s*[\n\r]+\s*(?:aspect|category):\s*[\"']?(.*?)[\"']?\s*[\n\r]+\s*(?:sentiment|prob):\s*\[([^\]]+)\]"
+        
+        try:
+            matches = re.findall(pattern, content, re.DOTALL | re.IGNORECASE)
+            return self._process_matches(matches)
+        except Exception as e:
+            logger.error(f"Error in structured parsing: {e}")
+            return []
     
-    if best_match:
-        logger.info(f"Fuzzy matched aspect '{pred_aspect}' -> '{best_match}' (ratio: {best_ratio:.3f})")
-        return best_match
+    def _flexible_parse(self, content: str) -> List[Dict]:
+        """Parse using flexible block-based approach"""
+        results = []
+        blocks = re.split(r'\n\s*\n', content)
+        
+        for block in blocks:
+            if len(block.strip()) < 20:
+                continue
+            
+            # Extract components using separate patterns
+            tweet_match = re.search(r'(?i)(?:tweet|text)[:\s]+(.*?)(?=\n|aspect|category|sentiment|$)', block, re.DOTALL)
+            aspect_match = re.search(r'(?i)(?:aspect|category)[:\s]+(.*?)(?=\n|sentiment|$)', block, re.DOTALL)
+            sentiment_match = re.search(r'(?i)(?:sentiment|prob)[:\s]*\[([^\]]+)\]', block)
+            
+            if all([tweet_match, aspect_match, sentiment_match]):
+                matches = [(
+                    tweet_match.group(1).strip().strip('"').strip("'"),
+                    aspect_match.group(1).strip().strip('"').strip("'"),
+                    sentiment_match.group(1).strip()
+                )]
+                results.extend(self._process_matches(matches))
+        
+        return results
     
-    logger.warning(f"Could not normalize aspect: '{pred_aspect}'")
-    return pred_aspect.strip()  # fallback: return as-is
+    def _process_matches(self, matches: List[tuple]) -> List[Dict]:
+        """Process regex matches into result dictionaries"""
+        results = []
+        
+        for tweet_text, aspect, sentiment in matches:
+            # Skip empty matches
+            if not all([tweet_text.strip(), aspect.strip(), sentiment.strip()]):
+                continue
+            
+            # Parse sentiment probabilities
+            probs = parse_sentiment_probabilities(sentiment)
+            if sum(probs) == 0:
+                continue
+            
+            # Find tweet ID and normalize aspect
+            tweet_id = find_tweet_id(tweet_text, self.tweets_batch)
+            normalized_aspect = normalize_aspect_name(aspect, self.aspect_categories)
+            
+            if normalized_aspect is None:
+                continue
+            
+            results.append({
+                "id": tweet_id,
+                "text": tweet_text,
+                "aspect_category": normalized_aspect,
+                "sentiment_prob": probs
+            })
+        
+        return results
 
 # --------------------------
-# Build Prompt
+# File Utilities
 # --------------------------
-def build_prompt(tweets_batch, aspects, mode, parser, few_shots=None):
-    """Build consistent prompts for both modes"""
+def load_csv_data(file_path: str, required_columns: List[str]) -> List[Dict]:
+    """Load CSV data with validation"""
+    data = []
+    try:
+        with open(file_path, newline="", encoding="utf-8") as csvfile:
+            reader = csv.DictReader(csvfile)
+            
+            # Check if required columns exist
+            missing_columns = set(required_columns) - set(reader.fieldnames)
+            if missing_columns:
+                raise ValueError(f"Missing required columns: {missing_columns}")
+            
+            for row in reader:
+                # Clean and validate row data
+                cleaned_row = {col: row[col].strip() if row[col] else "" for col in required_columns}
+                if any(cleaned_row.values()):  # Skip completely empty rows
+                    data.append(cleaned_row)
+        
+        logger.info(f"Loaded {len(data)} records from {file_path}")
+        return data
+    except Exception as e:
+        logger.error(f"Error loading {file_path}: {e}")
+        raise
+
+# --------------------------
+# Prompt Building
+# --------------------------
+def build_system_prompt(aspects: List[Dict], few_shots: Optional[List[Dict]] = None) -> str:
+    """Build system prompt with task definition and examples"""
+    
+    # Few-shot examples
     few_shot_text = ""
     if few_shots:
-        few_shot_text = "\n\nContoh:\n"
+        few_shot_text = "\n\nContoh format yang benar:\n"
         for ex in few_shots:
             few_shot_text += (
                 f'Tweet: {ex["text"]}\n'
                 f'Aspect: {ex["aspect_category"]}\n'
-                f'Sentiment: {ex["sentiment_prob"]}\n'
-                f'Confidence: 0.9\n\n'
+                f'Sentiment: {ex["sentiment_prob"]}\n\n'
             )
 
-    tweets_list = "\n".join([f'- "{t["text"]}"' for t in tweets_batch])
+    # Aspects list
     aspects_list = "\n".join([f'- "{a["category"]}": {a["description"]}' for a in aspects])
 
-    if mode == "json":
-        return f"""
-Anda adalah model ABSA (Aspect-Based Sentiment Analysis).
-Tweets:
-{tweets_list}
+    return f"""Anda adalah model ABSA (Aspect-Based Sentiment Analysis) yang ahli dalam menganalisis sentimen berbasis aspek pada teks berbahasa Indonesia.
 
-Daftar aspek:
+ASPEK YANG TERSEDIA:
 {aspects_list}
 
-Tugas:
-1. Untuk setiap tweet, evaluasi SEMUA aspek satu per satu
-2. Jika aspek relevan, tulis "present": true, "confidence": 0.x, dan tentukan "sentiment": [pos, neu, neg] (jumlah 1.0)
-3. Jika aspek TIDAK relevan, tulis "present": false dan "confidence": 0.x
-4. Format HARUS SESUAI skema berikut:
+TUGAS ANDA:
+1. Untuk setiap tweet yang diberikan, identifikasi aspek mana yang disebutkan atau tersirat
+2. Hanya sertakan aspek yang benar-benar relevan dengan tweet
+3. Untuk setiap aspek yang relevan, analisis sentimennya (positif, netral, negatif)
 
-{parser.get_format_instructions()}
+FORMAT OUTPUT YANG WAJIB:
+Tweet: <teks_tweet_persis_sama>
+Aspect: <nama_aspek_dari_daftar>
+Sentiment: [p_pos, p_neu, p_neg]
 
-{few_shot_text}
-"""
-    elif mode == "block":
-        return f"""
-    Anda adalah model ABSA (Aspect-Based Sentiment Analysis).
+ATURAN PENTING:
+- Probabilitas sentimen harus berjumlah 1.0 (contoh: [0.70, 0.20, 0.10])
+- Gunakan nama aspek yang PERSIS SAMA dengan daftar yang diberikan
+- Setiap tweet memiliki setidaknya satu aspek
+- PASTIKAN format output sama persis seperti yang ditentukan
 
-    Input:
-    Tweets berikut:
-    {tweets_list}
+{few_shot_text}"""
 
-    Daftar aspek (dengan deskripsi singkat):
-    {aspects_list}
+def build_user_prompt(tweets_batch: List[Dict]) -> str:
+    """Build user prompt with tweets to analyze"""
+    tweets_list = "\n".join([f'"{t["text"]}"' for t in tweets_batch])
+    
+    return f"""Analisis tweet-tweet berikut untuk aspek dan sentimen yang relevan:
 
-    Instruksi:
-    1. Baca setiap tweet dengan teliti.
-    2. Tentukan aspek-aspek yang benar-benar disebutkan atau tersirat dalam tweet. 
-    - Jika aspek tidak relevan dengan tweet, jangan keluarkan.
-    - Jika ada beberapa aspek relevan, keluarkan semuanya.
-    3. Untuk setiap aspek relevan, keluarkan hasil dalam format berikut:
+{tweets_list}
 
-    Tweet: <tweet_text_exact>
-    Aspect: <aspect_name>
-    Sentiment: [p_pos, p_neu, p_neg]  # probabilitas untuk positif, netral, negatif (jumlah = 1.0)
-    Confidence: <angka antara 0 dan 1>  # seberapa yakin model terhadap klasifikasi aspek
-
-    4. Probabilitas harus dalam format desimal 2 angka, misalnya [0.70, 0.20, 0.10].
-    5. Jangan keluarkan aspek yang tidak relevan.
-
-    Contoh output:
-    Tweet: Mobil ini sangat irit bensin tetapi performanya kurang
-    Aspect: bensin
-    Sentiment: [0.85, 0.10, 0.05]
-    Confidence: 0.90
-
-    Tweet: Mobil ini sangat irit bensin tetapi performanya kurang
-    Aspect: performa
-    Sentiment: [0.10, 0.15, 0.75]
-    Confidence: 0.90
-
-    {few_shot_text}
-    """
+Berikan analisis ABSA untuk setiap tweet yang relevan dengan format yang telah ditentukan."""
 
 # --------------------------
 # Main CLI
 # --------------------------
 def main():
-    parser = argparse.ArgumentParser(description="ABSA Batch Pipeline with LangChain & Gemini")
+    parser = argparse.ArgumentParser(description="ABSA Batch Pipeline")
     parser.add_argument("--input", required=True, help="Input CSV file path")
     parser.add_argument("--aspects", required=True, help="Aspects CSV file path")
     parser.add_argument("--output", required=True, help="Output folder path")
-    parser.add_argument("--mode", choices=["json", "block"], default="json", help="Prompt mode")
     parser.add_argument("--batch_size", type=int, default=5, help="Batch size")
     parser.add_argument("--few_shot", help="Optional few-shot examples CSV")
     parser.add_argument(
-        "--conf_thresholds", 
-        type=str, 
-        default="0.6", 
-        help="Comma separated list of confidence thresholds, e.g. '0.5,0.6,0.7'"
-    )
-    parser.add_argument(
         "--model", 
-        choices=["gemini-2.5-pro", "gemini-2.0-pro", "gemini-2.5-flash", "gemini-2.0-flash"], 
+        choices=["gemini-2.0-flash", "gemini-2.5-flash", "gemini-2.5-pro"], 
         required=True, 
         help="Model to use"
     )
@@ -270,234 +372,100 @@ def main():
     output_folder = Path(args.output).resolve()
     os.makedirs(output_folder, exist_ok=True)
 
-    # Validate inputs
-    if not input_path.exists():
-        raise FileNotFoundError(f"Input file not found: {input_path}")
-    
-    if not Path(args.aspects).exists():
-        raise FileNotFoundError(f"Aspects file not found: {args.aspects}")
-
-    conf_thresholds = [float(t.strip()) for t in args.conf_thresholds.split(",")]
-
+    # Validate API key
     GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
     if not GOOGLE_API_KEY:
         raise ValueError("GOOGLE_API_KEY environment variable not set")
 
-    llm = ChatGoogleGenerativeAI(
-        model=args.model,
-        google_api_key=GOOGLE_API_KEY,
-        temperature=0.1  # Lower temperature for more consistent results
-    )
+    # Initialize Google AI client
+    llm = GoogleGenerativeAI(model=args.model, api_key=GOOGLE_API_KEY, temperature=0.0)
 
-    output_parser = PydanticOutputParser(pydantic_object=ABSAResponse)
+    # Load data
+    tweets = load_csv_data(args.input, ["id", "text"])
+    aspect_categories = load_csv_data(args.aspects, ["aspect_category", "desc"])
+    
+    # Rename desc to description for consistency
+    for aspect in aspect_categories:
+        aspect["description"] = aspect.pop("desc")
+        aspect["category"] = aspect.pop("aspect_category")
 
-    # Load tweets
-    tweets = []
-    try:
-        with open(input_path, newline="", encoding="utf-8") as csvfile:
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                tweets.append({
-                    "id": row["id"],
-                    "text": row["text"]
-                })
-        logger.info(f"Loaded {len(tweets)} tweets")
-    except Exception as e:
-        logger.error(f"Error loading tweets: {e}")
-        raise
+    few_shots = None
+    if args.few_shot:
+        few_shots = load_csv_data(args.few_shot, ["text", "aspect_category", "sentiment_prob"])
 
-    # Load aspects
-    aspect_categories = []
-    try:
-        with open(args.aspects, newline="", encoding="utf-8") as csvfile:
-            reader = csv.DictReader(csvfile)
-            for row in reader:
-                aspect_categories.append({
-                    "category": row["aspect_category"].strip(),
-                    "description": row["desc"].strip()
-                })
-        logger.info(f"Loaded {len(aspect_categories)} aspect categories")
-    except Exception as e:
-        logger.error(f"Error loading aspects: {e}")
-        raise
-
-    few_shots = load_few_shots(args.few_shot) if args.few_shot else None
-
-    # Initialize output files and tracking
+    # Initialize output
     timestamp = int(time.time())
-    all_parsed_results = []
+    output_path = output_folder / f"{input_path.stem}_results_{timestamp}.csv"
+    
+    all_results = []
     failed_batches = []
     
-    # Create output files for each confidence threshold
-    output_files = {}
-    writers = {}
-    for threshold in conf_thresholds:
-        threshold_str = str(threshold).replace('.', '')
-        output_path = output_folder / f"{input_path.stem}_{threshold_str}_{timestamp}.csv"
-        output_files[threshold] = open(output_path, "w", newline="", encoding="utf-8")
-        writers[threshold] = csv.DictWriter(
-            output_files[threshold], 
-            fieldnames=["id", "text", "aspect_category", "sentiment_prob", "confidence"]
+    with open(output_path, "w", newline="", encoding="utf-8") as output_file:
+        writer = csv.DictWriter(
+            output_file, 
+            fieldnames=["id", "text", "aspect_category", "sentiment_prob"]
         )
-        writers[threshold].writeheader()
-    
-    # Create full output file
-    full_output_path = output_folder / f"{input_path.stem}_all_full_{timestamp}.csv"
-    full_output_file = open(full_output_path, "w", newline="", encoding="utf-8")
-    full_writer = csv.DictWriter(
-        full_output_file, 
-        fieldnames=["id", "text", "aspect_category", "sentiment_prob", "confidence"]
-    )
-    full_writer.writeheader()
+        writer.writeheader()
 
-    # Process batches with retry logic
-    for i in range(0, len(tweets), args.batch_size):
-        tweets_batch = tweets[i:i + args.batch_size]
-        batch_num = i // args.batch_size + 1
-        
-        logger.info(f"Processing batch {batch_num}: tweets {i + 1}-{i + len(tweets_batch)}")
-        
-        prompt_text = build_prompt(tweets_batch, aspect_categories, args.mode, output_parser, few_shots)
-        
-        # Retry logic for API calls
-        success = False
-        for attempt in range(args.max_retries):
+        # Process batches
+        for i in range(0, len(tweets), args.batch_size):
+            tweets_batch = tweets[i:i + args.batch_size]
+            batch_num = i // args.batch_size + 1
+            
+            logger.info(f"Processing batch {batch_num}: tweets {i + 1}-{i + len(tweets_batch)}")
+            
+            # Build prompts
+            system_prompt = build_system_prompt(aspect_categories, few_shots)
+            user_prompt = build_user_prompt(tweets_batch)
+            
+            # Retry logic for API calls
+            raw_content = None
+            for attempt in range(args.max_retries):
+                try:
+                    raw_content = llm.invoke(system_prompt, user_prompt)
+                    break
+                except Exception as e:
+                    logger.error(f"API call failed (attempt {attempt + 1}/{args.max_retries}): {e}")
+                    if attempt < args.max_retries - 1:
+                        time.sleep(args.retry_delay)
+
+            if not raw_content:
+                logger.error(f"Failed to process batch {batch_num} after {args.max_retries} attempts")
+                failed_batches.append(batch_num)
+                continue
+
+            # Parse results
             try:
-                raw_result = llm.invoke(prompt_text)
-                success = True
-                break
+                parser_instance = ResponseParser(tweets_batch, aspect_categories)
+                batch_results = parser_instance.parse(raw_content)
+
+                # Save results
+                for result in batch_results:
+                    all_results.append(result)
+                    row_copy = result.copy()
+                    row_copy["sentiment_prob"] = str(result["sentiment_prob"])
+                    writer.writerow(row_copy)
+
+                output_file.flush()
+                logger.info(f"✅ Successfully processed batch {batch_num} ({len(batch_results)} results)")
+
             except Exception as e:
-                logger.error(f"API call failed (attempt {attempt + 1}/{args.max_retries}): {e}")
-                if attempt < args.max_retries - 1:
-                    time.sleep(args.retry_delay)
-                else:
-                    failed_batches.append(batch_num)
-                    continue
+                logger.error(f"Error processing batch {batch_num}: {e}")
+                failed_batches.append(batch_num)
 
-        if not success:
-            logger.error(f"Failed to process batch {batch_num} after {args.max_retries} attempts")
-            continue
-
-        # Parse results based on mode and save immediately
-        batch_results = []
-        try:
-            if args.mode == "json":
-                result: ABSAResponse = output_parser.invoke(raw_result)
-                
-                # Process each tweet result with better ID matching
-                for tweet_idx, tweet_data in enumerate(result.results):
-                    tweet_id = safe_find_tweet_id(
-                        tweet_data.tweet, 
-                        tweets_batch, 
-                        fallback_index=tweet_idx
-                    )
-                    
-                    for asp in tweet_data.aspects:
-                        if asp.present and asp.sentiment:
-                            # Validate and normalize aspect
-                            normalized_aspect = normalize_aspect_name(asp.aspect, aspect_categories)
-                            
-                            # Validate sentiment probabilities
-                            if len(asp.sentiment) == 3 and abs(sum(asp.sentiment) - 1.0) <= 0.1:
-                                batch_results.append({
-                                    "id": tweet_id,
-                                    "text": tweet_data.tweet,
-                                    "aspect_category": normalized_aspect,
-                                    "sentiment_prob": asp.sentiment,
-                                    "confidence": asp.confidence
-                                })
-                            else:
-                                logger.warning(f"Invalid sentiment probabilities for tweet {tweet_id}: {asp.sentiment}")
-
-            else:  # block mode
-                pattern = re.compile(
-                    r"Tweet:\s*(.*?)\nAspect:\s*(.*?)\nSentiment:\s*\[([^\]]+)\]\s*\nConfidence:\s*([0-9]*\.?[0-9]+)",
-                    re.DOTALL
-                )
-                
-                content = raw_result.content if hasattr(raw_result, "content") else str(raw_result)
-                matches = pattern.findall(content)
-                
-                for tweet_text, aspect, sent, conf in matches:
-                    probs = parse_probs(sent)
-                    
-                    try:
-                        confidence = float(conf)
-                    except ValueError:
-                        logger.warning(f"Invalid confidence value: {conf}")
-                        confidence = 0.0
-                    
-                    tweet_id = safe_find_tweet_id(tweet_text.strip(), tweets_batch)
-                    normalized_aspect = normalize_aspect_name(aspect.strip(), aspect_categories)
-                    
-                    # Only add if probabilities are valid
-                    if sum(probs) > 0:
-                        batch_results.append({
-                            "id": tweet_id,
-                            "text": tweet_text.strip(),
-                            "aspect_category": normalized_aspect,
-                            "sentiment_prob": probs,
-                            "confidence": confidence
-                        })
-
-            # Save batch results immediately to all output files
-            for row in batch_results:
-                # Add to memory collection for summary stats
-                all_parsed_results.append(row)
-                
-                # Save to full output file
-                row_copy = row.copy()
-                row_copy["sentiment_prob"] = str(row["sentiment_prob"])
-                full_writer.writerow(row_copy)
-                
-                # Save to threshold-filtered files
-                for threshold in conf_thresholds:
-                    if row["confidence"] >= threshold:
-                        writers[threshold].writerow(row_copy)
-            
-            # Flush all files to ensure data is written
-            full_output_file.flush()
-            for f in output_files.values():
-                f.flush()
-            
-            logger.info(f"✅ Successfully processed and saved batch {batch_num} ({len(batch_results)} results)")
-            
-        except Exception as e:
-            logger.error(f"Error parsing results for batch {batch_num}: {e}")
-            failed_batches.append(batch_num)
-            continue
-
-        # Rate limiting
-        time.sleep(5)
-
-    # Close all output files
-    full_output_file.close()
-    for f in output_files.values():
-        f.close()
+            # Rate limiting
+            time.sleep(5)
 
     # Report results
-    if failed_batches:
-        logger.warning(f"Failed to process {len(failed_batches)} batches: {failed_batches}")
-
-    logger.info(f"Collected {len(all_parsed_results)} total results")
-    logger.info(f"📝 Full unfiltered results saved to {full_output_path}")
-    
-    # Report threshold-filtered file locations and counts
-    for threshold in conf_thresholds:
-        threshold_str = str(threshold).replace('.', '')
-        output_path = output_folder / f"{input_path.stem}_{threshold_str}_{timestamp}.csv"
-        filtered_count = len([row for row in all_parsed_results if row["confidence"] >= threshold])
-        logger.info(f"▶️ Filtered results (confidence >= {threshold}) saved to {output_path} ({filtered_count} rows)")
-
     elapsed_time = time.time() - start_time
-    logger.info(f"⏱️ Total time: {elapsed_time:.2f} seconds")
     
-    # Summary statistics
+    logger.info(f"📝 Results saved to {output_path}")
     logger.info(f"📊 Processing Summary:")
     logger.info(f"  - Total tweets processed: {len(tweets)}")
-    logger.info(f"  - Total results collected: {len(all_parsed_results)}")
+    logger.info(f"  - Total results collected: {len(all_results)}")
     logger.info(f"  - Failed batches: {len(failed_batches)}")
     logger.info(f"  - Success rate: {((len(tweets) - len(failed_batches) * args.batch_size) / len(tweets) * 100):.1f}%")
+    logger.info(f"⏱️ Total time: {elapsed_time:.2f} seconds")
 
 if __name__ == "__main__":
     main()

@@ -1,47 +1,58 @@
 import csv
 import subprocess
 import os
-import sys
 import glob
-import asyncio
+import shutil
 from pathlib import Path
-from typing import Optional
-from nicegui import ui, app, events
+from nicegui import ui
 import threading
 import queue
-import time
 
 class PipelineGUI:
     def __init__(self):
         self.log_queue = queue.Queue()
-        self.current_process = None
         self.is_running = False
-        
+        self.uploaded_files = {}
+
     def run_cmd(self, cmd, description):
-        """Run command and capture output"""
+        """Run command and log output"""
         self.log(f"\n[INFO] Running: {description}")
         self.log(f"[CMD] {' '.join(cmd)}")
-        
         try:
             result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
             if result.returncode != 0:
                 self.log(f"[ERROR] {description} failed:\n{result.stderr}")
                 return False
-            else:
-                self.log(f"[DONE] {description} complete.")
-                if result.stdout.strip():
-                    self.log(result.stdout.strip())
-                return True
+            if result.stdout.strip():
+                self.log(result.stdout.strip())
+            self.log(f"[DONE] {description} complete.")
+            return True
         except Exception as e:
             self.log(f"[ERROR] Failed to run {description}: {str(e)}")
             return False
 
     def log(self, message):
-        """Add message to log queue"""
         self.log_queue.put(message)
 
+    def handle_file_upload(self, e, file_type):
+        """Handle file upload and store in temporary location"""
+        try:
+            # Create uploads directory if it doesn't exist
+            uploads_dir = "uploads"
+            os.makedirs(uploads_dir, exist_ok=True)
+            
+            # Save uploaded file
+            upload_path = os.path.join(uploads_dir, e.name)
+            with open(upload_path, 'wb') as f:
+                f.write(e.content.read())
+            
+            self.uploaded_files[file_type] = upload_path
+            self.log(f"[INFO] Uploaded {file_type}: {e.name}")
+            
+        except Exception as ex:
+            self.log(f"[ERROR] Failed to upload {file_type}: {str(ex)}")
+
     def create_absa_input_from_community(self, community_csv_path, absa_input_path):
-        """Create ABSA input CSV from community input"""
         try:
             with open(community_csv_path, newline="", encoding="utf-8") as infile, \
                  open(absa_input_path, "w", newline="", encoding="utf-8") as outfile:
@@ -50,10 +61,9 @@ class PipelineGUI:
                 fieldnames = ["id", "text"]
                 writer = csv.DictWriter(outfile, fieldnames=fieldnames)
                 writer.writeheader()
-
                 for row in reader:
                     if "id" not in row or "text" not in row:
-                        self.log("[ERROR] community_input CSV must contain 'id' and 'text' columns")
+                        self.log("[ERROR] community_input CSV must contain 'id' and 'text'")
                         return False
                     writer.writerow({"id": row["id"], "text": row["text"]})
             return True
@@ -61,74 +71,61 @@ class PipelineGUI:
             self.log(f"[ERROR] Failed to create ABSA input: {str(e)}")
             return False
 
-    async def run_pipeline(self, config):
-        """Run the complete pipeline with given configuration"""
+    def run_pipeline(self, config):
+        """Run pipeline sequentially like CLI version"""
         self.is_running = True
-        
         try:
-            # Create working directory
             os.makedirs(config['workdir'], exist_ok=True)
-
-            # Auto-create absa_input.csv
             absa_input_csv = os.path.join(config['workdir'], "absa_input.csv")
-            if not self.create_absa_input_from_community(config['community_input'], absa_input_csv):
+            
+            # Use uploaded file path instead of filename
+            community_input_path = self.uploaded_files.get('community_input')
+            if not community_input_path or not os.path.exists(community_input_path):
+                self.log("[ERROR] Community input file not found")
+                return
+                
+            if not self.create_absa_input_from_community(community_input_path, absa_input_csv):
                 return
 
-            # Step 1: ABSA model execution
             aspect_output_folder = os.path.join(config['workdir'], "aspect_out")
             
+            # Use uploaded aspect file
+            aspect_file_path = self.uploaded_files.get('absa_aspect')
+            if not aspect_file_path or not os.path.exists(aspect_file_path):
+                self.log("[ERROR] ABSA aspect file not found")
+                return
+                
             if config['model'] == "gemini":
-                model_value = config.get('model_name', 'gemini-2.5-pro')
-                success = self.run_cmd([
+                if not self.run_cmd([
                     "gemini",
                     "--input", absa_input_csv,
-                    "--aspects", config['absa_aspect'],
+                    "--aspects", aspect_file_path,
                     "--output", aspect_output_folder,
-                    "--model", model_value,
-                    "--mode", "block",
-                    "--batch_size", str(config['batch_size']),
-                    "--conf_thresholds", str(config['conf_threshold'])
-                ], "Component 1: Gemini")
-                
+                    "--model", config['model_name'],
+                    "--batch_size", str(config['batch_size'])
+                ], "Component 1: Gemini"):
+                    return
             elif config['model'] == "dp":
-                success = self.run_cmd([
+                lexicon_path = self.uploaded_files.get('lexicon_file')
+                if not lexicon_path or not os.path.exists(lexicon_path):
+                    self.log("[ERROR] Lexicon file required for DP model")
+                    return
+                    
+                if not self.run_cmd([
                     "dp",
                     "--input", absa_input_csv,
-                    "--aspects", config['absa_aspect'],
-                    "--lexicon", "lexicon.csv",
+                    "--aspects", aspect_file_path,
+                    "--lexicon", lexicon_path,
                     "--output", aspect_output_folder,
-                    "--vector_mode", "tfidf",
-                    "--max_iter", "50"
-                ], "Component 1: Double Propagation (DP)")
-                
-            elif config['model'] == "gpt":
-                model_value = config.get('model_name', 'gpt-4.1')
-                cmd = [
-                    "gptabsa",
-                    "--input", absa_input_csv,
-                    "--aspects", config['absa_aspect'],
-                    "--output", aspect_output_folder,
-                    "--mode", config['gpt_mode'],
-                    "--batch_size", str(config['batch_size']),
-                    "--model", model_value,
-                    "--conf_thresholds", str(config['conf_threshold'])
-
-                ]
-                success = self.run_cmd(cmd, "Component 1: GPT ABSA")
-
-            if not success:
-                return
+                    "--vector_mode", config['vector_mode'],
+                    "--processor", config['model_name']
+                ], "Component 1: Double Propagation (DP)"):
+                    return
 
             # Find ABSA output CSV
-            if config['model'] == "gemini":
-                pattern = os.path.join(aspect_output_folder,
-                                     f"absa_input_{int(config['conf_threshold'] * 10):02d}_*.csv")
-            else:
-                pattern = os.path.join(aspect_output_folder, "*.csv")
-
+            pattern = os.path.join(aspect_output_folder, "*.csv")
             matching_files = glob.glob(pattern)
             absa_output_csv = matching_files[0] if matching_files else None
-
             if not absa_output_csv:
                 self.log("[ERROR] No ABSA output file found")
                 return
@@ -137,316 +134,296 @@ class PipelineGUI:
             community_output_csv = os.path.join(config['workdir'], "community_out.csv")
             edges_output_csv = community_output_csv.replace('.csv', '_edges.csv')
             graph_output_gml = os.path.join(config['workdir'], "community_graph.gml")
-
-            success = self.run_cmd([
+            if not self.run_cmd([
                 "community",
                 "--out-csv", community_output_csv,
                 "--out-graph", graph_output_gml,
-                config['community_input'],
+                community_input_path,
                 "--algo", config['algo'],
-                "-k", str(config['k']),
-            ], "Component 2: Community detection (nodes)")
-
-            if not success:
+                "-k", str(config['k'])
+            ], "Component 2: Community detection"):
                 return
 
             # Step 3: ABSA + community merge
             merged_output_csv = os.path.join(config['workdir'], "absa_community.csv")
-            success = self.run_cmd([
+            if not self.run_cmd([
                 "absa_community_merge",
                 "--aspect", absa_output_csv,
                 "--meta", community_output_csv,
-                "--output", merged_output_csv,
-            ], "Component 3: ABSA + Community Merge")
-
-            if not success:
+                "--output", merged_output_csv
+            ], "Component 3: ABSA + Community Merge"):
                 return
 
             # Step 4: Consensus
             consensus_output_txt = os.path.join(config['workdir'], "consensus.txt")
             consensus_details_txt = os.path.join(config['workdir'], "consensus_details.txt")
-            success = self.run_cmd([
+            if not self.run_cmd([
                 "consensus",
-                "-p", str(config['consensus_p']),
                 "-o", consensus_output_txt,
                 "--details", consensus_details_txt,
                 edges_output_csv, 
                 merged_output_csv
-            ], "Component 4: Consensus")
+            ], "Component 4: Consensus"):
+                return
 
-            if success:
-                self.log("\n[PIPELINE COMPLETE]")
-                self.log(f"Final consensus file: {consensus_output_txt}")
-            
-        except Exception as e:
-            self.log(f"[ERROR] Pipeline failed: {str(e)}")
+            self.log("\n[PIPELINE COMPLETE]")
+            self.log(f"Final consensus file: {consensus_output_txt}")
+
         finally:
             self.is_running = False
 
+
 def create_gui():
     pipeline = PipelineGUI()
-    
-    # Configuration state
     config = {
-        'community_input': '',
-        'absa_aspect': '',
         'workdir': 'pipeline_out',
         'model': 'gemini',
-        'model_name': 'gemini-1.5-pro',
-        'batch_size': 30,
-        'consensus_p': 0.5,
-        'conf_threshold': 0.6,
-        'conf_thresholds': '',
-        'few_shot': '',
-        'gpt_mode': 'block',
+        'model_name': 'gemini-2.0-flash',
+        'batch_size': 25,
         'algo': 'louvain',
         'k': 2,
-        'lexicon_file': ''
+        'vector_mode': 'tfidf'
     }
+
+    # Model options
+    gemini_models = ['gemini-2.0-flash', 'gemini-2.5-flash']
+    dp_processors = ['stanza', 'udpipe']
+    vector_modes = ['sentence', 'tfidf', 'fasttext']
 
     @ui.page('/')
     def main_page():
-        ui.page_title('Echo-ABSA-GDM')
-        
-        with ui.column().classes('w-full max-w-4xl mx-auto p-4'):
-            ui.markdown('# Echo-ABSA-GDM')
-            ui.markdown('Configure and run the echo chamber assessment pipeline using ABSA, community detection, and GDM.')
+        with ui.column().classes('w-[880px] mx-auto space-y-6'):
+            # Header
+            ui.markdown('# Echo-ABSA-GDM Pipeline').classes('text-center mb-8')
             
-            # File inputs section
-            with ui.card().classes('w-full p-4'):
-                ui.label('Input Files').classes('text-lg font-semibold')
+            # File Upload Section
+            with ui.card().classes('w-full p-6'):
+                ui.label('File Uploads').classes('text-xl font-semibold mb-4')
                 
                 with ui.row().classes('w-full gap-4'):
                     with ui.column().classes('flex-1'):
-                        ui.label('Community Input CSV*')
-                        community_upload = ui.upload(
-                            on_upload=lambda e: setattr(config, 'community_input', e.name),
-                            auto_upload=True
-                        ).classes('w-full').props('accept=.csv')
-                        ui.label().bind_text_from(config, 'community_input', 
-                                                lambda x: f'Selected: {x}' if x else 'No file selected').classes('text-sm text-gray-600')
-                        
+                        ui.label('Community Input CSV *').classes('text-sm font-medium')
+                        ui.upload(
+                            auto_upload=True, 
+                            on_upload=lambda e: pipeline.handle_file_upload(e, 'community_input')
+                        ).props('accept=.csv').classes('w-full')
+                    
                     with ui.column().classes('flex-1'):
-                        ui.label('ABSA Aspect CSV*')
-                        aspect_upload = ui.upload(
-                            on_upload=lambda e: setattr(config, 'absa_aspect', e.name),
-                            auto_upload=True
-                        ).classes('w-full').props('accept=.csv')
-                        ui.label().bind_text_from(config, 'absa_aspect', 
-                                                lambda x: f'Selected: {x}' if x else 'No file selected').classes('text-sm text-gray-600')
+                        ui.label('ABSA Aspect CSV *').classes('text-sm font-medium')
+                        ui.upload(
+                            auto_upload=True,
+                            on_upload=lambda e: pipeline.handle_file_upload(e, 'absa_aspect')
+                        ).props('accept=.csv').classes('w-full')
+
+            # General Settings
+            with ui.card().classes('w-full p-6'):
+                ui.label('General Settings').classes('text-xl font-semibold mb-4')
                 
-                ui.label('Working Directory')
-                workdir_input = ui.input(
-                    placeholder='pipeline_out',
-                    value=config['workdir']
-                ).classes('w-full')
+                ui.label('Working Directory').classes('text-sm font-medium')
+                workdir_input = ui.input(value=config['workdir']).classes('w-full max-w-md')
                 workdir_input.bind_value(config, 'workdir')
 
-            # Model configuration section
-            with ui.card().classes('w-full p-4'):
-                ui.label('Model Configuration').classes('text-lg font-semibold')
-                
-                # Model type and name dropdowns
-                model_options = {
-                    'gemini': ['gemini-1.5-pro', 'gemini-1.5-flash', 'gemini-2.0-flash-exp', 'gemini-2.5-pro'],
-                    'gpt': ['gpt-4o', 'gpt-4o-mini', 'gpt-4-turbo', 'gpt-3.5-turbo'],
-                    'dp': ['N/A (Dictionary-based)']
-                }
+            # Model Configuration
+            with ui.card().classes('w-full p-6'):
+                ui.label('Model Configuration').classes('text-xl font-semibold mb-4')
                 
                 with ui.row().classes('w-full gap-4'):
                     with ui.column().classes('flex-1'):
-                        ui.label('Model Type')
-                        model_select = ui.select(
-                            ['gemini', 'dp', 'gpt'],
-                            value=config['model']
-                        ).classes('w-full')
+                        ui.label('Model Type *').classes('text-sm font-medium')
+                        model_select = ui.select(['gemini', 'dp'], value=config['model']).classes('w-full')
                         model_select.bind_value(config, 'model')
-                        
-                    with ui.column().classes('flex-1'):
-                        ui.label('Model Name')
-                        model_name_select = ui.select(
-                            model_options[config['model']],
-                            value=config['model_name']
-                        ).classes('w-full')
-                        
-                        # Handle model name selection manually
-                        def on_model_name_change(e):
-                            config['model_name'] = e.value
-                        
-                        model_name_select.on('update:model-value', on_model_name_change)
-                
-                with ui.row().classes('w-full gap-4'):
-                    with ui.column().classes('flex-1'):
-                        ui.label('Batch Size')
-                        batch_size_input = ui.number(
-                            value=config['batch_size'],
-                            min=1,
-                            max=100
-                        ).classes('w-full')
-                        batch_size_input.bind_value(config, 'batch_size')
-                        
-                    with ui.column().classes('flex-1'):
-                        ui.label('Consensus Threshold P')
-                        consensus_input = ui.number(
-                            value=config['consensus_p'],
-                            min=0.0,
-                            max=1.0,
-                            step=0.1
-                        ).classes('w-full')
-                        consensus_input.bind_value(config, 'consensus_p')
-                
-                # Update model name options when model type changes
-                def update_model_names():
-                    options = model_options[config['model']]
-                    model_name_select.options = options
-                    config['model_name'] = options[0]
-                    model_name_select.value = options[0]
-                    model_name_select.update()
-                
-                model_select.on('update:model-value', lambda: update_model_names())
-
-            # Model-specific options
-            with ui.card().classes('w-full p-4'):
-                ui.label('Model-Specific Options').classes('text-lg font-semibold')
-                
-                # Confidence threshold (for Gemini and GPT)
-                conf_threshold_container = ui.row().classes('w-full gap-4')
-                with conf_threshold_container:
-                    with ui.column().classes('flex-1'):
-                        ui.label('Confidence Threshold')
-                        conf_threshold_input = ui.number(
-                            value=config['conf_threshold'],
-                            min=0.0,
-                            max=1.0,
-                            step=0.1
-                        ).classes('w-full')
-                        conf_threshold_input.bind_value(config, 'conf_threshold')
-                
-                # DP-specific options
-                dp_container = ui.column().classes('w-full')
-                with dp_container:
-                    ui.label('Double Propagation Options').classes('font-medium')
-                    ui.label('Lexicon CSV File')
-                    lexicon_upload = ui.upload(
-                        on_upload=lambda e: setattr(config, 'lexicon_file', e.name),
-                        auto_upload=True
-                    ).classes('w-full').props('accept=.csv')
-                    ui.label().bind_text_from(config, 'lexicon_file', 
-                                            lambda x: f'Selected: {x}' if x else 'No file selected (will use default lexicon.csv)').classes('text-sm text-gray-600')
-                
-                # Update visibility based on model selection
-                def update_model_options():
-                    # Show confidence threshold for Gemini and GPT only
-                    conf_threshold_container.set_visibility(config['model'] in ['gemini', 'gpt'])
-                    # Show DP options only for DP model
-                    dp_container.set_visibility(config['model'] == 'dp')
                     
-                model_select.on('update:model-value', lambda: update_model_options())
-                update_model_options()
+                    with ui.column().classes('flex-1'):
+                        # Conditional model name dropdown
+                        model_name_container = ui.column().classes('w-full')
+                        
+                        def update_model_options():
+                            model_name_container.clear()
+                            with model_name_container:
+                                ui.label('Model/Processor *').classes('text-sm font-medium')
+                                if config['model'] == 'gemini':
+                                    model_dropdown = ui.select(gemini_models, value=config['model_name']).classes('w-full')
+                                    model_dropdown.bind_value(config, 'model_name')
+                                else:
+                                    processor_dropdown = ui.select(dp_processors, value='stanza').classes('w-full')
+                                    processor_dropdown.bind_value(config, 'model_name')
+                        
+                        model_select.on('update:model-value', lambda: update_model_options())
+                        update_model_options()
 
-            # Community detection options
-            with ui.card().classes('w-full p-4'):
-                ui.label('Community Detection').classes('text-lg font-semibold')
+            # Conditional Settings
+            conditional_container = ui.column().classes('w-full space-y-6')
+            
+            def update_conditional_settings():
+                conditional_container.clear()
+                with conditional_container:
+                    if config['model'] == 'gemini':
+                        with ui.card().classes('w-full p-6'):
+                            ui.label('Gemini Settings').classes('text-xl font-semibold mb-4')
+                            ui.label('Batch Size').classes('text-sm font-medium')
+                            batch_input = ui.number(value=config['batch_size'], min=1, max=100).classes('w-full max-w-xs')
+                            batch_input.bind_value(config, 'batch_size')
+                    
+                    elif config['model'] == 'dp':
+                        with ui.card().classes('w-full p-6'):
+                            ui.label('DP Settings').classes('text-xl font-semibold mb-4')
+                            
+                            with ui.row().classes('w-full gap-4'):
+                                with ui.column().classes('flex-1'):
+                                    ui.label('Vector Mode').classes('text-sm font-medium')
+                                    vector_select = ui.select(vector_modes, value=config['vector_mode']).classes('w-full')
+                                    vector_select.bind_value(config, 'vector_mode')
+                                
+                                with ui.column().classes('flex-1'):
+                                    ui.label('Lexicon CSV *').classes('text-sm font-medium')
+                                    ui.upload(
+                                        auto_upload=True,
+                                        on_upload=lambda e: pipeline.handle_file_upload(e, 'lexicon_file')
+                                    ).props('accept=.csv').classes('w-full')
+
+            model_select.on('update:model-value', lambda: update_conditional_settings())
+            update_conditional_settings()
+
+            # Community Detection
+            with ui.card().classes('w-full p-6'):
+                ui.label('Community Detection').classes('text-xl font-semibold mb-4')
                 
                 with ui.row().classes('w-full gap-4'):
                     with ui.column().classes('flex-1'):
-                        ui.label('Algorithm')
-                        algo_select = ui.select(
-                            ['louvain', 'metis'],
-                            value=config['algo']
-                        ).classes('w-full')
+                        ui.label('Algorithm').classes('text-sm font-medium')
+                        algo_select = ui.select(['louvain', 'metis'], value=config['algo']).classes('w-full')
                         algo_select.bind_value(config, 'algo')
-                        
-                    # Always create the k_input container but control visibility
-                    k_container = ui.column().classes('flex-1')
-                    with k_container:
-                        ui.label('Number of Communities (METIS only)')
-                        k_input = ui.number(
-                            value=config['k'],
-                            min=2,
-                            max=100
-                        ).classes('w-full')
-                        k_input.bind_value(config, 'k')
-                
-                # Update visibility based on algorithm selection
-                def update_algo_options():
-                    k_container.set_visibility(config['algo'] == 'metis')
-                
-                algo_select.on('update:model-value', lambda: update_algo_options())
-                update_algo_options()  # Set initial visibility
-
-            # Control buttons
-            with ui.card().classes('w-full p-4'):
-                with ui.row().classes('w-full gap-4'):
-                    async def run_pipeline_click():
-                        # Validate files first
-                        errors = []
-                        if not config['community_input']:
-                            errors.append('Community input file is required')
-                        if not config['absa_aspect']:
-                            errors.append('ABSA aspect file is required')
-                        if config['model'] == 'dp' and not config.get('lexicon_file'):
-                            errors.append('Lexicon file is required for DP model (or ensure lexicon.csv exists in working directory)')
-                        
-                        if errors:
-                            ui.notify('\n'.join(errors), type='negative')
-                            return
-                        
-                        if pipeline.is_running:
-                            ui.notify('Pipeline is already running', type='warning')
-                            return
-                        
-                        # All validations passed
-                        ui.notify('Files validated successfully', type='positive')
-                        log_area.set_value('')  # Clear previous logs
-                        ui.notify('Pipeline started', type='positive')
-                        
-                        # Run pipeline in background thread
-                        def run_in_thread():
-                            asyncio.run(pipeline.run_pipeline(config.copy()))
-                        
-                        threading.Thread(target=run_in_thread, daemon=True).start()
                     
-                    run_button = ui.button('Run Pipeline', on_click=run_pipeline_click).classes('bg-green-500')
+                    with ui.column().classes('flex-1'):
+                        # Conditional k parameter
+                        k_container = ui.column().classes('w-full')
+                        
+                        def update_k_visibility():
+                            k_container.clear()
+                            if config['algo'] == 'metis':
+                                with k_container:
+                                    ui.label('Number of Communities').classes('text-sm font-medium')
+                                    k_input = ui.number(value=config['k'], min=2).classes('w-full')
+                                    k_input.bind_value(config, 'k')
+                        
+                        algo_select.on('update:model-value', lambda: update_k_visibility())
+                        update_k_visibility()
 
-            # Log output section
-            with ui.card().classes('w-full p-4'):
-                ui.label('Pipeline Output').classes('text-lg font-semibold')
-                log_area = ui.textarea().classes('w-full h-64 font-mono text-sm').props('readonly')
+            # Run Button Section
+            with ui.card().classes('w-full p-6 text-center'):
+                run_button = ui.button('Run Pipeline', color='primary').classes('text-lg px-12 py-4')
                 
-                # Update log area periodically
-                log_timer = None
-                
-                async def update_logs():
-                    nonlocal log_timer
-                    content = log_area.value or ''
-                    try:
-                        while True:
-                            message = pipeline.log_queue.get_nowait()
-                            content += message + '\n'
-                    except queue.Empty:
-                        pass
+                def validate_and_run():
+                    if pipeline.is_running:
+                        ui.notify('Pipeline already running!', type='warning')
+                        return
                     
-                    if content != log_area.value:
-                        log_area.set_value(content)
-                        # Auto-scroll to bottom
-                        try:
-                            await ui.run_javascript('''
-                                const textarea = document.querySelector('textarea');
-                                if (textarea) textarea.scrollTop = textarea.scrollHeight;
-                            ''')
-                        except:
-                            pass  # Ignore if client disconnected
+                    # Validation
+                    if 'community_input' not in pipeline.uploaded_files:
+                        ui.notify('Please upload Community Input CSV', type='negative')
+                        return
+                    if 'absa_aspect' not in pipeline.uploaded_files:
+                        ui.notify('Please upload ABSA Aspect CSV', type='negative')
+                        return
+                    if config['model'] == 'dp' and 'lexicon_file' not in pipeline.uploaded_files:
+                        ui.notify('Please upload Lexicon CSV for DP model', type='negative')
+                        return
+                    
+                    # Clear logs and start
+                    log_area.set_value('')
+                    ui.notify('Pipeline started!', type='positive')
+                    threading.Thread(target=pipeline.run_pipeline, args=(config.copy(),), daemon=True).start()
                 
-                # Start timer only when page is active
-                def start_log_timer():
-                    nonlocal log_timer
-                    if log_timer is None:
-                        log_timer = ui.timer(0.5, update_logs)
-                
-                start_log_timer()
+                run_button.on('click', validate_and_run)
 
-    ui.run(title='ABSA Pipeline Orchestrator', dark=False, host='0.0.0.0', port=8080)
+            # Status Section
+            with ui.card().classes('w-full p-6'):
+                ui.label('Status').classes('text-xl font-semibold mb-4')
+                status_container = ui.column().classes('w-full')
+
+            # Logs Section
+            with ui.card().classes('w-full p-6'):
+                ui.label('Pipeline Logs').classes('text-xl font-semibold mb-4')
+                log_area = ui.textarea().classes('w-full h-96 font-mono text-sm').props('readonly outlined')
+
+        # Update functions
+        def update_logs():
+            content = ''
+            while not pipeline.log_queue.empty():
+                content += pipeline.log_queue.get() + '\n'
+            if content:
+                current_value = log_area.value if log_area.value else ''
+                log_area.set_value(current_value + content)
+                
+        def update_status():
+            status_container.clear()
+            with status_container:
+                # Check file uploads status
+                community_uploaded = 'community_input' in pipeline.uploaded_files
+                aspect_uploaded = 'absa_aspect' in pipeline.uploaded_files
+                lexicon_uploaded = 'lexicon_file' in pipeline.uploaded_files
+                lexicon_required = config['model'] == 'dp'
+                
+                if pipeline.is_running:
+                    ui.label('Running Pipeline...').classes('text-lg text-blue-600 font-medium')
+                    run_button.props('loading')
+                elif not community_uploaded or not aspect_uploaded or (lexicon_required and not lexicon_uploaded):
+                    ui.label('Waiting for required files').classes('text-lg text-orange-600 font-medium')
+                    
+                    # Show missing files
+                    missing_files = []
+                    if not community_uploaded:
+                        missing_files.append('Community Input CSV')
+                    if not aspect_uploaded:
+                        missing_files.append('ABSA Aspect CSV')
+                    if lexicon_required and not lexicon_uploaded:
+                        missing_files.append('Lexicon CSV')
+                    
+                    ui.label(f'Missing: {", ".join(missing_files)}').classes('text-sm text-gray-600 mt-1')
+                    run_button.props(remove='loading')
+                else:
+                    ui.label('Ready to run').classes('text-lg text-green-600 font-medium')
+                    
+                    # Show uploaded files
+                    uploaded_files = []
+                    if community_uploaded:
+                        uploaded_files.append('Community Input CSV')
+                    if aspect_uploaded:
+                        uploaded_files.append('ABSA Aspect CSV')
+                    if lexicon_uploaded:
+                        uploaded_files.append('Lexicon CSV')
+                    
+                    ui.label(f'Files ready: {", ".join(uploaded_files)}').classes('text-sm text-gray-600 mt-1')
+                    run_button.props(remove='loading')
+
+        # Timers
+        ui.timer(0.5, lambda: [update_logs(), update_status()])
+
+    # Custom CSS for better styling
+    ui.add_head_html('''
+        <style>
+            .nicegui-content {
+                padding: 2rem;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+            }
+            .q-card {
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+                backdrop-filter: blur(10px);
+                background: rgba(255,255,255,0.95);
+            }
+            .q-btn {
+                border-radius: 8px;
+                font-weight: 600;
+            }
+            .q-input, .q-select {
+                border-radius: 6px;
+            }
+        </style>
+    ''')
+
+    ui.run(title='Echo-ABSA-GDM Pipeline', host='0.0.0.0', port=8080, dark=False)
 
 if __name__ in {"__main__", "__mp_main__"}:
     create_gui()

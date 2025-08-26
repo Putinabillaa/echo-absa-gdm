@@ -12,19 +12,11 @@ def normalize_csv(
     input_csv: str,
     output_csv: str,
     text_column: str = "text",
-    use_slangid: bool = True,
     use_txt_dict: bool = True,
     use_huggingface: bool = True,
     use_stopwords: bool = True
 ):
     output_csv = resolve_output_path(input_csv, output_csv)
-
-    # === SlangID ===
-    if use_slangid:
-        from slangid import Translator
-        slangid_normalizer = Translator()
-    else:
-        slangid_normalizer = None
 
     # === Local txt dict ===
     slang_txt_map = {}
@@ -56,8 +48,6 @@ def normalize_csv(
     def normalize_text(text: str) -> str:
         if pd.isnull(text) or not isinstance(text, str):
             return ""
-        if slangid_normalizer:
-            text = slangid_normalizer.translate(text)
         tokens = text.split()
         tokens = [combined_map.get(tok, tok) for tok in tokens]
         if use_stopwords:
@@ -100,23 +90,20 @@ def clean_line(text: str) -> str:
     if not isinstance(text, str):
         return ''
     text = text.lower()
+    text = re.sub(r'^\s*rt\b[:\-]*\s*', '', text)
     text = re.sub(r'http\S+', '', text)
     text = re.sub(r'@\w+', '', text)
     text = re.sub(r'#\w+', '', text)
-    text = re.sub(r'\d+', '', text)
     text = re.sub(r'[^a-zA-Z0-9\s]', '', text)
     text = ' '.join(text.splitlines())
     text = re.sub(r'\s+', ' ', text)
     return text.strip()
 
-import re
-
 def min_clean_line(text: str) -> str:
     if not isinstance(text, str):
         return ''
+    text = re.sub(r'[,]', ' ', text)
     text = re.sub(r'\s+', ' ', text).strip()
-    text = re.sub(r'[,]', '', text)
-    text = re.sub(r'http\S+', '', text)
     text = ' '.join(text.splitlines())
     return text
 
