@@ -1,0 +1,119 @@
+EVALUATION SUMMARY
+==================================================
+Total tweets evaluated: 900
+Sentiment pairs calculated: 279
+Sentiment calculation note: Only calculated for overlapping aspects between gold and predicted
+
+PER-CLASS METRICS (ASPECT DETECTION):
+--------------------------------------------------
+Agus-Sylvi                Precision: 0.3697  Recall: 0.3500  F1: 0.3596
+Ahok-Djarot               Precision: 0.3622  Recall: 0.3900  F1: 0.3756
+Anies-Sandi               Precision: 0.3725  Recall: 0.1900  F1: 0.2517
+
+ASPECT DETECTION SUMMARY:
+F1 macro: 0.3289
+F1 micro: 0.3361
+
+SENTIMENT ANALYSIS RESULTS:
+--------------------------------------------------
+Sentiment pairs evaluated: 279
+Sentiment Macro F1 (argmax): 0.3950
+Sentiment Micro F1 (argmax): 0.5914
+Sentiment Weighted F1 (argmax): 0.5920
+Sentiment MSE: 0.2526
+Sentiment Log Loss: 1.7765
+Sentiment Brier Score: 0.9910
+Baseline Brier Score: 0.8463
+
+COMBINED METRICS:
+--------------------------------------------------
+Exact match (aspect+sentiment): 0.0889
+Fixed sentiment order: ['neg', 'neu', 'pos']
+
+SENTIMENT CLASSIFICATION REPORT:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+         neg       0.51      0.71      0.59       117
+         neu       0.00      0.00      0.00         0
+         pos       0.71      0.51      0.59       162
+
+    accuracy                           0.59       279
+   macro avg       0.41      0.41      0.39       279
+weighted avg       0.63      0.59      0.59       279
+
+CUSTOM CONFUSION MATRIX (with 'none'):
+--------------------------------------------------
+Agus-Sylvi,Ahok-Djarot,Anies-Sandi,none
+Agus-Sylvi,105,68,18,109
+Ahok-Djarot,52,117,18,113
+Anies-Sandi,48,58,57,137
+none,79,80,60,0
+
+MULTILABEL CONFUSION MATRICES:
+--------------------------------------------------
+
+Aspect: Agus-Sylvi
+[[421 179]
+ [195 105]]
+
+Aspect: Ahok-Djarot
+[[394 206]
+ [183 117]]
+
+Aspect: Anies-Sandi
+[[504  96]
+ [243  57]]
+
+MISMATCHED PREDICTIONS (first 50):
+--------------------------------------------------
+Tweet 1: GOLD=none PRED=Ahok-Djarot
+Tweet 1: GOLD=none PRED=Anies-Sandi
+Tweet 2: GOLD=none PRED=Ahok-Djarot
+Tweet 3: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 4: GOLD=none PRED=Ahok-Djarot
+Tweet 5: GOLD=Agus-Sylvi PRED=none
+Tweet 6: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 8: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 9: GOLD=Agus-Sylvi PRED=none
+Tweet 10: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 11: GOLD=Agus-Sylvi PRED=none
+Tweet 12: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 13: GOLD=Agus-Sylvi PRED=none
+Tweet 14: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 15: GOLD=Agus-Sylvi PRED=none
+Tweet 17: GOLD=none PRED=Anies-Sandi
+Tweet 18: GOLD=none PRED=Ahok-Djarot
+Tweet 19: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 22: GOLD=Agus-Sylvi PRED=none
+Tweet 23: GOLD=Agus-Sylvi PRED=none
+Tweet 24: GOLD=Agus-Sylvi PRED=none
+Tweet 25: GOLD=none PRED=Ahok-Djarot
+Tweet 26: GOLD=Agus-Sylvi PRED=none
+Tweet 28: GOLD=none PRED=Ahok-Djarot
+Tweet 29: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 30: GOLD=Agus-Sylvi PRED=none
+Tweet 31: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 31: GOLD=none PRED=Anies-Sandi
+Tweet 32: GOLD=Agus-Sylvi PRED=none
+Tweet 33: GOLD=Agus-Sylvi PRED=none
+Tweet 35: GOLD=Agus-Sylvi PRED=none
+Tweet 36: GOLD=none PRED=Anies-Sandi
+Tweet 37: GOLD=Agus-Sylvi PRED=none
+Tweet 38: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 39: GOLD=none PRED=Ahok-Djarot
+Tweet 40: GOLD=Agus-Sylvi PRED=none
+Tweet 41: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 43: GOLD=none PRED=Ahok-Djarot
+Tweet 44: GOLD=none PRED=Ahok-Djarot
+Tweet 46: GOLD=none PRED=Ahok-Djarot
+Tweet 46: GOLD=none PRED=Anies-Sandi
+Tweet 47: GOLD=none PRED=Ahok-Djarot
+Tweet 49: GOLD=none PRED=Ahok-Djarot
+Tweet 50: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 51: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 51: GOLD=none PRED=Anies-Sandi
+Tweet 53: GOLD=Agus-Sylvi PRED=none
+Tweet 54: GOLD=Agus-Sylvi PRED=none
+Tweet 56: GOLD=none PRED=Ahok-Djarot
+Tweet 56: GOLD=none PRED=Anies-Sandi

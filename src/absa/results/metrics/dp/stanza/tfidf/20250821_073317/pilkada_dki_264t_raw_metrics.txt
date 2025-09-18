@@ -1,0 +1,131 @@
+EVALUATION SUMMARY
+==================================================
+Total tweets evaluated: 264
+Sentiment pairs calculated: 19
+Sentiment calculation note: Only calculated for overlapping aspects between gold and predicted
+
+PER-CLASS METRICS (ASPECT DETECTION):
+--------------------------------------------------
+Pendukung/Pemilih         Precision: 0.4545  Recall: 0.0746  F1: 0.1282
+Politik Uang              Precision: 0.0633  Recall: 0.5000  F1: 0.1124
+SARA                      Precision: 0.0000  Recall: 0.0000  F1: 0.0000
+Strategi Kampanye         Precision: 0.3333  Recall: 0.0333  F1: 0.0606
+Tokoh dan Partai          Precision: 1.0000  Recall: 0.0506  F1: 0.0964
+
+ASPECT DETECTION SUMMARY:
+F1 macro: 0.0795
+F1 micro: 0.0987
+
+SENTIMENT ANALYSIS RESULTS:
+--------------------------------------------------
+Sentiment pairs evaluated: 19
+Sentiment Macro F1 (argmax): 0.4333
+Sentiment Micro F1 (argmax): 0.5263
+Sentiment Weighted F1 (argmax): 0.4421
+Sentiment MSE: 0.2235
+Sentiment Log Loss: 1.0884
+Sentiment Brier Score: 0.8759
+Baseline Brier Score: 1.1351
+
+COMBINED METRICS:
+--------------------------------------------------
+Exact match (aspect+sentiment): 0.0265
+Fixed sentiment order: ['neg', 'neu', 'pos']
+
+SENTIMENT CLASSIFICATION REPORT:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+         neg       0.33      1.00      0.50         4
+         neu       0.00      0.00      0.00         7
+         pos       0.86      0.75      0.80         8
+
+    accuracy                           0.53        19
+   macro avg       0.40      0.58      0.43        19
+weighted avg       0.43      0.53      0.44        19
+
+CUSTOM CONFUSION MATRIX (with 'none'):
+--------------------------------------------------
+Pendukung/Pemilih,Politik Uang,SARA,Strategi Kampanye,Tokoh dan Partai,none
+Pendukung/Pemilih,5,13,3,1,0,45
+Politik Uang,0,5,0,0,0,5
+SARA,0,4,0,0,0,7
+Strategi Kampanye,1,8,1,1,0,19
+Tokoh dan Partai,4,49,3,1,8,93
+none,1,0,1,0,0,0
+
+MULTILABEL CONFUSION MATRICES:
+--------------------------------------------------
+
+Aspect: Pendukung/Pemilih
+[[191   6]
+ [ 62   5]]
+
+Aspect: Politik Uang
+[[180  74]
+ [  5   5]]
+
+Aspect: SARA
+[[245   8]
+ [ 11   0]]
+
+Aspect: Strategi Kampanye
+[[232   2]
+ [ 29   1]]
+
+Aspect: Tokoh dan Partai
+[[106   0]
+ [150   8]]
+
+MISMATCHED PREDICTIONS (first 50):
+--------------------------------------------------
+Tweet 1: GOLD=Tokoh dan Partai PRED=none
+Tweet 2: GOLD=Pendukung/Pemilih PRED=none
+Tweet 3: GOLD=Tokoh dan Partai PRED=Politik Uang
+Tweet 4: GOLD=Pendukung/Pemilih PRED=none
+Tweet 5: GOLD=Tokoh dan Partai PRED=Pendukung/Pemilih
+Tweet 6: GOLD=Tokoh dan Partai PRED=none
+Tweet 7: GOLD=Tokoh dan Partai PRED=none
+Tweet 8: GOLD=Tokoh dan Partai PRED=Politik Uang
+Tweet 9: GOLD=Tokoh dan Partai PRED=none
+Tweet 10: GOLD=Tokoh dan Partai PRED=none
+Tweet 11: GOLD=Pendukung/Pemilih PRED=none
+Tweet 12: GOLD=Pendukung/Pemilih PRED=none
+Tweet 13: GOLD=Pendukung/Pemilih PRED=none
+Tweet 14: GOLD=Tokoh dan Partai PRED=none
+Tweet 15: GOLD=Tokoh dan Partai PRED=none
+Tweet 16: GOLD=Tokoh dan Partai PRED=Politik Uang
+Tweet 17: GOLD=Tokoh dan Partai PRED=Politik Uang
+Tweet 18: GOLD=Tokoh dan Partai PRED=Politik Uang
+Tweet 20: GOLD=SARA PRED=Politik Uang
+Tweet 21: GOLD=Tokoh dan Partai PRED=none
+Tweet 22: GOLD=Tokoh dan Partai PRED=Politik Uang
+Tweet 23: GOLD=Tokoh dan Partai PRED=none
+Tweet 24: GOLD=Tokoh dan Partai PRED=none
+Tweet 25: GOLD=Tokoh dan Partai PRED=none
+Tweet 26: GOLD=Tokoh dan Partai PRED=none
+Tweet 27: GOLD=Tokoh dan Partai PRED=none
+Tweet 28: GOLD=Tokoh dan Partai PRED=none
+Tweet 29: GOLD=Tokoh dan Partai PRED=SARA
+Tweet 29: GOLD=none PRED=Pendukung/Pemilih
+Tweet 30: GOLD=Tokoh dan Partai PRED=none
+Tweet 31: GOLD=Tokoh dan Partai PRED=none
+Tweet 32: GOLD=Tokoh dan Partai PRED=none
+Tweet 33: GOLD=Tokoh dan Partai PRED=none
+Tweet 34: GOLD=Pendukung/Pemilih PRED=Politik Uang
+Tweet 35: GOLD=Strategi Kampanye PRED=Pendukung/Pemilih
+Tweet 36: GOLD=SARA PRED=Politik Uang
+Tweet 37: GOLD=Tokoh dan Partai PRED=none
+Tweet 37: GOLD=Pendukung/Pemilih PRED=none
+Tweet 38: GOLD=Tokoh dan Partai PRED=none
+Tweet 39: GOLD=Tokoh dan Partai PRED=none
+Tweet 41: GOLD=Tokoh dan Partai PRED=none
+Tweet 42: GOLD=Tokoh dan Partai PRED=none
+Tweet 43: GOLD=Tokoh dan Partai PRED=Politik Uang
+Tweet 44: GOLD=Pendukung/Pemilih PRED=none
+Tweet 46: GOLD=Pendukung/Pemilih PRED=Politik Uang
+Tweet 48: GOLD=Pendukung/Pemilih PRED=Politik Uang
+Tweet 51: GOLD=Tokoh dan Partai PRED=none
+Tweet 52: GOLD=Pendukung/Pemilih PRED=Politik Uang
+Tweet 53: GOLD=SARA PRED=Politik Uang
+Tweet 54: GOLD=Pendukung/Pemilih PRED=none

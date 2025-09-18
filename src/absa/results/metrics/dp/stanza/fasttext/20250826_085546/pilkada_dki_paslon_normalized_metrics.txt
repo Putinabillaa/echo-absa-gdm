@@ -1,0 +1,119 @@
+EVALUATION SUMMARY
+==================================================
+Total tweets evaluated: 900
+Sentiment pairs calculated: 362
+Sentiment calculation note: Only calculated for overlapping aspects between gold and predicted
+
+PER-CLASS METRICS (ASPECT DETECTION):
+--------------------------------------------------
+Agus-Sylvi                Precision: 0.3812  Recall: 0.4333  F1: 0.4056
+Ahok-Djarot               Precision: 0.4116  Recall: 0.4733  F1: 0.4403
+Anies-Sandi               Precision: 0.3750  Recall: 0.3000  F1: 0.3333
+
+ASPECT DETECTION SUMMARY:
+F1 macro: 0.3931
+F1 micro: 0.3965
+
+SENTIMENT ANALYSIS RESULTS:
+--------------------------------------------------
+Sentiment pairs evaluated: 362
+Sentiment Macro F1 (argmax): 0.4091
+Sentiment Micro F1 (argmax): 0.6105
+Sentiment Weighted F1 (argmax): 0.6127
+Sentiment MSE: 0.2440
+Sentiment Log Loss: 1.9630
+Sentiment Brier Score: 0.9797
+Baseline Brier Score: 0.8349
+
+COMBINED METRICS:
+--------------------------------------------------
+Exact match (aspect+sentiment): 0.1111
+Fixed sentiment order: ['neg', 'neu', 'pos']
+
+SENTIMENT CLASSIFICATION REPORT:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+         neg       0.57      0.70      0.63       171
+         neu       0.00      0.00      0.00         0
+         pos       0.68      0.53      0.60       191
+
+    accuracy                           0.61       362
+   macro avg       0.42      0.41      0.41       362
+weighted avg       0.63      0.61      0.61       362
+
+CUSTOM CONFUSION MATRIX (with 'none'):
+--------------------------------------------------
+Agus-Sylvi,Ahok-Djarot,Anies-Sandi,none
+Agus-Sylvi,130,59,27,84
+Ahok-Djarot,43,142,28,87
+Anies-Sandi,45,63,90,102
+none,123,81,95,0
+
+MULTILABEL CONFUSION MATRICES:
+--------------------------------------------------
+
+Aspect: Agus-Sylvi
+[[389 211]
+ [170 130]]
+
+Aspect: Ahok-Djarot
+[[397 203]
+ [158 142]]
+
+Aspect: Anies-Sandi
+[[450 150]
+ [210  90]]
+
+MISMATCHED PREDICTIONS (first 50):
+--------------------------------------------------
+Tweet 1: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 2: GOLD=none PRED=Ahok-Djarot
+Tweet 3: GOLD=none PRED=Anies-Sandi
+Tweet 4: GOLD=none PRED=Ahok-Djarot
+Tweet 6: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 7: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 8: GOLD=none PRED=Anies-Sandi
+Tweet 10: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 11: GOLD=Agus-Sylvi PRED=none
+Tweet 12: GOLD=Agus-Sylvi PRED=none
+Tweet 13: GOLD=Agus-Sylvi PRED=none
+Tweet 14: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 15: GOLD=Agus-Sylvi PRED=none
+Tweet 17: GOLD=none PRED=Anies-Sandi
+Tweet 18: GOLD=none PRED=Ahok-Djarot
+Tweet 20: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 21: GOLD=Agus-Sylvi PRED=none
+Tweet 22: GOLD=Agus-Sylvi PRED=none
+Tweet 24: GOLD=Agus-Sylvi PRED=none
+Tweet 25: GOLD=none PRED=Anies-Sandi
+Tweet 26: GOLD=Agus-Sylvi PRED=none
+Tweet 28: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 28: GOLD=none PRED=Anies-Sandi
+Tweet 29: GOLD=Agus-Sylvi PRED=none
+Tweet 30: GOLD=Agus-Sylvi PRED=none
+Tweet 31: GOLD=none PRED=Anies-Sandi
+Tweet 32: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 33: GOLD=Agus-Sylvi PRED=none
+Tweet 35: GOLD=Agus-Sylvi PRED=none
+Tweet 37: GOLD=Agus-Sylvi PRED=none
+Tweet 38: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 38: GOLD=none PRED=Anies-Sandi
+Tweet 39: GOLD=none PRED=Ahok-Djarot
+Tweet 40: GOLD=Agus-Sylvi PRED=none
+Tweet 41: GOLD=none PRED=Ahok-Djarot
+Tweet 41: GOLD=none PRED=Anies-Sandi
+Tweet 43: GOLD=none PRED=Ahok-Djarot
+Tweet 43: GOLD=none PRED=Anies-Sandi
+Tweet 44: GOLD=none PRED=Anies-Sandi
+Tweet 45: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 46: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 46: GOLD=none PRED=Anies-Sandi
+Tweet 47: GOLD=none PRED=Ahok-Djarot
+Tweet 48: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 49: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 50: GOLD=Agus-Sylvi PRED=none
+Tweet 51: GOLD=Agus-Sylvi PRED=none
+Tweet 52: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 53: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 54: GOLD=Agus-Sylvi PRED=Ahok-Djarot

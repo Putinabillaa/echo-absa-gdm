@@ -1,0 +1,137 @@
+EVALUATION SUMMARY
+==================================================
+Total tweets evaluated: 297
+Sentiment pairs calculated: 1
+Sentiment calculation note: Only calculated for overlapping aspects between gold and predicted
+
+PER-CLASS METRICS (ASPECT DETECTION):
+--------------------------------------------------
+Anggaran                  Precision: 0.0238  Recall: 0.1667  F1: 0.0417
+Kebijakan Menteri         Precision: 0.0000  Recall: 0.0000  F1: 0.0000
+Magang                    Precision: 0.0000  Recall: 0.0000  F1: 0.0000
+Nadiem                    Precision: 0.0000  Recall: 0.0000  F1: 0.0000
+Program                   Precision: 0.0000  Recall: 0.0000  F1: 0.0000
+Umum                      Precision: 0.0000  Recall: 0.0000  F1: 0.0000
+
+ASPECT DETECTION SUMMARY:
+F1 macro: 0.0069
+F1 micro: 0.0035
+
+SENTIMENT ANALYSIS RESULTS:
+--------------------------------------------------
+Sentiment pairs evaluated: 1
+Sentiment Macro F1 (argmax): 0.0000
+Sentiment Micro F1 (argmax): 0.0000
+Sentiment Weighted F1 (argmax): 0.0000
+Sentiment MSE: 0.6426
+Sentiment Log Loss: 4.4063
+Sentiment Brier Score: 2.5944
+Baseline Brier Score: 0.0000
+
+COMBINED METRICS:
+--------------------------------------------------
+Exact match (aspect+sentiment): 0.0000
+Fixed sentiment order: ['neg', 'neu', 'pos']
+
+SENTIMENT CLASSIFICATION REPORT:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+         neg       0.00      0.00      0.00       1.0
+         neu       0.00      0.00      0.00       0.0
+         pos       0.00      0.00      0.00       0.0
+
+    accuracy                           0.00       1.0
+   macro avg       0.00      0.00      0.00       1.0
+weighted avg       0.00      0.00      0.00       1.0
+
+CUSTOM CONFUSION MATRIX (with 'none'):
+--------------------------------------------------
+Anggaran,Kebijakan Menteri,Magang,Nadiem,Program,Umum,none
+Anggaran,1,0,2,1,2,0,0
+Kebijakan Menteri,5,0,3,2,19,0,6
+Magang,0,0,0,0,0,0,0
+Nadiem,0,0,0,0,0,0,0
+Program,0,0,0,0,0,0,0
+Umum,36,0,28,5,126,0,90
+none,0,0,1,2,11,0,0
+
+MULTILABEL CONFUSION MATRICES:
+--------------------------------------------------
+
+Aspect: Anggaran
+[[250  41]
+ [  5   1]]
+
+Aspect: Kebijakan Menteri
+[[262   0]
+ [ 35   0]]
+
+Aspect: Magang
+[[263  34]
+ [  0   0]]
+
+Aspect: Nadiem
+[[287  10]
+ [  0   0]]
+
+Aspect: Program
+[[139 158]
+ [  0   0]]
+
+Aspect: Umum
+[[ 12   0]
+ [285   0]]
+
+MISMATCHED PREDICTIONS (first 50):
+--------------------------------------------------
+Tweet 1: GOLD=Umum PRED=Magang
+Tweet 2: GOLD=Umum PRED=none
+Tweet 3: GOLD=Umum PRED=Program
+Tweet 4: GOLD=Umum PRED=none
+Tweet 5: GOLD=Umum PRED=Program
+Tweet 6: GOLD=Umum PRED=none
+Tweet 7: GOLD=Umum PRED=Magang
+Tweet 8: GOLD=Umum PRED=Program
+Tweet 9: GOLD=Kebijakan Menteri PRED=Program
+Tweet 10: GOLD=Umum PRED=Program
+Tweet 11: GOLD=Umum PRED=Anggaran
+Tweet 12: GOLD=Umum PRED=Program
+Tweet 13: GOLD=Umum PRED=Program
+Tweet 14: GOLD=Umum PRED=Program
+Tweet 15: GOLD=Umum PRED=Magang
+Tweet 16: GOLD=Kebijakan Menteri PRED=none
+Tweet 17: GOLD=Umum PRED=Anggaran
+Tweet 17: GOLD=none PRED=Program
+Tweet 18: GOLD=Umum PRED=Magang
+Tweet 19: GOLD=Umum PRED=Program
+Tweet 20: GOLD=Anggaran PRED=Program
+Tweet 20: GOLD=Umum PRED=none
+Tweet 21: GOLD=Umum PRED=Program
+Tweet 22: GOLD=Umum PRED=none
+Tweet 23: GOLD=Umum PRED=Anggaran
+Tweet 24: GOLD=Kebijakan Menteri PRED=Program
+Tweet 25: GOLD=Umum PRED=none
+Tweet 26: GOLD=Umum PRED=Program
+Tweet 27: GOLD=Umum PRED=Program
+Tweet 28: GOLD=Umum PRED=Nadiem
+Tweet 28: GOLD=none PRED=Program
+Tweet 29: GOLD=Umum PRED=Program
+Tweet 30: GOLD=Kebijakan Menteri PRED=none
+Tweet 30: GOLD=Umum PRED=none
+Tweet 31: GOLD=Umum PRED=Anggaran
+Tweet 31: GOLD=none PRED=Program
+Tweet 32: GOLD=Umum PRED=Magang
+Tweet 33: GOLD=Umum PRED=Magang
+Tweet 34: GOLD=Umum PRED=Program
+Tweet 35: GOLD=Umum PRED=none
+Tweet 36: GOLD=Umum PRED=none
+Tweet 37: GOLD=Umum PRED=Program
+Tweet 38: GOLD=Umum PRED=Program
+Tweet 39: GOLD=Kebijakan Menteri PRED=none
+Tweet 39: GOLD=Umum PRED=none
+Tweet 40: GOLD=Umum PRED=none
+Tweet 41: GOLD=Kebijakan Menteri PRED=Magang
+Tweet 41: GOLD=Umum PRED=none
+Tweet 42: GOLD=Umum PRED=Anggaran
+Tweet 42: GOLD=none PRED=Program

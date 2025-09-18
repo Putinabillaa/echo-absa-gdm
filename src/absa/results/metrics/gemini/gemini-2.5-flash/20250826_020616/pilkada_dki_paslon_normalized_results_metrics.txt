@@ -1,0 +1,119 @@
+EVALUATION SUMMARY
+==================================================
+Total tweets evaluated: 930
+Sentiment pairs calculated: 365
+Sentiment calculation note: Only calculated for overlapping aspects between gold and predicted
+
+PER-CLASS METRICS (ASPECT DETECTION):
+--------------------------------------------------
+Agus-Sylvi                Precision: 0.9618  Recall: 0.4200  F1: 0.5847
+Ahok-Djarot               Precision: 0.7011  Recall: 0.4300  F1: 0.5331
+Anies-Sandi               Precision: 0.7914  Recall: 0.3667  F1: 0.5011
+
+ASPECT DETECTION SUMMARY:
+F1 macro: 0.5396
+F1 micro: 0.5391
+
+SENTIMENT ANALYSIS RESULTS:
+--------------------------------------------------
+Sentiment pairs evaluated: 365
+Sentiment Macro F1 (argmax): 0.5423
+Sentiment Micro F1 (argmax): 0.7616
+Sentiment Weighted F1 (argmax): 0.8136
+Sentiment MSE: 0.1277
+Sentiment Log Loss: 1.4281
+Sentiment Brier Score: 0.5446
+Baseline Brier Score: 0.8335
+
+COMBINED METRICS:
+--------------------------------------------------
+Exact match (aspect+sentiment): 0.3172
+Fixed sentiment order: ['neg', 'neu', 'pos']
+
+SENTIMENT CLASSIFICATION REPORT:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+         neg       0.81      0.83      0.82       186
+         neu       0.00      0.00      0.00         0
+         pos       0.97      0.69      0.81       179
+
+    accuracy                           0.76       365
+   macro avg       0.59      0.51      0.54       365
+weighted avg       0.89      0.76      0.81       365
+
+CUSTOM CONFUSION MATRIX (with 'none'):
+--------------------------------------------------
+Agus-Sylvi,Ahok-Djarot,Anies-Sandi,none
+Agus-Sylvi,126,21,9,144
+Ahok-Djarot,0,129,12,159
+Anies-Sandi,3,24,110,163
+none,2,10,8,0
+
+MULTILABEL CONFUSION MATRICES:
+--------------------------------------------------
+
+Aspect: Agus-Sylvi
+[[625   5]
+ [174 126]]
+
+Aspect: Ahok-Djarot
+[[575  55]
+ [171 129]]
+
+Aspect: Anies-Sandi
+[[601  29]
+ [190 110]]
+
+MISMATCHED PREDICTIONS (first 50):
+--------------------------------------------------
+Tweet 1: GOLD=Agus-Sylvi PRED=none
+Tweet 2: GOLD=Agus-Sylvi PRED=none
+Tweet 3: GOLD=Agus-Sylvi PRED=none
+Tweet 4.0: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 6: GOLD=Agus-Sylvi PRED=none
+Tweet 7: GOLD=Agus-Sylvi PRED=none
+Tweet 8: GOLD=Agus-Sylvi PRED=none
+Tweet 9: GOLD=Agus-Sylvi PRED=none
+Tweet 10: GOLD=Agus-Sylvi PRED=none
+Tweet 11: GOLD=Agus-Sylvi PRED=none
+Tweet 12: GOLD=Agus-Sylvi PRED=none
+Tweet 13: GOLD=Agus-Sylvi PRED=none
+Tweet 14: GOLD=Agus-Sylvi PRED=none
+Tweet 15: GOLD=Agus-Sylvi PRED=none
+Tweet 16: GOLD=Agus-Sylvi PRED=none
+Tweet 17: GOLD=Agus-Sylvi PRED=none
+Tweet 18: GOLD=Agus-Sylvi PRED=none
+Tweet 19.0: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 20: GOLD=Agus-Sylvi PRED=none
+Tweet 21: GOLD=Agus-Sylvi PRED=none
+Tweet 22: GOLD=Agus-Sylvi PRED=none
+Tweet 23.0: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 25.0: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 26: GOLD=Agus-Sylvi PRED=none
+Tweet 27: GOLD=Agus-Sylvi PRED=none
+Tweet 28: GOLD=Agus-Sylvi PRED=none
+Tweet 29: GOLD=Agus-Sylvi PRED=none
+Tweet 30: GOLD=Agus-Sylvi PRED=none
+Tweet 31: GOLD=Agus-Sylvi PRED=none
+Tweet 32: GOLD=Agus-Sylvi PRED=none
+Tweet 33: GOLD=Agus-Sylvi PRED=none
+Tweet 34: GOLD=Agus-Sylvi PRED=none
+Tweet 35: GOLD=Agus-Sylvi PRED=none
+Tweet 36: GOLD=Agus-Sylvi PRED=none
+Tweet 37.0: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 39.0: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 40.0: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 41: GOLD=Agus-Sylvi PRED=none
+Tweet 42: GOLD=Agus-Sylvi PRED=none
+Tweet 43: GOLD=Agus-Sylvi PRED=none
+Tweet 44: GOLD=Agus-Sylvi PRED=none
+Tweet 46.0: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 48.0: GOLD=Agus-Sylvi PRED=Ahok-Djarot
+Tweet 50: GOLD=Agus-Sylvi PRED=none
+Tweet 51: GOLD=Agus-Sylvi PRED=none
+Tweet 52: GOLD=Agus-Sylvi PRED=none
+Tweet 53: GOLD=Agus-Sylvi PRED=none
+Tweet 55.0: GOLD=Agus-Sylvi PRED=Anies-Sandi
+Tweet 58: GOLD=Agus-Sylvi PRED=none
+Tweet 59: GOLD=Agus-Sylvi PRED=none

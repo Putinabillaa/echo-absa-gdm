@@ -1,0 +1,125 @@
+EVALUATION SUMMARY
+==================================================
+Total tweets evaluated: 297
+Sentiment pairs calculated: 268
+Sentiment calculation note: Only calculated for overlapping aspects between gold and predicted
+
+PER-CLASS METRICS (ASPECT DETECTION):
+--------------------------------------------------
+Anggaran                  Precision: 0.0400  Recall: 0.6667  F1: 0.0755
+Magang                    Precision: 0.2486  Recall: 0.8980  F1: 0.3894
+Nadiem                    Precision: 0.2159  Recall: 0.5429  F1: 0.3089
+Program                   Precision: 0.8894  Recall: 0.7556  F1: 0.8171
+
+ASPECT DETECTION SUMMARY:
+F1 macro: 0.3977
+F1 micro: 0.5660
+
+SENTIMENT ANALYSIS RESULTS:
+--------------------------------------------------
+Sentiment pairs evaluated: 268
+Sentiment Macro F1 (argmax): 0.3661
+Sentiment Micro F1 (argmax): 0.5075
+Sentiment Weighted F1 (argmax): 0.4438
+Sentiment MSE: 0.2949
+Sentiment Log Loss: 2.1165
+Sentiment Brier Score: 1.4483
+Baseline Brier Score: 1.1455
+
+COMBINED METRICS:
+--------------------------------------------------
+Exact match (aspect+sentiment): 0.0774
+Fixed sentiment order: ['neg', 'neu', 'pos']
+
+SENTIMENT CLASSIFICATION REPORT:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+         neg       0.53      0.80      0.64       126
+         neu       0.25      0.02      0.03        56
+         pos       0.47      0.40      0.43        86
+
+    accuracy                           0.51       268
+   macro avg       0.41      0.40      0.37       268
+weighted avg       0.45      0.51      0.44       268
+
+CUSTOM CONFUSION MATRIX (with 'none'):
+--------------------------------------------------
+Anggaran,Magang,Nadiem,Program,none
+Anggaran,4,0,1,0,1
+Magang,0,44,2,0,3
+Nadiem,2,6,19,2,6
+Program,19,9,4,201,33
+none,75,118,62,23,0
+
+MULTILABEL CONFUSION MATRICES:
+--------------------------------------------------
+
+Aspect: Anggaran
+[[195  96]
+ [  2   4]]
+
+Aspect: Magang
+[[115 133]
+ [  5  44]]
+
+Aspect: Nadiem
+[[193  69]
+ [ 16  19]]
+
+Aspect: Program
+[[  6  25]
+ [ 65 201]]
+
+MISMATCHED PREDICTIONS (first 50):
+--------------------------------------------------
+Tweet 1: GOLD=none PRED=Program
+Tweet 2: GOLD=none PRED=Anggaran
+Tweet 2: GOLD=none PRED=Program
+Tweet 5: GOLD=none PRED=Anggaran
+Tweet 7: GOLD=none PRED=Magang
+Tweet 8: GOLD=none PRED=Nadiem
+Tweet 8: GOLD=none PRED=Magang
+Tweet 9: GOLD=Nadiem PRED=Magang
+Tweet 10: GOLD=none PRED=Anggaran
+Tweet 10: GOLD=none PRED=Magang
+Tweet 12: GOLD=Program PRED=Anggaran
+Tweet 12: GOLD=none PRED=Magang
+Tweet 13: GOLD=Program PRED=Nadiem
+Tweet 14: GOLD=none PRED=Anggaran
+Tweet 15: GOLD=Program PRED=none
+Tweet 16: GOLD=Nadiem PRED=Magang
+Tweet 17: GOLD=none PRED=Anggaran
+Tweet 17: GOLD=none PRED=Magang
+Tweet 18: GOLD=none PRED=Magang
+Tweet 19: GOLD=none PRED=Program
+Tweet 20: GOLD=Anggaran PRED=none
+Tweet 21: GOLD=none PRED=Magang
+Tweet 23: GOLD=none PRED=Magang
+Tweet 24: GOLD=none PRED=Magang
+Tweet 24: GOLD=none PRED=Program
+Tweet 26: GOLD=none PRED=Nadiem
+Tweet 26: GOLD=none PRED=Program
+Tweet 27: GOLD=none PRED=Anggaran
+Tweet 27: GOLD=none PRED=Magang
+Tweet 28: GOLD=none PRED=Anggaran
+Tweet 28: GOLD=none PRED=Magang
+Tweet 29: GOLD=none PRED=Magang
+Tweet 30: GOLD=Nadiem PRED=none
+Tweet 31: GOLD=none PRED=Nadiem
+Tweet 32: GOLD=none PRED=Anggaran
+Tweet 34: GOLD=none PRED=Magang
+Tweet 36: GOLD=none PRED=Anggaran
+Tweet 37: GOLD=none PRED=Anggaran
+Tweet 37: GOLD=none PRED=Nadiem
+Tweet 37: GOLD=none PRED=Magang
+Tweet 38: GOLD=none PRED=Anggaran
+Tweet 38: GOLD=none PRED=Nadiem
+Tweet 38: GOLD=none PRED=Magang
+Tweet 39: GOLD=Program PRED=Magang
+Tweet 40: GOLD=none PRED=Magang
+Tweet 41: GOLD=Program PRED=Anggaran
+Tweet 41: GOLD=none PRED=Magang
+Tweet 42: GOLD=none PRED=Magang
+Tweet 43: GOLD=none PRED=Magang
+Tweet 44: GOLD=none PRED=Anggaran

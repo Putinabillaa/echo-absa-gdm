@@ -16,17 +16,14 @@ dependencies = [
 ]
 
 [project.scripts]
-preprocess = "preprocess.preprocess:main"
-mistral = "absa.models.mistral:main"
-gemini = "absa.models.gemini:main"
-gptabsa = "absa.models.gpt:main"
-pyabsa = "absa.models.pyabsa:main"
-dp = "absa.models.dp:main"
-metric_calc = "absa.metrics.metric_calc:main"
-community = "gdm.community:main"
-absa_community_merge = "gdm.absa_community_merge:main"
-consensus = "gdm.consensus:main"
-main = "main.main:main"
+preprocess = "src.preprocess.preprocess:main"
+gemini = "src.absa.models.gemini:main"
+dp = "src.absa.models.dp:main"
+metric_calc = "src.absa.metrics.metric_calc:main"
+community = "src.gdm.community:main"
+absa_community_merge = "src.gdm.absa_community_merge:main"
+consensus = "src.gdm.consensus:main"
+main = "src.main.main:main"
 
 [tool.setuptools.packages.find]
-include = ["preprocess", "absa", "gdm", "main"]
+include = ["src", "preprocess", "absa", "gdm", "main"]

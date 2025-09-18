@@ -1,0 +1,143 @@
+EVALUATION SUMMARY
+==================================================
+Total tweets evaluated: 437
+Sentiment pairs calculated: 145
+Sentiment calculation note: Only calculated for overlapping aspects between gold and predicted
+
+PER-CLASS METRICS (ASPECT DETECTION):
+--------------------------------------------------
+Aplikasi                  Precision: 0.1538  Recall: 0.0909  F1: 0.1143
+Biaya                     Precision: 0.3871  Recall: 0.4286  F1: 0.4068
+Implementasi              Precision: 0.3929  Recall: 0.1789  F1: 0.2458
+Layanan                   Precision: 0.0417  Recall: 0.2000  F1: 0.0690
+Peserta                   Precision: 0.1429  Recall: 0.0185  F1: 0.0328
+Produk Vaksin             Precision: 0.4226  Recall: 0.6516  F1: 0.5127
+Umum                      Precision: 0.2222  Recall: 0.0400  F1: 0.0678
+
+ASPECT DETECTION SUMMARY:
+F1 macro: 0.2070
+F1 micro: 0.3108
+
+SENTIMENT ANALYSIS RESULTS:
+--------------------------------------------------
+Sentiment pairs evaluated: 145
+Sentiment Macro F1 (argmax): 0.3313
+Sentiment Micro F1 (argmax): 0.4966
+Sentiment Weighted F1 (argmax): 0.5103
+Sentiment MSE: 0.3104
+Sentiment Log Loss: 2.6985
+Sentiment Brier Score: 1.2303
+Baseline Brier Score: 0.8733
+
+COMBINED METRICS:
+--------------------------------------------------
+Exact match (aspect+sentiment): 0.1304
+Fixed sentiment order: ['neg', 'neu', 'pos']
+
+SENTIMENT CLASSIFICATION REPORT:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+         neg       0.66      0.46      0.54        93
+         neu       0.00      0.00      0.00         0
+         pos       0.38      0.56      0.45        52
+
+    accuracy                           0.50       145
+   macro avg       0.35      0.34      0.33       145
+weighted avg       0.56      0.50      0.51       145
+
+CUSTOM CONFUSION MATRIX (with 'none'):
+--------------------------------------------------
+Aplikasi,Biaya,Implementasi,Layanan,Peserta,Produk Vaksin,Umum,none
+Aplikasi,2,2,2,2,0,9,0,5
+Biaya,0,12,2,2,0,5,3,4
+Implementasi,1,2,22,19,2,35,3,39
+Layanan,0,1,2,3,0,7,0,2
+Peserta,6,2,5,10,1,20,3,7
+Produk Vaksin,1,5,6,13,3,101,2,24
+Umum,3,6,13,18,1,51,4,4
+none,0,1,4,5,0,11,3,0
+
+MULTILABEL CONFUSION MATRICES:
+--------------------------------------------------
+
+Aspect: Aplikasi
+[[404  11]
+ [ 20   2]]
+
+Aspect: Biaya
+[[390  19]
+ [ 16  12]]
+
+Aspect: Implementasi
+[[280  34]
+ [101  22]]
+
+Aspect: Layanan
+[[353  69]
+ [ 12   3]]
+
+Aspect: Peserta
+[[377   6]
+ [ 53   1]]
+
+Aspect: Produk Vaksin
+[[144 138]
+ [ 54 101]]
+
+Aspect: Umum
+[[323  14]
+ [ 96   4]]
+
+MISMATCHED PREDICTIONS (first 50):
+--------------------------------------------------
+Tweet 1432038325540425728: GOLD=Umum PRED=Layanan
+Tweet 1421115366063759361: GOLD=Implementasi PRED=Layanan
+Tweet 1421115366063759361: GOLD=none PRED=Produk Vaksin
+Tweet 1431475123706490882: GOLD=Aplikasi PRED=Produk Vaksin
+Tweet 1431822775107289089: GOLD=Umum PRED=Layanan
+Tweet 1432261141602856963: GOLD=Aplikasi PRED=Implementasi
+Tweet 1432209923023130626: GOLD=Biaya PRED=Layanan
+Tweet 1432195601416933382: GOLD=Biaya PRED=Layanan
+Tweet 1432223084254097414: GOLD=Umum PRED=Produk Vaksin
+Tweet 1450418699567972358: GOLD=Umum PRED=Layanan
+Tweet 1450303520406597639: GOLD=Implementasi PRED=Produk Vaksin
+Tweet 1354281434970681350: GOLD=Implementasi PRED=none
+Tweet 1354844226672947209: GOLD=Produk Vaksin PRED=Aplikasi
+Tweet 1354225181762306057: GOLD=Umum PRED=Layanan
+Tweet 1374267232600031244: GOLD=Umum PRED=Peserta
+Tweet 1450297173778698251: GOLD=Implementasi PRED=Produk Vaksin
+Tweet 1421116052994363404: GOLD=Implementasi PRED=Produk Vaksin
+Tweet 1450301104315531286: GOLD=Umum PRED=Produk Vaksin
+Tweet 1383654893613768719: GOLD=Peserta PRED=Produk Vaksin
+Tweet 1451253781933395989: GOLD=Aplikasi PRED=Layanan
+Tweet 1451253781933395989: GOLD=Produk Vaksin PRED=none
+Tweet 1432193861296656386: GOLD=Produk Vaksin PRED=none
+Tweet 1450298574961471488: GOLD=Produk Vaksin PRED=none
+Tweet 1420755995328974848: GOLD=Peserta PRED=none
+Tweet 1420755995328974848: GOLD=Layanan PRED=none
+Tweet 1451098880620171264: GOLD=Umum PRED=Implementasi
+Tweet 1409503956720488448: GOLD=Umum PRED=Produk Vaksin
+Tweet 1352958415509721088: GOLD=Implementasi PRED=Produk Vaksin
+Tweet 1398893111506440192: GOLD=Implementasi PRED=Umum
+Tweet 1432193840350302208: GOLD=Layanan PRED=Produk Vaksin
+Tweet 1431476794570379264: GOLD=Produk Vaksin PRED=Layanan
+Tweet 1432215005621981185: GOLD=Peserta PRED=none
+Tweet 1353593189895049218: GOLD=Umum PRED=Produk Vaksin
+Tweet 1421124226333872130: GOLD=Peserta PRED=Layanan
+Tweet 1443067007167959042: GOLD=Umum PRED=Layanan
+Tweet 1443098733571280898: GOLD=Aplikasi PRED=Implementasi
+Tweet 1421128563869159426: GOLD=Implementasi PRED=none
+Tweet 1352980608377491459: GOLD=Biaya PRED=Produk Vaksin
+Tweet 1352980608377491459: GOLD=Implementasi PRED=none
+Tweet 1432199331520516100: GOLD=Peserta PRED=Produk Vaksin
+Tweet 1349567241583398916: GOLD=Implementasi PRED=Aplikasi
+Tweet 1451434206282715138: GOLD=Layanan PRED=Implementasi
+Tweet 1386908896548163589: GOLD=Umum PRED=Biaya
+Tweet 1431864983625732103: GOLD=Implementasi PRED=Produk Vaksin
+Tweet 1450298460247232519: GOLD=Implementasi PRED=Produk Vaksin
+Tweet 1450298349274337288: GOLD=Produk Vaksin PRED=Layanan
+Tweet 1375817261114527753: GOLD=Peserta PRED=Produk Vaksin
+Tweet 1441778495428825100: GOLD=Peserta PRED=Implementasi
+Tweet 1386594429637566464: GOLD=Biaya PRED=none
+Tweet 1364824852394221568: GOLD=Umum PRED=Produk Vaksin

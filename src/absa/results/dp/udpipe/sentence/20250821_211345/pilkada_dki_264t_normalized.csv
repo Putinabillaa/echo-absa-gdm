@@ -1,0 +1,462 @@
+id,original_text,aspect_term,aspect_category,similarity,matched_opinions,total_weight,sentiment_prob,context_phrase,opinion_count
+52,akun kloning seolah2 pendukung menyerang paslon opini dan argumen pmbenaranjangan terkecoh,pmbenaranjangan,Pendukung/Pemilih,0.6037,argumen,-4.0,"[0.0122, 0.0122, 0.9756]",argumen pmbenaranjangan terkecoh,1
+52,akun kloning seolah2 pendukung menyerang paslon opini dan argumen pmbenaranjangan terkecoh,akun,Pendukung/Pemilih,0.7277,menyerang,-3.0,"[0.0161, 0.0161, 0.9677]",akun kloning,1
+52,akun kloning seolah2 pendukung menyerang paslon opini dan argumen pmbenaranjangan terkecoh,paslon,Pendukung/Pemilih,0.6761,menyerang,-3.0,"[0.0161, 0.0161, 0.9677]",menyerang paslon opini,1
+127,kasihan kasihan peluru 1milyar rw tidak mempan menangin pilkada,peluru,Pendukung/Pemilih,0.5436,kasihan,-4.0,"[0.0122, 0.0122, 0.9756]",kasihan peluru 1milyar,1
+127,kasihan kasihan peluru 1milyar rw tidak mempan menangin pilkada,kasihan,SARA,0.0,kasihan,-4.0,"[0.0122, 0.0122, 0.9756]",kasihan kasihan,1
+149,awas ye kalo dukungan suara pendukung,suara,Pendukung/Pemilih,0.6981,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dukungan suara pendukung,1
+149,awas ye kalo dukungan suara pendukung,pendukung,Pendukung/Pemilih,0.7404,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",suara pendukung,1
+37,aneh deh lebay sangkut pautkan kandidat calgub lebay dukung,sangkut,Pendukung/Pemilih,0.7363,lebay,-4.0,"[0.0122, 0.0122, 0.9756]",lebay sangkut pautkan,1
+37,aneh deh lebay sangkut pautkan kandidat calgub lebay dukung,pautkan,Pendukung/Pemilih,0.711,lebay,-4.0,"[0.0122, 0.0122, 0.9756]",sangkut pautkan kandidat,1
+135,allah swt ucapkan syukur dan terimakasih makna 17 suara,suara,Pendukung/Pemilih,0.707,makna,5.0,"[0.9804, 0.0098, 0.0098]",17 suara,1
+238,terima kasih teruntuk pendukung kalianlah pembeda,kasih,Pendukung/Pemilih,0.3506,terima,2.0,"[0.9524, 0.0238, 0.0238]",terima kasih teruntuk,1
+250,terima kasih keistiqomahan relawan tlh mengantarkan signifikan,kasih,SARA,0.0,terima,2.0,"[0.9524, 0.0238, 0.0238]",terima kasih keistiqomahan,1
+250,terima kasih keistiqomahan relawan tlh mengantarkan signifikan,keistiqomahan,SARA,0.0,terima,2.0,"[0.9524, 0.0238, 0.0238]",kasih keistiqomahan relawan,1
+172,om aa lepas kalah tutup mulut tidak koar bongkar surabaya,om,Pendukung/Pemilih,0.7673,kalah,4.0,"[0.9756, 0.0122, 0.0122]",om aa,1
+172,om aa lepas kalah tutup mulut tidak koar bongkar surabaya,surabaya,Politik Uang,0.4452,bongkar,3.0,"[0.9677, 0.0161, 0.0161]",bongkar surabaya,1
+122,pencatutan nama dan mpo melanggar hukum tidak wkwkwkwkkwkk,pencatutan,Pendukung/Pemilih,0.5875,melanggar,5.0,"[0.9804, 0.0098, 0.0098]",pencatutan nama,1
+122,pencatutan nama dan mpo melanggar hukum tidak wkwkwkwkkwkk,hukum,Pendukung/Pemilih,0.5667,melanggar,5.0,"[0.9804, 0.0098, 0.0098]",melanggar hukum tidak,1
+260,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi,pastilah,Pendukung/Pemilih,0.6716,suka,-3.0,"[0.0161, 0.0161, 0.9677]",pastilah kan,1
+260,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi,mas,Politik Uang,0.3956,lari,-2.0,"[0.0238, 0.0238, 0.9524]",lari mas aniessandi,1
+260,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi,lari,Pendukung/Pemilih,0.5718,kalah,4.0,"[0.9756, 0.0122, 0.0122]",nya lari mas,1
+260,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi,pas,Tokoh dan Partai,0.0119,kalah,4.0,"[0.9756, 0.0122, 0.0122]",ahok pas sudah,1
+260,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi,dukungan,SARA,0.254,kalah,4.0,"[0.9756, 0.0122, 0.0122]",otomatis dukungan nya,1
+260,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi,ahok,Tokoh dan Partai,0.0,suka,-3.0,"[0.0161, 0.0161, 0.9677]",suka ahok pas,1
+80,banteng garuda ksatria gentle cinta,garuda,Pendukung/Pemilih,0.5461,banteng,-3.0,"[0.0161, 0.0161, 0.9677]",banteng garuda ksatria,1
+80,banteng garuda ksatria gentle cinta,ksatria,Strategi Kampanye,0.4398,banteng,-3.0,"[0.0161, 0.0161, 0.9677]",garuda ksatria gentle,1
+86,gara-gara ektp dikorupsi fotoku mirip pelan tapi pasti mirip stickmoticons,ektp,Politik Uang,0.4145,gara-gara,-5.0,"[0.0098, 0.0098, 0.9804]",gara-gara ektp dikorupsi,1
+131,nih antasari kalah melempem benerbener akting,nih,Pendukung/Pemilih,0.6975,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",nih antasari,1
+104,ingat tidak bisa modal omongan tapi kerja nyata,omongan,Politik Uang,0.2921,modal,-2.0,"[0.0238, 0.0238, 0.9524]",modal omongan tapi,1
+104,ingat tidak bisa modal omongan tapi kerja nyata,modal,SARA,0.0,ingat,-2.0,"[0.0238, 0.0238, 0.9524]",bisa modal omongan,1
+104,ingat tidak bisa modal omongan tapi kerja nyata,kerja,Tokoh dan Partai,0.0,omongan,4.0,"[0.9756, 0.0122, 0.0122]",tapi kerja nyata,1
+177,paslon salah langkah sandi bukan tidak mungkin bumerang gagal dapat suara,suara,Politik Uang,0.3303,gagal,4.0,"[0.9756, 0.0122, 0.0122]",dapat suara,1
+177,paslon salah langkah sandi bukan tidak mungkin bumerang gagal dapat suara,sandi,Pendukung/Pemilih,0.548,langkah,-4.0,"[0.0122, 0.0122, 0.9756]",langkah sandi bukan,1
+177,paslon salah langkah sandi bukan tidak mungkin bumerang gagal dapat suara,bumerang,Strategi Kampanye,0.6555,gagal,4.0,"[0.9756, 0.0122, 0.0122]",mungkin bumerang gagal,1
+78,manakah sang ksatria samurai prajurit pembangun semangat harapan pahlawan dinantinantikan rakyat,harapan,Pendukung/Pemilih,0.516,semangat,4.0,"[0.9756, 0.0122, 0.0122]",semangat harapan pahlawan,1
+47,awas ye kalo dukungan suara pendukung,suara,Pendukung/Pemilih,0.6981,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dukungan suara pendukung,1
+47,awas ye kalo dukungan suara pendukung,pendukung,Pendukung/Pemilih,0.7404,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",suara pendukung,1
+105,pelaku pengirim sms gelap antasari azhar,antasari,Politik Uang,0.5241,gelap,-4.0,"[0.0122, 0.0122, 0.9756]",gelap antasari azhar,1
+105,pelaku pengirim sms gelap antasari azhar,pelaku,Pendukung/Pemilih,0.569,gelap,-4.0,"[0.0122, 0.0122, 0.9756]",pelaku pengirim,1
+251,tuduhan kerap dilontarkan anak ingusan dan mayor tak terdengar dudah berubah sanjungan,mayor,Pendukung/Pemilih,0.7224,anak,3.0,"[0.9677, 0.0161, 0.0161]",dan mayor tak,1
+251,tuduhan kerap dilontarkan anak ingusan dan mayor tak terdengar dudah berubah sanjungan,ingusan,Pendukung/Pemilih,0.672,anak,3.0,"[0.9677, 0.0161, 0.0161]",anak ingusan dan,1
+111,jangan curiga saldonya bisa kenti blt berbuat baik belum apa-apa sudah curiga mekanismenya,saldo,Pendukung/Pemilih,0.7226,curiga,-1.0,"[0.0385, 0.1923, 0.7692]",curiga saldo nya,1
+111,jangan curiga saldonya bisa kenti blt berbuat baik belum apa-apa sudah curiga mekanismenya,mekanisme,Pendukung/Pemilih,0.6967,curiga,-1.0,"[0.0385, 0.1923, 0.7692]",curiga mekanisme nya,1
+11,ahoker masih bully,ahoker,Pendukung/Pemilih,0.5894,bully,-5.0,"[0.0098, 0.0098, 0.9804]",ahoker masih,1
+208,sayang mayor termasuk dikader pemimpin taruna teratas lagi2 pilihan,sayang,SARA,0.1579,termasuk,-3.0,"[0.0161, 0.0161, 0.9677]",sayang mayor,1
+208,sayang mayor termasuk dikader pemimpin taruna teratas lagi2 pilihan,pilihan,Pendukung/Pemilih,0.71,teratas,3.0,"[0.9677, 0.0161, 0.0161]",lagi2 pilihan,1
+208,sayang mayor termasuk dikader pemimpin taruna teratas lagi2 pilihan,mayor,SARA,0.0,sayang,3.0,"[0.9677, 0.0161, 0.0161]",sayang mayor termasuk,1
+224,setuju banget tidak bersyukur kemrin tidak banjir sibuk pembelaan,banget,SARA,0.0743,setuju,-4.0,"[0.0122, 0.0122, 0.9756]",setuju banget tidak,1
+224,setuju banget tidak bersyukur kemrin tidak banjir sibuk pembelaan,pembelaan,Politik Uang,0.4253,sibuk,-4.0,"[0.0122, 0.0122, 0.9756]",sibuk pembelaan,1
+224,setuju banget tidak bersyukur kemrin tidak banjir sibuk pembelaan,kemrin,SARA,0.0,bersyukur,-5.0,"[0.0098, 0.0098, 0.9804]",bersyukur kemrin tidak,1
+99,hellloooo suara rakyat mengerti suara rakyat bukan suaranya dek ngopi gih,suara,Pendukung/Pemilih,0.6879,"suara,mengerti",-4.0,"[0.0122, 0.0122, 0.9756]",hellloooo suara rakyat,2
+99,hellloooo suara rakyat mengerti suara rakyat bukan suaranya dek ngopi gih,rakyat,Pendukung/Pemilih,0.4565,suara,-2.0,"[0.0238, 0.0238, 0.9524]",suara rakyat mengerti,1
+65,cari teman padahal sudah gubernur,teman,Pendukung/Pemilih,0.3781,cari,-3.0,"[0.0161, 0.0161, 0.9677]",cari teman padahal,1
+5,agus tersingkir ahok anies rebutan suara ahy kepentingan kelompok,ahok,Tokoh dan Partai,0.0,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",tersingkir ahok anies,1
+5,agus tersingkir ahok anies rebutan suara ahy kepentingan kelompok,rebutan,Tokoh dan Partai,0.0335,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",anies rebutan suara,1
+5,agus tersingkir ahok anies rebutan suara ahy kepentingan kelompok,kelompok,Pendukung/Pemilih,0.8194,kepentingan,5.0,"[0.9804, 0.0098, 0.0098]",kepentingan kelompok,1
+165,meskipun kehilangan kesempatan menduduki gubernur dki 20172022,kesempatan,Pendukung/Pemilih,0.693,kehilangan,-4.0,"[0.0122, 0.0122, 0.9756]",kehilangan kesempatan menduduki,1
+53,konstituen risih mulutnya ahok tapi pilih anies gerombolan khilafah dibelakangnya memilih ahok,anies,Tokoh dan Partai,0.0,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih anies gerombolan,1
+60,blunder hina2 tapi butuh 17 suara dan harus ngemis hina2 jleb,suara,Pendukung/Pemilih,0.6958,butuh,-5.0,"[0.0098, 0.0098, 0.9804]",17 suara dan,1
+157,masih mencaci maki dan pepo memo nya harus mengemis suara 17 orang-orang hina,pepo,Pendukung/Pemilih,0.7095,maki,-5.0,"[0.0098, 0.0098, 0.9804]",dan pepo memo,1
+157,masih mencaci maki dan pepo memo nya harus mengemis suara 17 orang-orang hina,maki,Pendukung/Pemilih,0.7174,mencaci,-5.0,"[0.0098, 0.0098, 0.9804]",mencaci maki dan,1
+157,masih mencaci maki dan pepo memo nya harus mengemis suara 17 orang-orang hina,orang-orang,Pendukung/Pemilih,0.6062,suara,2.0,"[0.9524, 0.0238, 0.0238]",17 orang-orang hina,1
+175,pakar surabaya surat anas urbaningrum jeruji besi sindiran,surat,Pendukung/Pemilih,0.6988,pakar,-1.0,"[0.0385, 0.1923, 0.7692]",surabaya surat anas,1
+175,pakar surabaya surat anas urbaningrum jeruji besi sindiran,surabaya,Pendukung/Pemilih,0.6226,pakar,-1.0,"[0.0385, 0.1923, 0.7692]",pakar surabaya surat,1
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi gubernur,pilkada,Pendukung/Pemilih,0.6767,debat,-3.0,"[0.0161, 0.0161, 0.9677]",debat pilkada dki,1
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi gubernur,gubernur,SARA,0.0,jual,-1.0,"[0.0385, 0.1923, 0.7692]",mimpi gubernur,1
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi gubernur,sylvi,Politik Uang,0.4512,jual,-1.0,"[0.0385, 0.1923, 0.7692]",sylvi aniessandiaga,1
+7,ah bukannya bang aji disitu bikin kalah,bikin,Pendukung/Pemilih,0.4893,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",disitu bikin kalah,1
+168,mungkin rendah hati bisa pendukung paslon 1 masih hati melihat foto,hati,Pendukung/Pemilih,0.598,"pendukung,melihat",7.0,"[0.9859, 0.007, 0.007]",rendah hati bisa,2
+168,mungkin rendah hati bisa pendukung paslon 1 masih hati melihat foto,pendukung,Tokoh dan Partai,0.2226,melihat,3.0,"[0.9677, 0.0161, 0.0161]",bisa pendukung paslon,1
+168,mungkin rendah hati bisa pendukung paslon 1 masih hati melihat foto,foto,Pendukung/Pemilih,0.5902,melihat,3.0,"[0.9677, 0.0161, 0.0161]",melihat foto,1
+168,mungkin rendah hati bisa pendukung paslon 1 masih hati melihat foto,paslon,Pendukung/Pemilih,0.737,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung paslon 1,1
+38,anggap bisa sebulan dijual pindah tangan orang-orang elit partai gerindra dan pks,tangan,Pendukung/Pemilih,0.5259,pindah,1.0,"[0.7692, 0.1923, 0.0385]",pindah tangan orang-orang,1
+38,anggap bisa sebulan dijual pindah tangan orang-orang elit partai gerindra dan pks,orang-orang,Pendukung/Pemilih,0.5592,pindah,1.0,"[0.7692, 0.1923, 0.0385]",tangan orang-orang elit,1
+42,antasari konferensi pers surabaya surabaya konferensi pers surabaya rengekan anak kecil,pers,Pendukung/Pemilih,0.725,konferensi,2.0,"[0.9524, 0.0238, 0.0238]",konferensi pers surabaya,1
+42,antasari konferensi pers surabaya surabaya konferensi pers surabaya rengekan anak kecil,surabaya,Pendukung/Pemilih,0.6974,konferensi,2.0,"[0.9524, 0.0238, 0.0238]",pers surabaya surabaya,1
+246,tim tidak tidur,tim,Pendukung/Pemilih,0.615,tidur,-3.0,"[0.0161, 0.0161, 0.9677]",tim tidak,1
+67,coba beretika dukungan konstituen setia jangan menipu membuat meme dan berita palsu rachland nashidik,konstituen,Pendukung/Pemilih,0.5741,dukungan,-4.0,"[0.0122, 0.0122, 0.9756]",dukungan konstituen setia,1
+67,coba beretika dukungan konstituen setia jangan menipu membuat meme dan berita palsu rachland nashidik,palsu,Pendukung/Pemilih,0.6745,berita,4.0,"[0.9756, 0.0122, 0.0122]",berita palsu rachland,1
+67,coba beretika dukungan konstituen setia jangan menipu membuat meme dan berita palsu rachland nashidik,setia,Tokoh dan Partai,0.2918,dukungan,-4.0,"[0.0122, 0.0122, 0.9756]",konstituen setia jangan,1
+67,coba beretika dukungan konstituen setia jangan menipu membuat meme dan berita palsu rachland nashidik,dukungan,Pendukung/Pemilih,0.6491,menipu,3.0,"[0.9677, 0.0161, 0.0161]",beretika dukungan konstituen,1
+129,kasihan tidak menyadari musuh dalam sarung selfienya motivasi terselubung hmmm,sarung,Pendukung/Pemilih,0.5521,menyadari,-2.0,"[0.0238, 0.0238, 0.9524]",dalam sarung selfie,1
+129,kasihan tidak menyadari musuh dalam sarung selfienya motivasi terselubung hmmm,motivasi,Pendukung/Pemilih,0.6121,menyadari,-2.0,"[0.0238, 0.0238, 0.9524]",nya motivasi terselubung,1
+129,kasihan tidak menyadari musuh dalam sarung selfienya motivasi terselubung hmmm,hmmm,Pendukung/Pemilih,0.7548,terselubung,-5.0,"[0.0098, 0.0098, 0.9804]",terselubung hmmm,1
+129,kasihan tidak menyadari musuh dalam sarung selfienya motivasi terselubung hmmm,kasihan,Tokoh dan Partai,0.0,menyadari,-2.0,"[0.0238, 0.0238, 0.9524]",kasihan tidak,1
+129,kasihan tidak menyadari musuh dalam sarung selfienya motivasi terselubung hmmm,musuh,Pendukung/Pemilih,0.7517,menyadari,-2.0,"[0.0238, 0.0238, 0.9524]",menyadari musuh dalam,1
+35,amieeennnnn dan tidak lupa janji2 manis kampanye sang mayor sejati,kampanye,Politik Uang,0.308,lupa,-1.0,"[0.0385, 0.1923, 0.7692]",manis kampanye sang,1
+35,amieeennnnn dan tidak lupa janji2 manis kampanye sang mayor sejati,janji2,Pendukung/Pemilih,0.5295,lupa,-1.0,"[0.0385, 0.1923, 0.7692]",lupa janji2 manis,1
+35,amieeennnnn dan tidak lupa janji2 manis kampanye sang mayor sejati,mayor,Pendukung/Pemilih,0.62,kampanye,-3.0,"[0.0161, 0.0161, 0.9677]",sang mayor sejati,1
+173,pilkada dki ahy dan surabaya target hoax dan fitnah akunakun pendukung ahok,ahok,Pendukung/Pemilih,0.5539,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahok,1
+173,pilkada dki ahy dan surabaya target hoax dan fitnah akunakun pendukung ahok,fitnah,Pendukung/Pemilih,0.5835,hoax,-5.0,"[0.0098, 0.0098, 0.9804]",dan fitnah akunakun,1
+30,akibat pernyataan antasari suara ahy melorot pilkada dki,pilkada,Pendukung/Pemilih,0.6619,melorot,1.0,"[0.7692, 0.1923, 0.0385]",melorot pilkada dki,1
+30,akibat pernyataan antasari suara ahy melorot pilkada dki,pernyataan,Pendukung/Pemilih,0.7536,melorot,1.0,"[0.7692, 0.1923, 0.0385]",akibat pernyataan antasari,1
+84,enam kampanye pilkada kubu ahy pendukung ahok sibuk serang program ahy tidak kampanye program ahok,pilkada,Pendukung/Pemilih,0.7436,kampanye,3.0,"[0.9677, 0.0161, 0.0161]",kampanye pilkada kubu,1
+84,enam kampanye pilkada kubu ahy pendukung ahok sibuk serang program ahy tidak kampanye program ahok,ahok,Tokoh dan Partai,0.0414,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahok sibuk,1
+84,enam kampanye pilkada kubu ahy pendukung ahok sibuk serang program ahy tidak kampanye program ahok,program,Pendukung/Pemilih,0.6556,"pendukung,kampanye",7.0,"[0.9859, 0.007, 0.007]",serang program ahy,2
+84,enam kampanye pilkada kubu ahy pendukung ahok sibuk serang program ahy tidak kampanye program ahok,kampanye,Strategi Kampanye,0.7232,kampanye,3.0,"[0.9677, 0.0161, 0.0161]",enam kampanye pilkada,1
+137,ahy kalah berpidato timnya terdiam menangis melepaskan pilkada dki,pilkada,SARA,0.4096,melepaskan,-5.0,"[0.0098, 0.0098, 0.9804]",melepaskan pilkada dki,1
+137,ahy kalah berpidato timnya terdiam menangis melepaskan pilkada dki,ahy,Pendukung/Pemilih,0.6939,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy kalah,1
+215,sejujurnya penilaian subyektif terlalu cepat ahy 2019 kalah pilkada bukan modal tapi catatan negatif,pilkada,Tokoh dan Partai,0.0,kalah,4.0,"[0.9756, 0.0122, 0.0122]",kalah pilkada bukan,1
+215,sejujurnya penilaian subyektif terlalu cepat ahy 2019 kalah pilkada bukan modal tapi catatan negatif,ahy,Politik Uang,0.4995,kalah,4.0,"[0.9756, 0.0122, 0.0122]",cepat ahy 2019,1
+215,sejujurnya penilaian subyektif terlalu cepat ahy 2019 kalah pilkada bukan modal tapi catatan negatif,catatan,Pendukung/Pemilih,0.6466,kalah,4.0,"[0.9756, 0.0122, 0.0122]",tapi catatan negatif,1
+249,tolak bajingan tengik ahy tukang sogok pemilih bangsat ahy sungguh berbahaya,bajingan,Pendukung/Pemilih,0.7792,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",tolak bajingan tengik,1
+249,tolak bajingan tengik ahy tukang sogok pemilih bangsat ahy sungguh berbahaya,sogok,Tokoh dan Partai,0.0119,tukang,-2.0,"[0.0238, 0.0238, 0.9524]",tukang sogok pemilih,1
+249,tolak bajingan tengik ahy tukang sogok pemilih bangsat ahy sungguh berbahaya,pemilih,Tokoh dan Partai,0.0,tukang,-2.0,"[0.0238, 0.0238, 0.9524]",sogok pemilih bangsat,1
+249,tolak bajingan tengik ahy tukang sogok pemilih bangsat ahy sungguh berbahaya,sungguh,Politik Uang,0.2786,bangsat,-5.0,"[0.0098, 0.0098, 0.9804]",ahy sungguh berbahaya,1
+249,tolak bajingan tengik ahy tukang sogok pemilih bangsat ahy sungguh berbahaya,ahy,Pendukung/Pemilih,0.7202,"tolak,sungguh",0.0,"[0.0, 1.0, 0.0]",tengik ahy tukang,2
+249,tolak bajingan tengik ahy tukang sogok pemilih bangsat ahy sungguh berbahaya,tukang,Tokoh dan Partai,0.3993,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",ahy tukang sogok,1
+249,tolak bajingan tengik ahy tukang sogok pemilih bangsat ahy sungguh berbahaya,tengik,Pendukung/Pemilih,0.7941,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",bajingan tengik ahy,1
+248,tolak ahy berpolitik agama,ahy,Pendukung/Pemilih,0.5706,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",tolak ahy berpolitik,1
+45,astaga pendukung ahy tidak terima hasil surveyharusnya tolak acuan semangat,pendukung,Pendukung/Pemilih,0.6403,astaga,-3.0,"[0.0161, 0.0161, 0.9677]",astaga pendukung ahy,1
+45,astaga pendukung ahy tidak terima hasil surveyharusnya tolak acuan semangat,acuan,Pendukung/Pemilih,0.7523,tolak,4.0,"[0.9756, 0.0122, 0.0122]",tolak acuan semangat,1
+45,astaga pendukung ahy tidak terima hasil surveyharusnya tolak acuan semangat,hasil,SARA,0.0,tolak,4.0,"[0.9756, 0.0122, 0.0122]",terima hasil surveyharusnya,1
+45,astaga pendukung ahy tidak terima hasil surveyharusnya tolak acuan semangat,astaga,Pendukung/Pemilih,0.4837,terima,-2.0,"[0.0238, 0.0238, 0.9524]",astaga pendukung,1
+45,astaga pendukung ahy tidak terima hasil surveyharusnya tolak acuan semangat,ahy,Tokoh dan Partai,0.2922,pendukung,-4.0,"[0.0122, 0.0122, 0.9756]",pendukung ahy tidak,1
+195,sahsah tolak ukur kedewasaan dki kalo ahy menang pola pikir masih primitif,ukur,Pendukung/Pemilih,0.7504,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",tolak ukur kedewasaan,1
+195,sahsah tolak ukur kedewasaan dki kalo ahy menang pola pikir masih primitif,kedewasaan,SARA,0.235,ukur,3.0,"[0.9677, 0.0161, 0.0161]",ukur kedewasaan dki,1
+195,sahsah tolak ukur kedewasaan dki kalo ahy menang pola pikir masih primitif,pikir,Pendukung/Pemilih,0.7883,pola,3.0,"[0.9677, 0.0161, 0.0161]",pola pikir masih,1
+195,sahsah tolak ukur kedewasaan dki kalo ahy menang pola pikir masih primitif,sahsah,Pendukung/Pemilih,0.5052,menang,4.0,"[0.9756, 0.0122, 0.0122]",sahsah tolak,1
+195,sahsah tolak ukur kedewasaan dki kalo ahy menang pola pikir masih primitif,pola,Pendukung/Pemilih,0.6211,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pola pikir,1
+247,seleksi tendemnya pilkada dki ahy kalah tendemnya salah pilih mengurangi kualitas ahy,seleksi,Pendukung/Pemilih,0.7692,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",seleksi tendemnya,1
+247,seleksi tendemnya pilkada dki ahy kalah tendemnya salah pilih mengurangi kualitas ahy,ahy,Tokoh dan Partai,0.4906,kualitas,4.0,"[0.9756, 0.0122, 0.0122]",dki ahy kalah,1
+242,segelintir pendukung ahy ditikung tweet akun resmi parpol pendukung aniessandi,aniessandi,Tokoh dan Partai,0.2686,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung aniessandi,1
+242,segelintir pendukung ahy ditikung tweet akun resmi parpol pendukung aniessandi,ahy,Pendukung/Pemilih,0.539,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahy ditikung,1
+23,ahy menanggung akibat cuitan ayahnya tak produktif,ahy,Pendukung/Pemilih,0.6949,menanggung,2.0,"[0.9524, 0.0238, 0.0238]",ahy menanggung,1
+23,ahy menanggung akibat cuitan ayahnya tak produktif,cuitan,Pendukung/Pemilih,0.6272,produktif,-2.0,"[0.0238, 0.0238, 0.9524]",akibat cuitan ayah,1
+210,reaksi pendukung ahy tak bersikap bawa perasaan tak pecundang ajang pilkada,pilkada,Pendukung/Pemilih,0.6864,ajang,3.0,"[0.9677, 0.0161, 0.0161]",ajang pilkada,1
+210,reaksi pendukung ahy tak bersikap bawa perasaan tak pecundang ajang pilkada,pendukung,Pendukung/Pemilih,0.7345,reaksi,-2.0,"[0.0238, 0.0238, 0.9524]",reaksi pendukung ahy,1
+210,reaksi pendukung ahy tak bersikap bawa perasaan tak pecundang ajang pilkada,ahy,Pendukung/Pemilih,0.7582,pendukung,-4.0,"[0.0122, 0.0122, 0.9756]",pendukung ahy tak,1
+19,mengenang pidato kekalahan,pidato,Strategi Kampanye,0.6065,mengenang,3.0,"[0.9677, 0.0161, 0.0161]",mengenang pidato kekalahan,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,antasari,Pendukung/Pemilih,0.6786,efek,3.0,"[0.9677, 0.0161, 0.0161]",dan antasari efek,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,efek,Pendukung/Pemilih,0.7587,debat,3.0,"[0.9677, 0.0161, 0.0161]",debat efek aksi,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,aksi,Pendukung/Pemilih,0.7391,efek,3.0,"[0.9677, 0.0161, 0.0161]",efek aksi 112,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,ahy,Pendukung/Pemilih,0.7619,lini,4.0,"[0.9756, 0.0122, 0.0122]",pertahanan ahy rapuh,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,pertahanan,Pendukung/Pemilih,0.7989,lini,4.0,"[0.9756, 0.0122, 0.0122]",lini pertahanan ahy,1
+85,gagal pilkada dki jakarta ahy diisukan maju pilgub jatim,pilkada,Tokoh dan Partai,0.2582,gagal,-4.0,"[0.0122, 0.0122, 0.9756]",gagal pilkada dki,1
+57,survey sementara ahy masuk 3 selamat,ahy,Pendukung/Pemilih,0.7164,masuk,-3.0,"[0.0161, 0.0161, 0.9677]",sementara ahy masuk,1
+57,survey sementara ahy masuk 3 selamat,survey,Pendukung/Pemilih,0.7192,masuk,-3.0,"[0.0161, 0.0161, 0.9677]",survey sementara,1
+161,meninggalkan zona aman dan nyaman kemajuan jakarta hasil tak harapan ahy,zona,Pendukung/Pemilih,0.7459,meninggalkan,-4.0,"[0.0122, 0.0122, 0.9756]",meninggalkan zona aman,1
+161,meninggalkan zona aman dan nyaman kemajuan jakarta hasil tak harapan ahy,harapan,Pendukung/Pemilih,0.7715,hasil,-3.0,"[0.0161, 0.0161, 0.9677]",tak harapan ahy,1
+128,kasihan ahy kalah walaupun sudah umroh dibantu doa 7 juta umatternyata allah netral tidak berpolitik,ahy,Politik Uang,0.224,kasihan,4.0,"[0.9756, 0.0122, 0.0122]",kasihan ahy kalah,1
+128,kasihan ahy kalah walaupun sudah umroh dibantu doa 7 juta umatternyata allah netral tidak berpolitik,doa,Pendukung/Pemilih,0.5452,dibantu,2.0,"[0.9524, 0.0238, 0.0238]",dibantu doa 7,1
+128,kasihan ahy kalah walaupun sudah umroh dibantu doa 7 juta umatternyata allah netral tidak berpolitik,kasihan,Pendukung/Pemilih,0.5156,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kasihan ahy,1
+118,jual baju bekas ahy 3 pm for info,baju,Pendukung/Pemilih,0.5993,jual,1.0,"[0.7692, 0.1923, 0.0385]",jual baju bekas,1
+118,jual baju bekas ahy 3 pm for info,ahy,Pendukung/Pemilih,0.6123,jual,1.0,"[0.7692, 0.1923, 0.0385]",bekas ahy 3,1
+28,ahy vocalis band rock lompat lompat mulu bang kerjaannya,kerjaan,Pendukung/Pemilih,0.7712,mulu,2.0,"[0.9524, 0.0238, 0.0238]",bang kerjaan nya,1
+126,kasihan benar nasib ahy karir tni harus tamat nafsu pepo cepat parpol tidak dagang,nasib,Pendukung/Pemilih,0.6836,kasihan,4.0,"[0.9756, 0.0122, 0.0122]",benar nasib ahy,1
+126,kasihan benar nasib ahy karir tni harus tamat nafsu pepo cepat parpol tidak dagang,nafsu,Pendukung/Pemilih,0.6797,tamat,-3.0,"[0.0161, 0.0161, 0.9677]",tamat nafsu pepo,1
+126,kasihan benar nasib ahy karir tni harus tamat nafsu pepo cepat parpol tidak dagang,kasihan,Politik Uang,0.0798,tamat,-3.0,"[0.0161, 0.0161, 0.9677]",kasihan benar,1
+115,jangan surabaya ahy kalah garagara antasari survey kan sudah menunjukan ahy merosot elektabilitasnya,elektabilitas,Pendukung/Pemilih,0.6554,merosot,-5.0,"[0.0098, 0.0098, 0.9804]",merosot elektabilitas nya,1
+115,jangan surabaya ahy kalah garagara antasari survey kan sudah menunjukan ahy merosot elektabilitasnya,garagara,SARA,0.1684,kalah,4.0,"[0.9756, 0.0122, 0.0122]",kalah garagara antasari,1
+115,jangan surabaya ahy kalah garagara antasari survey kan sudah menunjukan ahy merosot elektabilitasnya,surabaya,Pendukung/Pemilih,0.4956,kalah,4.0,"[0.9756, 0.0122, 0.0122]",jangan surabaya ahy,1
+202,presiden tv rusak ahy tidak hasil qc sementara tidak apa-apa,ahy,Tokoh dan Partai,0.0,rusak,-3.0,"[0.0161, 0.0161, 0.9677]",rusak ahy tidak,1
+202,presiden tv rusak ahy tidak hasil qc sementara tidak apa-apa,hasil,Pendukung/Pemilih,0.4638,rusak,-3.0,"[0.0161, 0.0161, 0.9677]",tidak hasil qc,1
+202,presiden tv rusak ahy tidak hasil qc sementara tidak apa-apa,tv,Tokoh dan Partai,0.2054,presiden,-3.0,"[0.0161, 0.0161, 0.9677]",presiden tv rusak,1
+202,presiden tv rusak ahy tidak hasil qc sementara tidak apa-apa,presiden,Strategi Kampanye,0.5699,rusak,-3.0,"[0.0161, 0.0161, 0.9677]",presiden tv,1
+182,mengenang pidato kekalahan,pidato,Strategi Kampanye,0.6065,mengenang,3.0,"[0.9677, 0.0161, 0.0161]",mengenang pidato kekalahan,1
+217,ahy memang kalah pilkada tetapi menang hati rakyat,hati,Tokoh dan Partai,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang hati rakyat,1
+217,ahy memang kalah pilkada tetapi menang hati rakyat,pilkada,SARA,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kalah pilkada tetapi,1
+217,ahy memang kalah pilkada tetapi menang hati rakyat,ahy,Pendukung/Pemilih,0.7837,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy memang,1
+217,ahy memang kalah pilkada tetapi menang hati rakyat,rakyat,Strategi Kampanye,0.4497,hati,2.0,"[0.9524, 0.0238, 0.0238]",hati rakyat,1
+98,heeebohhhhagus sylvi kalah tps 6 tmpat menggunakan hak pilihnya,tps,Pendukung/Pemilih,0.5014,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kalah tps 6,1
+262,pilih semoga tidak demokrat benar dukung ahok,ahok,Tokoh dan Partai,0.0,dukung,-4.0,"[0.0122, 0.0122, 0.9756]",dukung ahok,1
+75,demokrat ahok gerindra tantangan bermain politik kotor,ahok,Tokoh dan Partai,0.4423,demokrat,-1.7999999999999998,"[0.0263, 0.0263, 0.9474]",demokrat ahok gerindra,0
+62,pendukung mari rapatkan barisan paslon buang issu miring paslon masih dipimpin terdakwa simulut ember,mari,Tokoh dan Partai,0.2822,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung mari rapatkan,1
+93,rakyat menangis melihat kalah bukan aspek pribadi tapi kepentingan rakyat,aspek,Pendukung/Pemilih,0.7622,melihat,-3.0,"[0.0161, 0.0161, 0.9677]",bukan aspek pribadi,1
+93,rakyat menangis melihat kalah bukan aspek pribadi tapi kepentingan rakyat,pribadi,Pendukung/Pemilih,0.6878,aspek,3.0,"[0.9677, 0.0161, 0.0161]",aspek pribadi tapi,1
+93,rakyat menangis melihat kalah bukan aspek pribadi tapi kepentingan rakyat,kepentingan,Politik Uang,0.4621,aspek,3.0,"[0.9677, 0.0161, 0.0161]",tapi kepentingan rakyat,1
+93,rakyat menangis melihat kalah bukan aspek pribadi tapi kepentingan rakyat,rakyat,Pendukung/Pemilih,0.5067,"menangis,kepentingan",0.0,"[0.0, 1.0, 0.0]",rakyat menangis,2
+16,ahy bisa menang pilgub dki bisa ngumpulin 7 bola dragon ball rolling on floor laughing rolling on floor laughing,pilgub,Tokoh dan Partai,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pilgub dki,1
+16,ahy bisa menang pilgub dki bisa ngumpulin 7 bola dragon ball rolling on floor laughing rolling on floor laughing,ahy,Pendukung/Pemilih,0.6237,menang,4.0,"[0.9756, 0.0122, 0.0122]",ahy bisa,1
+6,ah lihat ahy ingat norman kamaru ahy jualan bubur haji smiling face with open mouth smiling eyes,bubur,Politik Uang,0.3382,jualan,1.0,"[0.7692, 0.1923, 0.0385]",jualan bubur haji,1
+6,ah lihat ahy ingat norman kamaru ahy jualan bubur haji smiling face with open mouth smiling eyes,haji,Pendukung/Pemilih,0.5644,jualan,1.0,"[0.7692, 0.1923, 0.0385]",bubur haji smiling,1
+6,ah lihat ahy ingat norman kamaru ahy jualan bubur haji smiling face with open mouth smiling eyes,ahy,Pendukung/Pemilih,0.5716,lihat,3.0,"[0.9677, 0.0161, 0.0161]",lihat ahy ingat,1
+6,ah lihat ahy ingat norman kamaru ahy jualan bubur haji smiling face with open mouth smiling eyes,norman,Pendukung/Pemilih,0.6644,ingat,2.0,"[0.9524, 0.0238, 0.0238]",ingat norman kamaru,1
+21,ahy tersingkir persevering face persevering face hampir pasti dilanjuntukan putaran ahokdjarot vs aniessandi,persevering,Pendukung/Pemilih,0.6106,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",tersingkir persevering face,1
+21,ahy tersingkir persevering face persevering face hampir pasti dilanjuntukan putaran ahokdjarot vs aniessandi,ahy,Pendukung/Pemilih,0.7092,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",ahy tersingkir,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar hujat buka aib,hujat,Pendukung/Pemilih,0.7023,terhindar,-4.0,"[0.0122, 0.0122, 0.9756]",terhindar hujat buka,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar hujat buka aib,sisi,Pendukung/Pemilih,0.6003,tertunda,-3.0,"[0.0161, 0.0161, 0.9677]",kalah sisi negatif,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar hujat buka aib,buka,Pendukung/Pemilih,0.7114,hujat,-5.0,"[0.0098, 0.0098, 0.9804]",hujat buka aib,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar hujat buka aib,ahy,Pendukung/Pemilih,0.6939,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy kalah,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar hujat buka aib,islam,SARA,0.2963,umat,3.0,"[0.9677, 0.0161, 0.0161]",umat islam tertunda,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar hujat buka aib,aib,Pendukung/Pemilih,0.6666,hujat,-5.0,"[0.0098, 0.0098, 0.9804]",buka aib,1
+14,ahy ahy mengomong karakter barusan omongkan melihat sisi negatif tongue oncoming fist,sisi,Pendukung/Pemilih,0.6193,melihat,3.0,"[0.9677, 0.0161, 0.0161]",melihat sisi negatif,1
+17,ahy membicarakan negatif jakarta tidak solusi mengatasi nol thumbs down,jakarta,SARA,0.442,solusi,-3.0,"[0.0161, 0.0161, 0.9677]",negatif jakarta tidak,1
+138,kicauan negatif surabaya diyakini pengaruhi elektabilitas ahy via,surabaya,Pendukung/Pemilih,0.6164,kicauan,-4.0,"[0.0122, 0.0122, 0.9756]",negatif surabaya diyakini,1
+160,menemukan foto lingkaran orang-orang ahy penuh integritas dan kwalitas negatif waspada waspada thumbs down,waspada,Pendukung/Pemilih,0.7522,"waspada,menemukan",5.0,"[0.9804, 0.0098, 0.0098]",negatif waspada waspada,2
+160,menemukan foto lingkaran orang-orang ahy penuh integritas dan kwalitas negatif waspada waspada thumbs down,foto,Pendukung/Pemilih,0.7229,menemukan,2.0,"[0.9524, 0.0238, 0.0238]",menemukan foto lingkaran,1
+160,menemukan foto lingkaran orang-orang ahy penuh integritas dan kwalitas negatif waspada waspada thumbs down,lingkaran,Pendukung/Pemilih,0.6923,foto,3.0,"[0.9677, 0.0161, 0.0161]",foto lingkaran orang-orang,1
+160,menemukan foto lingkaran orang-orang ahy penuh integritas dan kwalitas negatif waspada waspada thumbs down,orang-orang,Pendukung/Pemilih,0.7823,foto,3.0,"[0.9677, 0.0161, 0.0161]",lingkaran orang-orang ahy,1
+160,menemukan foto lingkaran orang-orang ahy penuh integritas dan kwalitas negatif waspada waspada thumbs down,integritas,Pendukung/Pemilih,0.5929,foto,3.0,"[0.9677, 0.0161, 0.0161]",penuh integritas dan,1
+254,si ahy 70 sentimennya negatif wkwkwkface with stuckout tounges,ahy,Pendukung/Pemilih,0.7611,sentimen,-3.0,"[0.0161, 0.0161, 0.9677]",si ahy 70,1
+40,feeling sih menang pasangan aniessandi,feeling,Pendukung/Pemilih,0.7489,menang,4.0,"[0.9756, 0.0122, 0.0122]",feeling sih,1
+40,feeling sih menang pasangan aniessandi,pasangan,Tokoh dan Partai,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pasangan aniessandi,1
+39,lihat mas debat face with stuckout tounges,mas,Pendukung/Pemilih,0.6997,lihat,3.0,"[0.9677, 0.0161, 0.0161]",lihat mas debat,1
+166,2mesti nyuruh pemilih pilih paslon face with open mouth thumbs up oke hand folded hands thinking face smiling face with sunglasses,2mesti,Pendukung/Pemilih,0.7039,nyuruh,-3.0,"[0.0161, 0.0161, 0.9677]",2mesti nyuruh,1
+166,2mesti nyuruh pemilih pilih paslon face with open mouth thumbs up oke hand folded hands thinking face smiling face with sunglasses,pemilih,Tokoh dan Partai,0.3231,nyuruh,-3.0,"[0.0161, 0.0161, 0.9677]",nyuruh pemilih pilih,1
+166,2mesti nyuruh pemilih pilih paslon face with open mouth thumbs up oke hand folded hands thinking face smiling face with sunglasses,paslon,Tokoh dan Partai,0.1886,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih paslon face,1
+134,1kenape tidak dilawan pasangan pilgub jabar demokrat memang harus tegas pilgub dki thinking face thinking face thinking face,demokrat,Pendukung/Pemilih,0.5597,jabar,-3.0,"[0.0161, 0.0161, 0.9677]",jabar demokrat memang,1
+87,gara-gara pakai seragam hitam2 thinking face thinking face thinking face smiling face with open mouth closed eyes smiling face with sunglasses,pakai,Pendukung/Pemilih,0.5067,gara-gara,-5.0,"[0.0098, 0.0098, 0.9804]",gara-gara pakai seragam,1
+261,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi grimacing face,pastilah,Pendukung/Pemilih,0.6716,suka,-3.0,"[0.0161, 0.0161, 0.9677]",pastilah kan,1
+261,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi grimacing face,mas,Politik Uang,0.3956,lari,-2.0,"[0.0238, 0.0238, 0.9524]",lari mas aniessandi,1
+261,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi grimacing face,lari,Pendukung/Pemilih,0.5718,kalah,4.0,"[0.9756, 0.0122, 0.0122]",nya lari mas,1
+261,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi grimacing face,pas,Tokoh dan Partai,0.0119,kalah,4.0,"[0.9756, 0.0122, 0.0122]",ahok pas sudah,1
+261,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi grimacing face,dukungan,SARA,0.254,lari,-2.0,"[0.0238, 0.0238, 0.9524]",otomatis dukungan nya,1
+261,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi grimacing face,ahok,Tokoh dan Partai,0.0,suka,-3.0,"[0.0161, 0.0161, 0.9677]",suka ahok pas,1
+261,pastilah kan tidak suka ahok pas sudah kalah otomatis dukungannya lari mas aniessandi grimacing face,aniessandi,Strategi Kampanye,0.6139,lari,-2.0,"[0.0238, 0.0238, 0.9524]",mas aniessandi grimacing,1
+140,kirim kaosnya sejati smiling face with smiling eyes smiling face with smiling eyes smiling face with smiling eyes,sejati,Pendukung/Pemilih,0.4652,kirim,2.0,"[0.9524, 0.0238, 0.0238]",kaosnya sejati smiling,1
+101,hoax tidakada habis2nya foto 4 pencoblosanfotonya tidak hoax tulisanya penuh dusta angry face,foto,Pendukung/Pemilih,0.6245,hoax,-5.0,"[0.0098, 0.0098, 0.9804]",habis2nya foto 4,1
+101,hoax tidakada habis2nya foto 4 pencoblosanfotonya tidak hoax tulisanya penuh dusta angry face,pencoblosanfoto,SARA,0.2543,foto,-3.0,"[0.0161, 0.0161, 0.9677]",4 pencoblosanfoto nya,1
+73,deklarasi konsultasi dan persetujuan ahy,persetujuan,Pendukung/Pemilih,0.7525,deklarasi,-3.0,"[0.0161, 0.0161, 0.9677]",dan persetujuan ahy,1
+73,deklarasi konsultasi dan persetujuan ahy,konsultasi,Pendukung/Pemilih,0.7441,deklarasi,-3.0,"[0.0161, 0.0161, 0.9677]",deklarasi konsultasi dan,1
+73,deklarasi konsultasi dan persetujuan ahy,ahy,Pendukung/Pemilih,0.7716,deklarasi,-3.0,"[0.0161, 0.0161, 0.9677]",persetujuan ahy,1
+174,jangan biarkan pengorbanan dan perjuangan rezim kocak komando fire fire,pengorbanan,Pendukung/Pemilih,0.7122,biarkan,-1.0,"[0.0385, 0.1923, 0.7692]",biarkan pengorbanan dan,1
+48,ayo pendukung ahy dukung penggembosmu tongue fire fire,pendukung,Tokoh dan Partai,0.1516,ayo,4.0,"[0.9756, 0.0122, 0.0122]",ayo pendukung ahy,1
+48,ayo pendukung ahy dukung penggembosmu tongue fire fire,ayo,Politik Uang,0.1914,dukung,4.0,"[0.9756, 0.0122, 0.0122]",ayo pendukung,1
+48,ayo pendukung ahy dukung penggembosmu tongue fire fire,ahy,Pendukung/Pemilih,0.5852,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahy dukung,1
+48,ayo pendukung ahy dukung penggembosmu tongue fire fire,penggembosmu,Pendukung/Pemilih,0.4569,dukung,4.0,"[0.9756, 0.0122, 0.0122]",dukung penggembosmu tongue,1
+231,suara rusak garagara nyanyian si aa peka moga surabaya bisa bikin jeblos penjara pupus disana face with steam from nose,penjara,Pendukung/Pemilih,0.4393,jeblos,1.0,"[0.7692, 0.1923, 0.0385]",jeblos penjara pupus,1
+231,suara rusak garagara nyanyian si aa peka moga surabaya bisa bikin jeblos penjara pupus disana face with steam from nose,garagara,Pendukung/Pemilih,0.6101,suara,2.0,"[0.9524, 0.0238, 0.0238]",rusak garagara nyanyian,1
+231,suara rusak garagara nyanyian si aa peka moga surabaya bisa bikin jeblos penjara pupus disana face with steam from nose,aa,Pendukung/Pemilih,0.7942,suara,2.0,"[0.9524, 0.0238, 0.0238]",si aa peka,1
+231,suara rusak garagara nyanyian si aa peka moga surabaya bisa bikin jeblos penjara pupus disana face with steam from nose,nyanyian,Pendukung/Pemilih,0.7347,suara,2.0,"[0.9524, 0.0238, 0.0238]",garagara nyanyian si,1
+46,awas mendadak baik metamorfosis kecebong berubah anjing penjilat oke hand clapping hands,penjilat,SARA,0.3295,anjing,-4.0,"[0.0122, 0.0122, 0.9756]",anjing penjilat oke,1
+46,awas mendadak baik metamorfosis kecebong berubah anjing penjilat oke hand clapping hands,oke,SARA,0.0,awas,4.0,"[0.9756, 0.0122, 0.0122]",penjilat oke hand,1
+46,awas mendadak baik metamorfosis kecebong berubah anjing penjilat oke hand clapping hands,metamorfosis,Pendukung/Pemilih,0.7308,awas,4.0,"[0.9756, 0.0122, 0.0122]",baik metamorfosis kecebong,1
+216,tunggu sikap manuver agus clapping hands face with cold sweat face with cold sweat,sikap,Pendukung/Pemilih,0.6854,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",tunggu sikap manuver,1
+216,tunggu sikap manuver agus clapping hands face with cold sweat face with cold sweat,manuver,Strategi Kampanye,0.7646,sikap,2.0,"[0.9524, 0.0238, 0.0238]",sikap manuver agus,1
+216,tunggu sikap manuver agus clapping hands face with cold sweat face with cold sweat,clapping,Pendukung/Pemilih,0.6106,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",agus clapping hands,1
+82,doa ku semoga suaranya mas agussylvi benaran yakin kan mas agus mu,mas,Strategi Kampanye,0.7065,yakin,3.0,"[0.9677, 0.0161, 0.0161]",nya mas agussylvi,1
+237,terima kasih mas karenamu anak muda berani menyuarakan perubahan bersamamu,kasih,Politik Uang,0.0609,terima,2.0,"[0.9524, 0.0238, 0.0238]",terima kasih mas,1
+237,terima kasih mas karenamu anak muda berani menyuarakan perubahan bersamamu,anak,Pendukung/Pemilih,0.6931,menyuarakan,3.0,"[0.9677, 0.0161, 0.0161]",karenamu anak muda,1
+237,terima kasih mas karenamu anak muda berani menyuarakan perubahan bersamamu,perubahan,Pendukung/Pemilih,0.6724,menyuarakan,3.0,"[0.9677, 0.0161, 0.0161]",menyuarakan perubahan bersamamu,1
+237,terima kasih mas karenamu anak muda berani menyuarakan perubahan bersamamu,mas,Pendukung/Pemilih,0.5412,kasih,2.0,"[0.9524, 0.0238, 0.0238]",kasih mas karenamu,1
+243,tersingkir kancah pilkada dki mengangkat mendunia,kancah,Pendukung/Pemilih,0.6323,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",tersingkir kancah pilkada,1
+69,dalam pilkada dki ahy mampu kualitasnya pemimpin muda berjiwa ksatria ahy mendunia,pilkada,Pendukung/Pemilih,0.6066,mampu,2.0,"[0.9524, 0.0238, 0.0238]",dalam pilkada dki,1
+69,dalam pilkada dki ahy mampu kualitasnya pemimpin muda berjiwa ksatria ahy mendunia,pemimpin,Tokoh dan Partai,0.0974,kualitas,4.0,"[0.9756, 0.0122, 0.0122]",nya pemimpin muda,1
+18,12 ahy menitipkan pentingnya menjaga pluralisme kebangsaan dan kesatuan dalam persaingan pilkada persatuan penting,persaingan,Strategi Kampanye,0.7341,menjaga,-3.0,"[0.0161, 0.0161, 0.9677]",dalam persaingan pilkada,1
+18,12 ahy menitipkan pentingnya menjaga pluralisme kebangsaan dan kesatuan dalam persaingan pilkada persatuan penting,pluralisme,Pendukung/Pemilih,0.7025,menjaga,-3.0,"[0.0161, 0.0161, 0.9677]",menjaga pluralisme kebangsaan,1
+22,ahy memang kalah pilkada tetapi menang hati rakyat,hati,Tokoh dan Partai,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang hati rakyat,1
+22,ahy memang kalah pilkada tetapi menang hati rakyat,pilkada,SARA,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kalah pilkada tetapi,1
+22,ahy memang kalah pilkada tetapi menang hati rakyat,ahy,Pendukung/Pemilih,0.7837,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy memang,1
+22,ahy memang kalah pilkada tetapi menang hati rakyat,rakyat,Strategi Kampanye,0.4497,hati,2.0,"[0.9524, 0.0238, 0.0238]",hati rakyat,1
+71,pendukung ahok berantem mending kayak pendukung ahy membuat kopdar biar luas calon,kayak,Pendukung/Pemilih,0.7822,mending,2.0,"[0.9524, 0.0238, 0.0238]",mending kayak pendukung,1
+71,pendukung ahok berantem mending kayak pendukung ahy membuat kopdar biar luas calon,pendukung,Pendukung/Pemilih,0.5539,"berantem,kayak",-7.0,"[0.007, 0.007, 0.9859]",pendukung ahok,2
+71,pendukung ahok berantem mending kayak pendukung ahy membuat kopdar biar luas calon,ahy,Pendukung/Pemilih,0.6374,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahy membuat,1
+71,pendukung ahok berantem mending kayak pendukung ahy membuat kopdar biar luas calon,kopdar,Pendukung/Pemilih,0.5989,membuat,1.0,"[0.7692, 0.1923, 0.0385]",membuat kopdar biar,1
+71,pendukung ahok berantem mending kayak pendukung ahy membuat kopdar biar luas calon,ahok,Tokoh dan Partai,0.3791,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahok berantem,1
+162,ahy pilkada dki hikmah pelajaran ujian dan tantangan dapat ambil dapat mematangkan karakternya,tantangan,Pendukung/Pemilih,0.7693,ujian,1.0,"[0.7692, 0.1923, 0.0385]",dan tantangan dapat,1
+162,ahy pilkada dki hikmah pelajaran ujian dan tantangan dapat ambil dapat mematangkan karakternya,pelajaran,Pendukung/Pemilih,0.6824,hikmah,2.0,"[0.9524, 0.0238, 0.0238]",hikmah pelajaran ujian,1
+162,ahy pilkada dki hikmah pelajaran ujian dan tantangan dapat ambil dapat mematangkan karakternya,ujian,Pendukung/Pemilih,0.7136,pelajaran,2.0,"[0.9524, 0.0238, 0.0238]",pelajaran ujian dan,1
+218,semangat ahy faktor kekalahan pilkada ahy maju insyaalloh,ahy,Pendukung/Pemilih,0.5394,semangat,4.0,"[0.9756, 0.0122, 0.0122]",semangat ahy faktor,1
+218,semangat ahy faktor kekalahan pilkada ahy maju insyaalloh,faktor,Pendukung/Pemilih,0.6705,semangat,4.0,"[0.9756, 0.0122, 0.0122]",ahy faktor kekalahan,1
+218,semangat ahy faktor kekalahan pilkada ahy maju insyaalloh,pilkada,Pendukung/Pemilih,0.705,faktor,-4.0,"[0.0122, 0.0122, 0.9756]",kekalahan pilkada ahy,1
+218,semangat ahy faktor kekalahan pilkada ahy maju insyaalloh,kekalahan,Pendukung/Pemilih,0.7243,faktor,-4.0,"[0.0122, 0.0122, 0.9756]",faktor kekalahan pilkada,1
+120,dilihat upaya demokrat mengenalkan ahy berhasil pilkada jakarta dan ahy sudah blusukan indonesia,pilkada,Tokoh dan Partai,0.0453,berhasil,3.0,"[0.9677, 0.0161, 0.0161]",berhasil pilkada jakarta,1
+120,dilihat upaya demokrat mengenalkan ahy berhasil pilkada jakarta dan ahy sudah blusukan indonesia,demokrat,Pendukung/Pemilih,0.6256,upaya,1.0,"[0.7692, 0.1923, 0.0385]",upaya demokrat mengenalkan,1
+184,pilihan jakarta mayoritas bukan ahok tapi calon ahok terbukti putaran pilkada dki mayoritas memilih ahy dan anies,putaran,Politik Uang,0.2285,terbukti,-3.0,"[0.0161, 0.0161, 0.9677]",terbukti putaran pilkada,1
+184,pilihan jakarta mayoritas bukan ahok tapi calon ahok terbukti putaran pilkada dki mayoritas memilih ahy dan anies,jakarta,SARA,0.34,pilihan,-5.0,"[0.0098, 0.0098, 0.9804]",pilihan jakarta mayoritas,1
+184,pilihan jakarta mayoritas bukan ahok tapi calon ahok terbukti putaran pilkada dki mayoritas memilih ahy dan anies,mayoritas,Pendukung/Pemilih,0.4851,pilihan,-5.0,"[0.0098, 0.0098, 0.9804]",jakarta mayoritas bukan,1
+184,pilihan jakarta mayoritas bukan ahok tapi calon ahok terbukti putaran pilkada dki mayoritas memilih ahy dan anies,calon,Tokoh dan Partai,0.4069,terbukti,-3.0,"[0.0161, 0.0161, 0.9677]",tapi calon ahok,1
+145,akun instagram ahy ucapkan selamat paslon pemenang pilkada dki jakarta,pilkada,Tokoh dan Partai,0.0638,pemenang,3.0,"[0.9677, 0.0161, 0.0161]",pemenang pilkada dki,1
+145,akun instagram ahy ucapkan selamat paslon pemenang pilkada dki jakarta,paslon,SARA,0.0,selamat,5.0,"[0.9804, 0.0098, 0.0098]",selamat paslon pemenang,1
+163,menyeberangi selat malaka aiman kompastv mendapat kesempatan mewawancarai ahy pilkada dki,selat,Pendukung/Pemilih,0.7489,menyeberangi,3.0,"[0.9677, 0.0161, 0.0161]",menyeberangi selat malaka,1
+163,menyeberangi selat malaka aiman kompastv mendapat kesempatan mewawancarai ahy pilkada dki,kesempatan,Pendukung/Pemilih,0.701,mendapat,3.0,"[0.9677, 0.0161, 0.0161]",mendapat kesempatan mewawancarai,1
+197,salam kagum ahy masih muda berani pensiun berani menantang ahok pilkada disaat takut termasuk,ahok,Tokoh dan Partai,0.3095,menantang,-4.0,"[0.0122, 0.0122, 0.9756]",menantang ahok pilkada,1
+197,salam kagum ahy masih muda berani pensiun berani menantang ahok pilkada disaat takut termasuk,salam,Pendukung/Pemilih,0.4897,muda,-2.0,"[0.0238, 0.0238, 0.9524]",salam kagum,1
+185,pilkada dki berdoa ahy menang mudahmudahan anies sandi menang,pilkada,Pendukung/Pemilih,0.656,menang,4.0,"[0.9756, 0.0122, 0.0122]",pilkada dki,1
+185,pilkada dki berdoa ahy menang mudahmudahan anies sandi menang,mudahmudahan,Tokoh dan Partai,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang mudahmudahan anies,1
+228,mental kalah pilkada indonesia harus berguru sosok ahy,pilkada,Pendukung/Pemilih,0.5175,berguru,3.0,"[0.9677, 0.0161, 0.0161]",kalah pilkada indonesia,1
+228,mental kalah pilkada indonesia harus berguru sosok ahy,mental,Pendukung/Pemilih,0.5945,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",mental kalah,1
+228,mental kalah pilkada indonesia harus berguru sosok ahy,sosok,Pendukung/Pemilih,0.7208,berguru,3.0,"[0.9677, 0.0161, 0.0161]",berguru sosok ahy,1
+148,lsi membuktikan kejujuran surveynya pilkada dki tahap1 ahokdjarot disurvey kalah dan ahy menang 1 putaran,putaran,Pendukung/Pemilih,0.6391,menang,4.0,"[0.9756, 0.0122, 0.0122]",1 putaran,1
+148,lsi membuktikan kejujuran surveynya pilkada dki tahap1 ahokdjarot disurvey kalah dan ahy menang 1 putaran,kejujuran,SARA,0.2204,membuktikan,-4.0,"[0.0122, 0.0122, 0.9756]",membuktikan kejujuran surveynya,1
+148,lsi membuktikan kejujuran surveynya pilkada dki tahap1 ahokdjarot disurvey kalah dan ahy menang 1 putaran,ahy,Pendukung/Pemilih,0.5931,menang,4.0,"[0.9756, 0.0122, 0.0122]",dan ahy menang,1
+148,lsi membuktikan kejujuran surveynya pilkada dki tahap1 ahokdjarot disurvey kalah dan ahy menang 1 putaran,lsi,Pendukung/Pemilih,0.6629,membuktikan,-4.0,"[0.0122, 0.0122, 0.9756]",lsi membuktikan,1
+213,sehabis pilkadapileg dan pilpres harap ahy ketua dpr,ketua,Pendukung/Pemilih,0.6583,harap,3.0,"[0.9677, 0.0161, 0.0161]",ahy ketua dpr,1
+213,sehabis pilkadapileg dan pilpres harap ahy ketua dpr,ahy,Pendukung/Pemilih,0.5321,harap,3.0,"[0.9677, 0.0161, 0.0161]",harap ahy ketua,1
+211,sebentar lupakan kegilaan pilkada dki mari berlari ahy kepri 23 april,pilkada,Politik Uang,0.6223,kegilaan,3.0,"[0.9677, 0.0161, 0.0161]",kegilaan pilkada dki,1
+211,sebentar lupakan kegilaan pilkada dki mari berlari ahy kepri 23 april,dki,SARA,0.3165,mari,4.0,"[0.9756, 0.0122, 0.0122]",pilkada dki mari,1
+203,bilang pasti menang bentuk keyakinan keberhasilan goal goal improvisasi politik surabaya ahydi pilkada dki,keyakinan,Strategi Kampanye,0.7313,bentuk,4.0,"[0.9756, 0.0122, 0.0122]",bentuk keyakinan keberhasilan,1
+203,bilang pasti menang bentuk keyakinan keberhasilan goal goal improvisasi politik surabaya ahydi pilkada dki,keberhasilan,Strategi Kampanye,0.7695,bentuk,4.0,"[0.9756, 0.0122, 0.0122]",keyakinan keberhasilan goal,1
+203,bilang pasti menang bentuk keyakinan keberhasilan goal goal improvisasi politik surabaya ahydi pilkada dki,bentuk,SARA,0.2356,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang bentuk keyakinan,1
+219,semoga anies menang pilkada dan ahy presiden indonesia 2019 amin yra klop deh,pilkada,Tokoh dan Partai,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pilkada dan,1
+219,semoga anies menang pilkada dan ahy presiden indonesia 2019 amin yra klop deh,indonesia,Strategi Kampanye,0.6817,presiden,3.0,"[0.9677, 0.0161, 0.0161]",presiden indonesia 2019,1
+205,pikir target ahy dalam pilkada membangun sentimen positif,pilkada,Politik Uang,0.4134,pikir,1.0,"[0.7692, 0.1923, 0.0385]",dalam pilkada membangun,1
+205,pikir target ahy dalam pilkada membangun sentimen positif,target,Pendukung/Pemilih,0.7575,pikir,1.0,"[0.7692, 0.1923, 0.0385]",pikir target ahy,1
+109,hargai sikap dan pendukung ahy memilih bersikap netral putaran pilkada dki 2017,pendukung,Pendukung/Pemilih,0.6562,sikap,2.0,"[0.9524, 0.0238, 0.0238]",dan pendukung ahy,1
+79,pilkada putaran membuat kaos ahy dibagibagikan dilingkungan utan kayu jaktim,pilkada,Pendukung/Pemilih,0.7045,membuat,1.0,"[0.7692, 0.1923, 0.0385]",pilkada putaran,1
+79,pilkada putaran membuat kaos ahy dibagibagikan dilingkungan utan kayu jaktim,ahy,Pendukung/Pemilih,0.5504,kaos,-4.0,"[0.0122, 0.0122, 0.9756]",kaos ahy dibagibagikan,1
+244,semangat dukung ahysylvi pilkada terlaksana yakin dan tentukan pilihan pro rakyat,pilkada,Tokoh dan Partai,0.2559,semangat,4.0,"[0.9756, 0.0122, 0.0122]",ahysylvi pilkada terlaksana,1
+244,semangat dukung ahysylvi pilkada terlaksana yakin dan tentukan pilihan pro rakyat,rakyat,Pendukung/Pemilih,0.5081,pilihan,5.0,"[0.9804, 0.0098, 0.0098]",pro rakyat,1
+244,semangat dukung ahysylvi pilkada terlaksana yakin dan tentukan pilihan pro rakyat,ahysylvi,Tokoh dan Partai,0.3623,semangat,4.0,"[0.9756, 0.0122, 0.0122]",dukung ahysylvi pilkada,1
+244,semangat dukung ahysylvi pilkada terlaksana yakin dan tentukan pilihan pro rakyat,dukung,Pendukung/Pemilih,0.4689,semangat,4.0,"[0.9756, 0.0122, 0.0122]",semangat dukung ahysylvi,1
+244,semangat dukung ahysylvi pilkada terlaksana yakin dan tentukan pilihan pro rakyat,tentukan,Strategi Kampanye,0.7518,yakin,3.0,"[0.9677, 0.0161, 0.0161]",dan tentukan pilihan,1
+196,salah ahysilvy menang pilkada mudah ibu silvy mio tidak memakai helm keliling komplek pemilihan dijamin segan,pilkada,Tokoh dan Partai,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pilkada mudah,1
+141,tunggu kualitas jiwa anies sandiapa ucapan peran suara loyalis ahysilvy dalam kemenangan pilkada,kualitas,Pendukung/Pemilih,0.6752,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",tunggu kualitas jiwa,1
+141,tunggu kualitas jiwa anies sandiapa ucapan peran suara loyalis ahysilvy dalam kemenangan pilkada,ahysilvy,Pendukung/Pemilih,0.562,suara,2.0,"[0.9524, 0.0238, 0.0238]",loyalis ahysilvy dalam,1
+141,tunggu kualitas jiwa anies sandiapa ucapan peran suara loyalis ahysilvy dalam kemenangan pilkada,loyalis,Pendukung/Pemilih,0.5997,suara,2.0,"[0.9524, 0.0238, 0.0238]",suara loyalis ahysilvy,1
+141,tunggu kualitas jiwa anies sandiapa ucapan peran suara loyalis ahysilvy dalam kemenangan pilkada,jiwa,Pendukung/Pemilih,0.5498,kualitas,4.0,"[0.9756, 0.0122, 0.0122]",kualitas jiwa anies,1
+141,tunggu kualitas jiwa anies sandiapa ucapan peran suara loyalis ahysilvy dalam kemenangan pilkada,ucapan,SARA,0.2967,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",sandiapa ucapan peran,1
+141,tunggu kualitas jiwa anies sandiapa ucapan peran suara loyalis ahysilvy dalam kemenangan pilkada,anies,Tokoh dan Partai,0.3618,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",jiwa anies sandiapa,1
+239,terimakasih ahysilvy jakarta tidak gubernur,gubernur,Tokoh dan Partai,0.1011,terimakasih,-5.0,"[0.0098, 0.0098, 0.9804]",tidak gubernur,1
+114,jangan lupa pilih paslon,paslon,Pendukung/Pemilih,0.387,pilih,2.0,"[0.9524, 0.0238, 0.0238]",pilih paslon,1
+123,putaran 2 rapat kan barisan komando,barisan,Pendukung/Pemilih,0.7109,rapat,1.0,"[0.7692, 0.1923, 0.0385]",kan barisan komando,1
+263,youtubebxrzd69u61a tenang bening dan tulus mas agus mungkin mas,youtubebxrzd69u61a,Pendukung/Pemilih,0.2698,tenang,5.0,"[0.9804, 0.0098, 0.0098]",youtubebxrzd69u61a tenang,1
+263,youtubebxrzd69u61a tenang bening dan tulus mas agus mungkin mas,tulus,Pendukung/Pemilih,0.5644,bening,-4.0,"[0.0122, 0.0122, 0.9756]",dan tulus mas,1
+152,mari masukan kritik membangun kalah dalam pertandingan,pertandingan,Strategi Kampanye,0.7331,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",dalam pertandingan,1
+152,mari masukan kritik membangun kalah dalam pertandingan,masukan,Pendukung/Pemilih,0.6481,mari,4.0,"[0.9756, 0.0122, 0.0122]",mari masukan kritik,1
+103,yuk fan dukung dan menangkan,yuk,Pendukung/Pemilih,0.6818,dukung,4.0,"[0.9756, 0.0122, 0.0122]",yuk fan,1
+103,yuk fan dukung dan menangkan,fan,SARA,0.1705,yuk,4.0,"[0.9756, 0.0122, 0.0122]",yuk fan dukung,1
+130,kekalahan sukses tertunda bukan disesali tapi dijadikan pengalaman baik,kekalahan,Pendukung/Pemilih,0.6291,tertunda,3.0,"[0.9677, 0.0161, 0.0161]",kekalahan sukses,1
+236,tandatangan petisi stop hoax dan fitnah serta mendukung gerakan kebebasan pers hoax dan fitnah,fitnah,Pendukung/Pemilih,0.7258,hoax,-5.0,"[0.0098, 0.0098, 0.9804]",dan fitnah serta,1
+236,tandatangan petisi stop hoax dan fitnah serta mendukung gerakan kebebasan pers hoax dan fitnah,kebebasan,Pendukung/Pemilih,0.7555,gerakan,4.0,"[0.9756, 0.0122, 0.0122]",gerakan kebebasan pers,1
+167,mestinya gus negarawan,gus,Tokoh dan Partai,0.3845,mesti,-3.0,"[0.0161, 0.0161, 0.9677]",nya gus negarawan,1
+74,demokrat cinta nkri dan berbakti,nkri,Pendukung/Pemilih,0.624,cinta,3.0,"[0.9677, 0.0161, 0.0161]",cinta nkri dan,1
+74,demokrat cinta nkri dan berbakti,cinta,Politik Uang,0.5342,demokrat,0.0,"[0.0, 1.0, 0.0]",demokrat cinta nkri,0
+183,pesan jangan lupa gembira dan cinta indonesia,pesan,Pendukung/Pemilih,0.5629,lupa,-1.0,"[0.0385, 0.1923, 0.7692]",pesan jangan,1
+183,pesan jangan lupa gembira dan cinta indonesia,cinta,Pendukung/Pemilih,0.597,gembira,-5.0,"[0.0098, 0.0098, 0.9804]",dan cinta indonesia,1
+183,pesan jangan lupa gembira dan cinta indonesia,gembira,Pendukung/Pemilih,0.5655,lupa,-1.0,"[0.0385, 0.1923, 0.7692]",lupa gembira dan,1
+183,pesan jangan lupa gembira dan cinta indonesia,indonesia,Pendukung/Pemilih,0.5632,cinta,-3.0,"[0.0161, 0.0161, 0.9677]",cinta indonesia,1
+143,membaca strategi politik surabaya dalam pencalonan agus yudhoyono,yudhoyono,Pendukung/Pemilih,0.7052,agus,1.7999999999999998,"[0.9474, 0.0263, 0.0263]",agus yudhoyono,0
+143,membaca strategi politik surabaya dalam pencalonan agus yudhoyono,strategi,Strategi Kampanye,0.7964,membaca,4.0,"[0.9756, 0.0122, 0.0122]",membaca strategi politik,1
+72,muka pulang punggung terima kasih kepri,kasih,SARA,0.0581,terima,2.0,"[0.9524, 0.0238, 0.0238]",terima kasih kepri,1
+72,muka pulang punggung terima kasih kepri,muka,Pendukung/Pemilih,0.6935,terima,2.0,"[0.9524, 0.0238, 0.0238]",muka pulang,1
+72,muka pulang punggung terima kasih kepri,kepri,Pendukung/Pemilih,0.4663,terima,2.0,"[0.9524, 0.0238, 0.0238]",kasih kepri,1
+4,inspirasi kaum muda gerakan indonesia muda menuju indonesia emas,gerakan,Pendukung/Pemilih,0.7734,inspirasi,-3.0,"[0.0161, 0.0161, 0.9677]",muda gerakan indonesia,1
+4,inspirasi kaum muda gerakan indonesia muda menuju indonesia emas,kaum,Pendukung/Pemilih,0.7501,inspirasi,-3.0,"[0.0161, 0.0161, 0.9677]",inspirasi kaum muda,1
+4,inspirasi kaum muda gerakan indonesia muda menuju indonesia emas,indonesia,Pendukung/Pemilih,0.794,"menuju,gerakan",0.0,"[0.0, 1.0, 0.0]",gerakan indonesia muda,2
+223,setia politik indonesia regenerasi matang jangan kutu loncat,politik,Pendukung/Pemilih,0.7023,setia,4.0,"[0.9756, 0.0122, 0.0122]",setia politik indonesia,1
+223,setia politik indonesia regenerasi matang jangan kutu loncat,regenerasi,Strategi Kampanye,0.3627,setia,4.0,"[0.9756, 0.0122, 0.0122]",indonesia regenerasi matang,1
+223,setia politik indonesia regenerasi matang jangan kutu loncat,indonesia,Pendukung/Pemilih,0.7029,setia,4.0,"[0.9756, 0.0122, 0.0122]",politik indonesia regenerasi,1
+153,mas agus kasih kuliah nih,kuliah,Strategi Kampanye,0.577,kasih,2.0,"[0.9524, 0.0238, 0.0238]",kasih kuliah nih,1
+142,kuliah mahasiswa perspektif at umrah dompak,mahasiswa,Strategi Kampanye,0.7657,kuliah,1.0,"[0.7692, 0.1923, 0.0385]",kuliah mahasiswa perspektif,1
+142,kuliah mahasiswa perspektif at umrah dompak,umrah,Pendukung/Pemilih,0.512,kuliah,1.0,"[0.7692, 0.1923, 0.0385]",at umrah dompak,1
+230,suara pemilih putaran 1 memilih paslon 3 puataran selamat jakarta gubernur,pemilih,Pendukung/Pemilih,0.787,suara,2.0,"[0.9524, 0.0238, 0.0238]",suara pemilih putaran,1
+230,suara pemilih putaran 1 memilih paslon 3 puataran selamat jakarta gubernur,putaran,Pendukung/Pemilih,0.7846,suara,2.0,"[0.9524, 0.0238, 0.0238]",pemilih putaran 1,1
+194,putaran melihat bgm kelasnya pemimpin berbesar hati,bgm,Pendukung/Pemilih,0.5418,melihat,3.0,"[0.9677, 0.0161, 0.0161]",melihat bgm kelas,1
+194,putaran melihat bgm kelasnya pemimpin berbesar hati,putaran,Pendukung/Pemilih,0.6042,melihat,3.0,"[0.9677, 0.0161, 0.0161]",putaran melihat,1
+209,kecil pendukung dukung ahok basis massa mayoritas pilih anies kunci kemenangan tipis anies,pendukung,SARA,0.2251,kecil,-3.0,"[0.0161, 0.0161, 0.9677]",kecil pendukung dukung,1
+209,kecil pendukung dukung ahok basis massa mayoritas pilih anies kunci kemenangan tipis anies,kemenangan,Pendukung/Pemilih,0.6481,kunci,3.0,"[0.9677, 0.0161, 0.0161]",kunci kemenangan tipis,1
+209,kecil pendukung dukung ahok basis massa mayoritas pilih anies kunci kemenangan tipis anies,dukung,Tokoh dan Partai,0.2485,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung dukung ahok,1
+209,kecil pendukung dukung ahok basis massa mayoritas pilih anies kunci kemenangan tipis anies,ahok,Tokoh dan Partai,0.0,dukung,4.0,"[0.9756, 0.0122, 0.0122]",dukung ahok basis,1
+209,kecil pendukung dukung ahok basis massa mayoritas pilih anies kunci kemenangan tipis anies,basis,Pendukung/Pemilih,0.718,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",ahok basis massa,1
+209,kecil pendukung dukung ahok basis massa mayoritas pilih anies kunci kemenangan tipis anies,anies,Tokoh dan Partai,0.0,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih anies kunci,1
+49,suara pendukung menentukan kemenangan salah paslon,pendukung,Pendukung/Pemilih,0.601,suara,2.0,"[0.9524, 0.0238, 0.0238]",suara pendukung menentukan,1
+220,semoga pemilih putaran 1 kebon kacang dan kp bali beralih aniessandi,semoga,Pendukung/Pemilih,0.4402,beralih,-3.0,"[0.0161, 0.0161, 0.9677]",semoga pemilih,1
+220,semoga pemilih putaran 1 kebon kacang dan kp bali beralih aniessandi,aniessandi,Pendukung/Pemilih,0.4532,beralih,-3.0,"[0.0161, 0.0161, 0.9677]",beralih aniessandi,1
+264,yuk fan dukung dan menangkan,yuk,Pendukung/Pemilih,0.6818,dukung,4.0,"[0.9756, 0.0122, 0.0122]",yuk fan,1
+264,yuk fan dukung dan menangkan,fan,SARA,0.1705,yuk,4.0,"[0.9756, 0.0122, 0.0122]",yuk fan dukung,1
+59,bismillah semoga esok jakarta memiliki pemimpin tuntunan alquran diridhai allah swt,alquran,Pendukung/Pemilih,0.4966,tuntunan,-3.0,"[0.0161, 0.0161, 0.9677]",tuntunan alquran diridhai,1
+59,bismillah semoga esok jakarta memiliki pemimpin tuntunan alquran diridhai allah swt,swt,Pendukung/Pemilih,0.6182,allah,5.0,"[0.9804, 0.0098, 0.0098]",allah swt,1
+59,bismillah semoga esok jakarta memiliki pemimpin tuntunan alquran diridhai allah swt,semoga,Pendukung/Pemilih,0.687,bismillah,4.0,"[0.9756, 0.0122, 0.0122]",bismillah semoga esok,1
+59,bismillah semoga esok jakarta memiliki pemimpin tuntunan alquran diridhai allah swt,esok,Politik Uang,0.291,bismillah,4.0,"[0.9756, 0.0122, 0.0122]",semoga esok jakarta,1
+59,bismillah semoga esok jakarta memiliki pemimpin tuntunan alquran diridhai allah swt,jakarta,SARA,0.0751,esok,1.0,"[0.7692, 0.1923, 0.0385]",esok jakarta memiliki,1
+56,tulus menyenangkan insyaallah jalan bu,tulus,SARA,0.0,menyenangkan,4.0,"[0.9756, 0.0122, 0.0122]",tulus menyenangkan,1
+56,tulus menyenangkan insyaallah jalan bu,insyaallah,SARA,0.0,menyenangkan,4.0,"[0.9756, 0.0122, 0.0122]",menyenangkan insyaallah jalan,1
+56,tulus menyenangkan insyaallah jalan bu,jalan,Politik Uang,0.1819,insyaallah,2.0,"[0.9524, 0.0238, 0.0238]",insyaallah jalan bu,1
+199,salam wallahulmuwafiq ilaaqwamithoriq mencerminkan nu jatuh hati,hati,Pendukung/Pemilih,0.7183,jatuh,1.0,"[0.7692, 0.1923, 0.0385]",jatuh hati,1
+206,suka berjiwa,suka,Pendukung/Pemilih,0.4891,berjiwa,3.0,"[0.9677, 0.0161, 0.0161]",suka berjiwa,1
+26,ahy r1 2019 boleh kalah pilgub,pilgub,Politik Uang,0.4132,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kalah pilgub,1
+26,ahy r1 2019 boleh kalah pilgub,ahy,Pendukung/Pemilih,0.7255,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy r1,1
+257,walaupun kalahkami bangga padamu jalanmu masih panjangkesuksesan baik menantimu disaat,jalanmu,Pendukung/Pemilih,0.7474,bangga,3.0,"[0.9677, 0.0161, 0.0161]",padamu jalanmu masih,1
+31,agus harimurti yudhoyono lovers annisa larasati pohan lovers bukan mendadak,harimurti,Strategi Kampanye,0.713,agus,1.5,"[0.8955, 0.0746, 0.0299]",agus harimurti yudhoyono,0
+31,agus harimurti yudhoyono lovers annisa larasati pohan lovers bukan mendadak,annisa,Pendukung/Pemilih,0.717,agus,1.5,"[0.8955, 0.0746, 0.0299]",lovers annisa larasati,0
+31,agus harimurti yudhoyono lovers annisa larasati pohan lovers bukan mendadak,pohan,Pendukung/Pemilih,0.6957,agus,1.5,"[0.8955, 0.0746, 0.0299]",larasati pohan lovers,0
+31,agus harimurti yudhoyono lovers annisa larasati pohan lovers bukan mendadak,larasati,Pendukung/Pemilih,0.7483,agus,1.5,"[0.8955, 0.0746, 0.0299]",annisa larasati pohan,0
+51,bangga melihat pernyataan ksatria,pernyataan,Pendukung/Pemilih,0.6441,melihat,3.0,"[0.9677, 0.0161, 0.0161]",melihat pernyataan ksatria,1
+51,bangga melihat pernyataan ksatria,bangga,SARA,0.1269,melihat,3.0,"[0.9677, 0.0161, 0.0161]",bangga melihat,1
+119,bagus programnya persija,persija,Pendukung/Pemilih,0.6701,bagus,2.0,"[0.9524, 0.0238, 0.0238]",nya persija,1
+187,lihat mas debat face with stuckout tounges,mas,Pendukung/Pemilih,0.6997,lihat,3.0,"[0.9677, 0.0161, 0.0161]",lihat mas debat,1
+76,kecerdasan nasionalisme dan jiwa pancasilais dimiliki bisa dikatakan memiliki jiwa santri walaupun belum mondok,kecerdasan,Pendukung/Pemilih,0.7032,dimiliki,1.0,"[0.7692, 0.1923, 0.0385]",kecerdasan nasionalisme,1
+256,walaupun pendukung anies sandi oke hand tapi bangga jiwa ahy silvy masih 2019 prabowo ahy folded hands folded hands,jiwa,SARA,0.2029,bangga,3.0,"[0.9677, 0.0161, 0.0161]",bangga jiwa ahy,1
+256,walaupun pendukung anies sandi oke hand tapi bangga jiwa ahy silvy masih 2019 prabowo ahy folded hands folded hands,ahy,Pendukung/Pemilih,0.7832,bangga,3.0,"[0.9677, 0.0161, 0.0161]",jiwa ahy silvy,1
+256,walaupun pendukung anies sandi oke hand tapi bangga jiwa ahy silvy masih 2019 prabowo ahy folded hands folded hands,anies,Tokoh dan Partai,0.3175,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung anies sandi,1
+29,ahy sylvi menang dalam hati pendukungnya ahysylvi membuat panik dan ketar ketir kubu folded hands folded hands,hati,Pendukung/Pemilih,0.4865,menang,4.0,"[0.9756, 0.0122, 0.0122]",dalam hati pendukung,1
+29,ahy sylvi menang dalam hati pendukungnya ahysylvi membuat panik dan ketar ketir kubu folded hands folded hands,pendukung,Politik Uang,0.2597,hati,2.0,"[0.9524, 0.0238, 0.0238]",hati pendukung nya,1
+29,ahy sylvi menang dalam hati pendukungnya ahysylvi membuat panik dan ketar ketir kubu folded hands folded hands,ahysylvi,Pendukung/Pemilih,0.6004,membuat,1.0,"[0.7692, 0.1923, 0.0385]",nya ahysylvi membuat,1
+29,ahy sylvi menang dalam hati pendukungnya ahysylvi membuat panik dan ketar ketir kubu folded hands folded hands,ahy,Pendukung/Pemilih,0.6867,menang,4.0,"[0.9756, 0.0122, 0.0122]",ahy sylvi,1
+29,ahy sylvi menang dalam hati pendukungnya ahysylvi membuat panik dan ketar ketir kubu folded hands folded hands,ketir,Pendukung/Pemilih,0.5649,ketar,-3.0,"[0.0161, 0.0161, 0.9677]",ketar ketir kubu,1
+156,masih bisa diperbuat ahy silvy kemaslahatan bangsa,bangsa,Pendukung/Pemilih,0.6883,kemaslahatan,4.0,"[0.9756, 0.0122, 0.0122]",kemaslahatan bangsa,1
+97,heboh pentolan band coldplay inggris chris martin dukungan pasangan agussylvi pilkada jakarta 2017,chris,Pendukung/Pemilih,0.6526,heboh,1.0,"[0.7692, 0.1923, 0.0385]",inggris chris martin,1
+97,heboh pentolan band coldplay inggris chris martin dukungan pasangan agussylvi pilkada jakarta 2017,pentolan,Pendukung/Pemilih,0.6913,heboh,1.0,"[0.7692, 0.1923, 0.0385]",heboh pentolan band,1
+97,heboh pentolan band coldplay inggris chris martin dukungan pasangan agussylvi pilkada jakarta 2017,pasangan,Strategi Kampanye,0.5746,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dukungan pasangan agussylvi,1
+97,heboh pentolan band coldplay inggris chris martin dukungan pasangan agussylvi pilkada jakarta 2017,dukungan,SARA,0.3482,heboh,1.0,"[0.7692, 0.1923, 0.0385]",martin dukungan pasangan,1
+133,kemenangan tertunda belajar kekalahanpernyataan bijaksana,kekalahanpernyataan,Strategi Kampanye,0.4532,belajar,3.0,"[0.9677, 0.0161, 0.0161]",belajar kekalahanpernyataan bijaksana,1
+133,kemenangan tertunda belajar kekalahanpernyataan bijaksana,kemenangan,Pendukung/Pemilih,0.406,tertunda,-3.0,"[0.0161, 0.0161, 0.9677]",kemenangan tertunda,1
+188,politik santun dan bermartabat folded hands,santun,Politik Uang,0.5522,politik,-1.0,"[0.0385, 0.1923, 0.7692]",politik santun dan,1
+96,mengenang pidato kekalahan,pidato,Strategi Kampanye,0.6065,mengenang,3.0,"[0.9677, 0.0161, 0.0161]",mengenang pidato kekalahan,1
+89,gunawan dan freely anggota dprd talaud pasang spanduk ahy perbtasan indonesiafilipina lanjutkan,dprd,Pendukung/Pemilih,0.6797,anggota,-3.0,"[0.0161, 0.0161, 0.9677]",anggota dprd talaud,1
+89,gunawan dan freely anggota dprd talaud pasang spanduk ahy perbtasan indonesiafilipina lanjutkan,talaud,Pendukung/Pemilih,0.4881,anggota,-3.0,"[0.0161, 0.0161, 0.9677]",dprd talaud pasang,1
+89,gunawan dan freely anggota dprd talaud pasang spanduk ahy perbtasan indonesiafilipina lanjutkan,ahy,Pendukung/Pemilih,0.5887,lanjutkan,1.0,"[0.7692, 0.1923, 0.0385]",spanduk ahy perbtasan,1
+89,gunawan dan freely anggota dprd talaud pasang spanduk ahy perbtasan indonesiafilipina lanjutkan,gunawan,Pendukung/Pemilih,0.7111,lanjutkan,1.0,"[0.7692, 0.1923, 0.0385]",gunawan dan,1
+89,gunawan dan freely anggota dprd talaud pasang spanduk ahy perbtasan indonesiafilipina lanjutkan,perbtasan,SARA,0.194,lanjutkan,1.0,"[0.7692, 0.1923, 0.0385]",ahy perbtasan indonesiafilipina,1
+201,sambutan hangat pendukung bergabung smiling face with smiling eyes folded hands,pendukung,SARA,0.2202,sambutan,3.0,"[0.9677, 0.0161, 0.0161]",hangat pendukung bergabung,1
+201,sambutan hangat pendukung bergabung smiling face with smiling eyes folded hands,sambutan,Strategi Kampanye,0.6472,bergabung,-4.0,"[0.0122, 0.0122, 0.9756]",sambutan hangat,1
+201,sambutan hangat pendukung bergabung smiling face with smiling eyes folded hands,hangat,Strategi Kampanye,0.4656,sambutan,3.0,"[0.9677, 0.0161, 0.0161]",sambutan hangat pendukung,1
+70,12 dan surabaya puji dan dibela malu dan bersalah mengharapkan dukungan politik dan massa demokrat,politik,Pendukung/Pemilih,0.737,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dukungan politik dan,1
+70,12 dan surabaya puji dan dibela malu dan bersalah mengharapkan dukungan politik dan massa demokrat,massa,Pendukung/Pemilih,0.6854,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dan massa demokrat,1
+70,12 dan surabaya puji dan dibela malu dan bersalah mengharapkan dukungan politik dan massa demokrat,surabaya,Pendukung/Pemilih,0.5661,puji,4.0,"[0.9756, 0.0122, 0.0122]",dan surabaya puji,1
+204,dan tidak nyesal dukung face blowing a kiss face blowing a kiss bngga kehadirannya republik,kehadiran,Pendukung/Pemilih,0.6091,nyesal,4.0,"[0.9756, 0.0122, 0.0122]",bngga kehadiran nya,1
+204,dan tidak nyesal dukung face blowing a kiss face blowing a kiss bngga kehadirannya republik,dukung,Tokoh dan Partai,0.0,nyesal,4.0,"[0.9756, 0.0122, 0.0122]",nyesal dukung face,1
+204,dan tidak nyesal dukung face blowing a kiss face blowing a kiss bngga kehadirannya republik,republik,Pendukung/Pemilih,0.6185,kehadiran,3.0,"[0.9677, 0.0161, 0.0161]",nya republik,1
+226,pemenang nya ahy 1 dan dihati smiling face with open mouth closed eyes smiling face with open mouth smiling eyes smiling face with smiling eyes face savouring delicious food kissing face with closed eyes face blowing a kiss smiling face with hearteyes,mouth,Strategi Kampanye,0.5118,open,-3.0,"[0.0161, 0.0161, 0.9677]",open mouth closed,1
+226,pemenang nya ahy 1 dan dihati smiling face with open mouth closed eyes smiling face with open mouth smiling eyes smiling face with smiling eyes face savouring delicious food kissing face with closed eyes face blowing a kiss smiling face with hearteyes,smiling,Pendukung/Pemilih,0.5869,dihati,3.0,"[0.9677, 0.0161, 0.0161]",dihati smiling face,1
+226,pemenang nya ahy 1 dan dihati smiling face with open mouth closed eyes smiling face with open mouth smiling eyes smiling face with smiling eyes face savouring delicious food kissing face with closed eyes face blowing a kiss smiling face with hearteyes,ahy,Pendukung/Pemilih,0.7049,pemenang,3.0,"[0.9677, 0.0161, 0.0161]",nya ahy 1,1
+207,yakin rencana dan keputusan allah benar dan baik keputusan manusia smiling face with smiling eyes smiling face with smiling eyes,rencana,Strategi Kampanye,0.6892,yakin,3.0,"[0.9677, 0.0161, 0.0161]",yakin rencana dan,1
+207,yakin rencana dan keputusan allah benar dan baik keputusan manusia smiling face with smiling eyes smiling face with smiling eyes,manusia,Pendukung/Pemilih,0.6497,keputusan,4.0,"[0.9756, 0.0122, 0.0122]",keputusan manusia smiling,1
+207,yakin rencana dan keputusan allah benar dan baik keputusan manusia smiling face with smiling eyes smiling face with smiling eyes,allah,Pendukung/Pemilih,0.4199,rencana,2.0,"[0.9524, 0.0238, 0.0238]",keputusan allah benar,1
+207,yakin rencana dan keputusan allah benar dan baik keputusan manusia smiling face with smiling eyes smiling face with smiling eyes,keputusan,Pendukung/Pemilih,0.6066,rencana,2.0,"[0.9524, 0.0238, 0.0238]",dan keputusan allah,1
+154,mas semangat pendukung jangan tidur maju insyaallah menang,pendukung,Pendukung/Pemilih,0.2318,semangat,-4.0,"[0.0122, 0.0122, 0.9756]",semangat pendukung jangan,1
+154,mas semangat pendukung jangan tidur maju insyaallah menang,insyaallah,Politik Uang,0.2347,menang,-4.0,"[0.0122, 0.0122, 0.9756]",maju insyaallah menang,1
+154,mas semangat pendukung jangan tidur maju insyaallah menang,mas,Pendukung/Pemilih,0.7516,tidur,-3.0,"[0.0161, 0.0161, 0.9677]",mas semangat,1
+159,membaca strategi politik surabaya dalam pencalonan agus yudhoyono,yudhoyono,Pendukung/Pemilih,0.7052,agus,1.7999999999999998,"[0.9474, 0.0263, 0.0263]",agus yudhoyono,0
+159,membaca strategi politik surabaya dalam pencalonan agus yudhoyono,strategi,Strategi Kampanye,0.7964,membaca,4.0,"[0.9756, 0.0122, 0.0122]",membaca strategi politik,1
+170,menunggu skenario,skenario,Strategi Kampanye,0.597,menunggu,-3.0,"[0.0161, 0.0161, 0.9677]",menunggu skenario,1
+113,jangan kira skenario ahy menang pilgub ahy sudah pikirkan matang skenario kalah kalah menang sejatinya smiling face with smiling eyes smiling face with smiling eyes,skenario,Pendukung/Pemilih,0.6599,menang,-4.0,"[0.0122, 0.0122, 0.9756]",kira skenario ahy,1
+113,jangan kira skenario ahy menang pilgub ahy sudah pikirkan matang skenario kalah kalah menang sejatinya smiling face with smiling eyes smiling face with smiling eyes,smiling,Pendukung/Pemilih,0.5403,sejati,3.0,"[0.9677, 0.0161, 0.0161]",nya smiling face,1
+113,jangan kira skenario ahy menang pilgub ahy sudah pikirkan matang skenario kalah kalah menang sejatinya smiling face with smiling eyes smiling face with smiling eyes,pilgub,Tokoh dan Partai,0.2368,menang,-4.0,"[0.0122, 0.0122, 0.9756]",menang pilgub ahy,1
+113,jangan kira skenario ahy menang pilgub ahy sudah pikirkan matang skenario kalah kalah menang sejatinya smiling face with smiling eyes smiling face with smiling eyes,sejati,SARA,0.1444,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",menang sejati nya,1
+63,bukan sudah jiwa dalam hasil pilkada sulit sungguh tidak sulit deklarasi,deklarasi,Politik Uang,0.3002,sungguh,-4.0,"[0.0122, 0.0122, 0.9756]",sulit deklarasi,1
+63,bukan sudah jiwa dalam hasil pilkada sulit sungguh tidak sulit deklarasi,pilkada,Politik Uang,0.445,hasil,-3.0,"[0.0161, 0.0161, 0.9677]",hasil pilkada sulit,1
+63,bukan sudah jiwa dalam hasil pilkada sulit sungguh tidak sulit deklarasi,jiwa,Pendukung/Pemilih,0.661,deklarasi,3.0,"[0.9677, 0.0161, 0.0161]",sudah jiwa dalam,1
+66,catat dki kehilangan ahok,ahok,Politik Uang,0.3434,kehilangan,-4.0,"[0.0122, 0.0122, 0.9756]",kehilangan ahok,1
+91,kalah besok kalah dipengadilan,besok,Strategi Kampanye,0.3882,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kalah besok kalah,1
+212,sedih kehilangan sosok gubenur jujur dan pekerja keras melayani warganya,warga,SARA,0.0934,melayani,3.0,"[0.9677, 0.0161, 0.0161]",melayani warga nya,1
+212,sedih kehilangan sosok gubenur jujur dan pekerja keras melayani warganya,sosok,Pendukung/Pemilih,0.5631,kehilangan,-4.0,"[0.0122, 0.0122, 0.9756]",kehilangan sosok gubenur,1
+8,ahok kalah telak diseluruh tps wilayah fpi,ahok,Tokoh dan Partai,0.262,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahok kalah,1
+10,ahok menang tipis tps habib rizieq mencoblos,ahok,Tokoh dan Partai,0.0,mencoblos,-3.0,"[0.0161, 0.0161, 0.9677]",ahok menang,1
+10,ahok menang tipis tps habib rizieq mencoblos,tps,SARA,0.4356,mencoblos,-3.0,"[0.0161, 0.0161, 0.9677]",tipis tps habib,1
+144,deh cuitan curang black campaign nongol legowo demokrasi bukan namanya hahaa,legowo,Tokoh dan Partai,0.0,nongol,2.0,"[0.9524, 0.0238, 0.0238]",nongol legowo demokrasi,1
+94,hasil tps 011010 rw 002 kelurahan pela mampang sedih lihatnya,rw,Pendukung/Pemilih,0.6501,hasil,3.0,"[0.9677, 0.0161, 0.0161]",011010 rw 002,1
+94,hasil tps 011010 rw 002 kelurahan pela mampang sedih lihatnya,kelurahan,Pendukung/Pemilih,0.6386,hasil,3.0,"[0.9677, 0.0161, 0.0161]",002 kelurahan pela,1
+94,hasil tps 011010 rw 002 kelurahan pela mampang sedih lihatnya,hasil,Pendukung/Pemilih,0.7173,lihat,3.0,"[0.9677, 0.0161, 0.0161]",hasil tps,1
+94,hasil tps 011010 rw 002 kelurahan pela mampang sedih lihatnya,tps,Pendukung/Pemilih,0.7594,hasil,3.0,"[0.9677, 0.0161, 0.0161]",hasil tps 011010,1
+112,jangan harap jakarta bebas korupsi suaramu masih bisa dibeli,suaramu,Politik Uang,0.5947,korupsi,4.0,"[0.9756, 0.0122, 0.0122]",korupsi suaramu masih,1
+235,syukur lembar c6 sudah tangan tidak sabar colok matanya ahok,syukur,Pendukung/Pemilih,0.614,colok,-2.0,"[0.0238, 0.0238, 0.9524]",syukur lembar,1
+235,syukur lembar c6 sudah tangan tidak sabar colok matanya ahok,tangan,Pendukung/Pemilih,0.2915,syukur,-5.0,"[0.0098, 0.0098, 0.9804]",sudah tangan tidak,1
+235,syukur lembar c6 sudah tangan tidak sabar colok matanya ahok,lembar,Pendukung/Pemilih,0.7669,syukur,-5.0,"[0.0098, 0.0098, 0.9804]",syukur lembar c6,1
+235,syukur lembar c6 sudah tangan tidak sabar colok matanya ahok,ahok,Politik Uang,0.3549,colok,-2.0,"[0.0238, 0.0238, 0.9524]",nya ahok,1
+108,kan rejeki kasihan sudah dukung tapi tidak dapat,rejeki,SARA,0.0,dukung,-4.0,"[0.0122, 0.0122, 0.9756]",kan rejeki kasihan,1
+108,kan rejeki kasihan sudah dukung tapi tidak dapat,kasihan,SARA,0.2058,rejeki,-4.0,"[0.0122, 0.0122, 0.9756]",rejeki kasihan sudah,1
+13,tim tidak tidur,tim,Pendukung/Pemilih,0.615,tidur,-3.0,"[0.0161, 0.0161, 0.9677]",tim tidak,1
+136,merayakannya terima sembakonya jangan pilih pemberinya,pemberi,Pendukung/Pemilih,0.5717,terima,-2.0,"[0.0238, 0.0238, 0.9524]",pilih pemberi nya,1
+125,dki maka pesan rasulullah saw menyerahkan ahlinya cc,rasulullah,Pendukung/Pemilih,0.6108,pesan,2.0,"[0.9524, 0.0238, 0.0238]",pesan rasulullah saw,1
+125,dki maka pesan rasulullah saw menyerahkan ahlinya cc,saw,Pendukung/Pemilih,0.5575,pesan,2.0,"[0.9524, 0.0238, 0.0238]",rasulullah saw menyerahkan,1
+106,hoaks ingat muktamar nu sudah wajibkan nahdliyin pilih pemimpin muslim,hoaks,Pendukung/Pemilih,0.6579,ingat,2.0,"[0.9524, 0.0238, 0.0238]",hoaks ingat,1
+106,hoaks ingat muktamar nu sudah wajibkan nahdliyin pilih pemimpin muslim,pemimpin,Tokoh dan Partai,0.0493,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih pemimpin muslim,1
+55,beberkan kronologi pengusiran sholat jumat,pengusiran,Pendukung/Pemilih,0.6287,kronologi,-1.0,"[0.0385, 0.1923, 0.7692]",kronologi pengusiran sholat,1
+55,beberkan kronologi pengusiran sholat jumat,jumat,Pendukung/Pemilih,0.6064,sholat,5.0,"[0.9804, 0.0098, 0.0098]",sholat jumat,1
+90,iblis menghalanghalangi manusia beribadah masjid semangat djarot,semangat,Strategi Kampanye,0.4641,masjid,3.0,"[0.9677, 0.0161, 0.0161]",masjid semangat djarot,1
+90,iblis menghalanghalangi manusia beribadah masjid semangat djarot,djarot,Pendukung/Pemilih,0.6632,semangat,4.0,"[0.9756, 0.0122, 0.0122]",semangat djarot,1
+81,dilarang pilih cagub nonmuslim habib pilih djarot,pilih,Tokoh dan Partai,0.4337,dilarang,-3.0,"[0.0161, 0.0161, 0.9677]",dilarang pilih cagub,1
+81,dilarang pilih cagub nonmuslim habib pilih djarot,cagub,Tokoh dan Partai,0.2757,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih cagub nonmuslim,1
+81,dilarang pilih cagub nonmuslim habib pilih djarot,djarot,Tokoh dan Partai,0.5055,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih djarot,1
+36,aneh dan aneh umat usir,usir,Pendukung/Pemilih,0.6593,umat,3.0,"[0.9677, 0.0161, 0.0161]",umat usir,1
+36,aneh dan aneh umat usir,umat,Pendukung/Pemilih,0.5654,aneh,4.0,"[0.9756, 0.0122, 0.0122]",aneh umat usir,1
+36,aneh dan aneh umat usir,aneh,Pendukung/Pemilih,0.6855,aneh,4.0,"[0.9756, 0.0122, 0.0122]",aneh dan,1
+50,bagi-bagi sembako gratis tim melanggar pasal 73 ayat 1 uu no10 2016,uu,Pendukung/Pemilih,0.8015,pasal,-4.0,"[0.0122, 0.0122, 0.9756]",1 uu no10,1
+50,bagi-bagi sembako gratis tim melanggar pasal 73 ayat 1 uu no10 2016,pasal,Pendukung/Pemilih,0.7968,melanggar,-5.0,"[0.0098, 0.0098, 0.9804]",melanggar pasal 73,1
+50,bagi-bagi sembako gratis tim melanggar pasal 73 ayat 1 uu no10 2016,tim,SARA,0.0,melanggar,-5.0,"[0.0098, 0.0098, 0.9804]",gratis tim melanggar,1
+50,bagi-bagi sembako gratis tim melanggar pasal 73 ayat 1 uu no10 2016,ayat,Pendukung/Pemilih,0.7864,pasal,-4.0,"[0.0122, 0.0122, 0.9756]",73 ayat 1,1
+50,bagi-bagi sembako gratis tim melanggar pasal 73 ayat 1 uu no10 2016,bagi-bagi,Politik Uang,0.3609,melanggar,-5.0,"[0.0098, 0.0098, 0.9804]",bagi-bagi sembako,1

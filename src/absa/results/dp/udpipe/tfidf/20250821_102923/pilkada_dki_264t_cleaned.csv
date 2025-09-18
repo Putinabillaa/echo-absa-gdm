@@ -1,0 +1,564 @@
+id,original_text,aspect_term,aspect_category,similarity,matched_opinions,total_weight,sentiment_prob,context_phrase,opinion_count
+52,banyak akun kloning seolah2 pendukung mulai menyerang paslon dengan opini dan argumen pmbenaranjangan terkecoh,pmbenaranjangan,Politik Uang,0.0,argumen,-4.0,"[0.0122, 0.0122, 0.9756]",argumen pmbenaranjangan terkecoh,1
+52,banyak akun kloning seolah2 pendukung mulai menyerang paslon dengan opini dan argumen pmbenaranjangan terkecoh,paslon,Pendukung/Pemilih,0.2023,menyerang,-3.0,"[0.0161, 0.0161, 0.9677]",menyerang paslon dengan,1
+52,banyak akun kloning seolah2 pendukung mulai menyerang paslon dengan opini dan argumen pmbenaranjangan terkecoh,opini,Pendukung/Pemilih,0.1681,menyerang,-3.0,"[0.0161, 0.0161, 0.9677]",dengan opini dan,1
+52,banyak akun kloning seolah2 pendukung mulai menyerang paslon dengan opini dan argumen pmbenaranjangan terkecoh,akun,Politik Uang,0.0,mulai,1.0,"[0.7692, 0.1923, 0.0385]",banyak akun kloning,1
+127,kasian oh kasian dengan peluru 1milyar untuk tiap rw tidak mempan menangin pilkada,peluru,Pendukung/Pemilih,0.2023,kasian,-3.0,"[0.0161, 0.0161, 0.9677]",dengan peluru 1milyar,1
+127,kasian oh kasian dengan peluru 1milyar untuk tiap rw tidak mempan menangin pilkada,kasian,Politik Uang,0.0,kasian,-3.0,"[0.0161, 0.0161, 0.9677]",kasian oh,1
+149,awas ye kalo minta dukungan suara pendukung,pendukung,Pendukung/Pemilih,0.6068,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",suara pendukung,1
+149,awas ye kalo minta dukungan suara pendukung,kalo,Politik Uang,0.0,minta,2.0,"[0.9524, 0.0238, 0.0238]",ye kalo minta,1
+149,awas ye kalo minta dukungan suara pendukung,dukungan,Politik Uang,0.0,minta,2.0,"[0.9524, 0.0238, 0.0238]",minta dukungan suara,1
+149,awas ye kalo minta dukungan suara pendukung,suara,Pendukung/Pemilih,0.6068,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dukungan suara pendukung,1
+37,aneh deh lebay masa ini di sangkut pautkan sama kandidat calgub anda lebay seperti yg anda dukung,lebay,Politik Uang,0.0,aneh,4.0,"[0.9756, 0.0122, 0.0122]",deh lebay masa,1
+135,kepada allah swt kami ucapkan rasa syukur dan kepada pak kami sampaikan terimakasih makna 17 suara anda,swt,Politik Uang,0.0,allah,5.0,"[0.9804, 0.0098, 0.0098]",allah swt kami,1
+135,kepada allah swt kami ucapkan rasa syukur dan kepada pak kami sampaikan terimakasih makna 17 suara anda,syukur,SARA,0.2167,rasa,-2.0,"[0.0238, 0.0238, 0.9524]",rasa syukur dan,1
+135,kepada allah swt kami ucapkan rasa syukur dan kepada pak kami sampaikan terimakasih makna 17 suara anda,suara,Politik Uang,0.0,makna,5.0,"[0.9804, 0.0098, 0.0098]",17 suara anda,1
+238,terima kasih teruntuk pendukung kalianlah pembeda kali ini,kasih,Politik Uang,0.0,terima,2.0,"[0.9524, 0.0238, 0.0238]",terima kasih teruntuk,1
+250,trima kasih atas keistiqomahan relawan lah yg tlh mengantarkan dg cukup signifikan,keistiqomahan,Politik Uang,0.0,trima,1.0,"[0.7692, 0.1923, 0.0385]",atas keistiqomahan relawan,1
+250,trima kasih atas keistiqomahan relawan lah yg tlh mengantarkan dg cukup signifikan,kasih,Politik Uang,0.0,trima,1.0,"[0.7692, 0.1923, 0.0385]",trima kasih atas,1
+233,sudah boleh ngakak survey mu jauh panggang dari api,survey,Politik Uang,0.0,ngakak,-2.0,"[0.0238, 0.0238, 0.9524]",ngakak survey mu,1
+233,sudah boleh ngakak survey mu jauh panggang dari api,panggang,Politik Uang,0.0,ngakak,-2.0,"[0.0238, 0.0238, 0.9524]",jauh panggang dari,1
+172,om aa kemana lepas kalah kok dia tutup mulut tidak koar mau bongkar sby,om,Politik Uang,0.0,lepas,-2.0,"[0.0238, 0.0238, 0.9524]",om aa,1
+172,om aa kemana lepas kalah kok dia tutup mulut tidak koar mau bongkar sby,sby,Tokoh dan Partai,0.1859,bongkar,3.0,"[0.9677, 0.0161, 0.0161]",bongkar sby,1
+172,om aa kemana lepas kalah kok dia tutup mulut tidak koar mau bongkar sby,mulut,Politik Uang,0.0,tutup,2.0,"[0.9524, 0.0238, 0.0238]",tutup mulut tidak,1
+172,om aa kemana lepas kalah kok dia tutup mulut tidak koar mau bongkar sby,koar,Politik Uang,0.0,mau,-5.0,"[0.0098, 0.0098, 0.9804]",tidak koar mau,1
+122,kalau pencatutan nama dan mpo melanggar hukum ga ya wkwkwkwkkwkk,ga,Politik Uang,0.0,hukum,3.0,"[0.9677, 0.0161, 0.0161]",hukum ga ya,1
+122,kalau pencatutan nama dan mpo melanggar hukum ga ya wkwkwkwkkwkk,hukum,Politik Uang,0.0,melanggar,-5.0,"[0.0098, 0.0098, 0.9804]",melanggar hukum ga,1
+122,kalau pencatutan nama dan mpo melanggar hukum ga ya wkwkwkwkkwkk,pencatutan,Tokoh dan Partai,0.3717,melanggar,-5.0,"[0.0098, 0.0098, 0.9804]",kalau pencatutan nama,1
+260,ya pastilah kan ga suka ama ahok jd pas udah kalah otomatis dukungannya lari ke mas aniessandi,udah,Politik Uang,0.0,lari,-2.0,"[0.0238, 0.0238, 0.9524]",pas udah kalah,1
+260,ya pastilah kan ga suka ama ahok jd pas udah kalah otomatis dukungannya lari ke mas aniessandi,pastilah,Politik Uang,0.0,suka,3.0,"[0.9677, 0.0161, 0.0161]",ya pastilah kan,1
+260,ya pastilah kan ga suka ama ahok jd pas udah kalah otomatis dukungannya lari ke mas aniessandi,ahok,Tokoh dan Partai,0.1859,suka,3.0,"[0.9677, 0.0161, 0.0161]",ama ahok jd,1
+260,ya pastilah kan ga suka ama ahok jd pas udah kalah otomatis dukungannya lari ke mas aniessandi,ama,Tokoh dan Partai,0.1859,suka,3.0,"[0.9677, 0.0161, 0.0161]",suka ama ahok,1
+260,ya pastilah kan ga suka ama ahok jd pas udah kalah otomatis dukungannya lari ke mas aniessandi,dukungan,Politik Uang,0.0,lari,-2.0,"[0.0238, 0.0238, 0.9524]",otomatis dukungan nya,1
+260,ya pastilah kan ga suka ama ahok jd pas udah kalah otomatis dukungannya lari ke mas aniessandi,aniessandi,Politik Uang,0.0,mas,3.3,"[0.9706, 0.0147, 0.0147]",mas aniessandi,0
+260,ya pastilah kan ga suka ama ahok jd pas udah kalah otomatis dukungannya lari ke mas aniessandi,mas,Politik Uang,0.0,lari,-2.0,"[0.0238, 0.0238, 0.9524]",ke mas aniessandi,1
+80,banteng garuda ksatria gentle cinta,garuda,Politik Uang,0.0,banteng,-3.0,"[0.0161, 0.0161, 0.9677]",banteng garuda ksatria,1
+80,banteng garuda ksatria gentle cinta,ksatria,Politik Uang,0.0,banteng,-3.0,"[0.0161, 0.0161, 0.9677]",garuda ksatria gentle,1
+86,gara2 ektp dikorupsi fotoku yg semula mirip pelan tapi pasti skrang malah mirip stickmoticons,pelan,Politik Uang,0.0,mirip,1.0,"[0.7692, 0.1923, 0.0385]",mirip pelan tapi,1
+86,gara2 ektp dikorupsi fotoku yg semula mirip pelan tapi pasti skrang malah mirip stickmoticons,skrang,Politik Uang,0.0,mirip,1.0,"[0.7692, 0.1923, 0.0385]",pasti skrang malah,1
+86,gara2 ektp dikorupsi fotoku yg semula mirip pelan tapi pasti skrang malah mirip stickmoticons,semula,Politik Uang,0.0,mirip,1.0,"[0.7692, 0.1923, 0.0385]",yg semula mirip,1
+131,kemana nih antasari kalah di melempem dia benerbener akting yang,nih,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kemana nih antasari,1
+104,ingat tidak bisa modal omongan saja tapi kerja nyata,omongan,Politik Uang,0.0,modal,-2.0,"[0.0238, 0.0238, 0.9524]",modal omongan saja,1
+104,ingat tidak bisa modal omongan saja tapi kerja nyata,kerja,Politik Uang,0.0,modal,-2.0,"[0.0238, 0.0238, 0.9524]",tapi kerja nyata,1
+104,ingat tidak bisa modal omongan saja tapi kerja nyata,modal,Politik Uang,0.0,ingat,-2.0,"[0.0238, 0.0238, 0.9524]",bisa modal omongan,1
+177,paslon salah langkah seperti dilakukan sandi ini bukan tidak mungkin jadi bumerang gagal dapat suara,suara,Politik Uang,0.0,gagal,4.0,"[0.9756, 0.0122, 0.0122]",dapat suara,1
+177,paslon salah langkah seperti dilakukan sandi ini bukan tidak mungkin jadi bumerang gagal dapat suara,bumerang,Politik Uang,0.0,gagal,4.0,"[0.9756, 0.0122, 0.0122]",jadi bumerang gagal,1
+78,di manakah sang ksatria samurai prajurit pembangun semangat harapan pahlawan yg dinantinantikan rakyat itu,harapan,Politik Uang,0.0,semangat,4.0,"[0.9756, 0.0122, 0.0122]",semangat harapan pahlawan,1
+139,kini ketika berada di luar arena tabir kegelapan tiada harapan kembali menyergap rakyat kemana lagi rakyat mencari ketulusan,ketulusan,Politik Uang,0.0,mencari,-3.0,"[0.0161, 0.0161, 0.9677]",mencari ketulusan,1
+139,kini ketika berada di luar arena tabir kegelapan tiada harapan kembali menyergap rakyat kemana lagi rakyat mencari ketulusan,rakyat,Politik Uang,0.0,mencari,-3.0,"[0.0161, 0.0161, 0.9677]",menyergap rakyat kemana,1
+139,kini ketika berada di luar arena tabir kegelapan tiada harapan kembali menyergap rakyat kemana lagi rakyat mencari ketulusan,arena,Politik Uang,0.0,berada,4.0,"[0.9756, 0.0122, 0.0122]",luar arena tabir,1
+47,awas ye kalo minta dukungan suara pendukung,pendukung,Pendukung/Pemilih,0.6068,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",suara pendukung,1
+47,awas ye kalo minta dukungan suara pendukung,kalo,Politik Uang,0.0,minta,2.0,"[0.9524, 0.0238, 0.0238]",ye kalo minta,1
+47,awas ye kalo minta dukungan suara pendukung,dukungan,Politik Uang,0.0,minta,2.0,"[0.9524, 0.0238, 0.0238]",minta dukungan suara,1
+47,awas ye kalo minta dukungan suara pendukung,suara,Pendukung/Pemilih,0.6068,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dukungan suara pendukung,1
+105,ini dia pelaku pengirim sms gelap antasari azhar,sms,Politik Uang,0.0,pengirim,1.0,"[0.7692, 0.1923, 0.0385]",pengirim sms gelap,1
+105,ini dia pelaku pengirim sms gelap antasari azhar,antasari,Politik Uang,0.0,pengirim,1.0,"[0.7692, 0.1923, 0.0385]",gelap antasari azhar,1
+251,tuduhan terhadap yg kerap dilontarkan anak ingusan dan cuma mayor sekarang tak terdengar lagi dudah berubah menjadi sanjungan,ingusan,SARA,0.2167,anak,-3.0,"[0.0161, 0.0161, 0.9677]",anak ingusan dan,1
+111,jangan curiga dulu saldonya bisa di kenti seperti blt orang mau berbuat baik belum apa2 sudah curiga mekanismenya seperti apa,mekanisme,Politik Uang,0.0,curiga,-1.0,"[0.0385, 0.1923, 0.7692]",curiga mekanisme nya,1
+11,ahoker masih bully,ahoker,Politik Uang,0.0,bully,-5.0,"[0.0098, 0.0098, 0.9804]",ahoker masih,1
+208,sayang mayor termasuk yang dikader untuk pemimpin masa depan dari sma taruna beliau selalu yang teratas lagi2 itu pilihan,sayang,Politik Uang,0.0,termasuk,-3.0,"[0.0161, 0.0161, 0.9677]",sayang mayor,1
+208,sayang mayor termasuk yang dikader untuk pemimpin masa depan dari sma taruna beliau selalu yang teratas lagi2 itu pilihan,pilihan,Politik Uang,0.0,teratas,3.0,"[0.9677, 0.0161, 0.0161]",itu pilihan,1
+208,sayang mayor termasuk yang dikader untuk pemimpin masa depan dari sma taruna beliau selalu yang teratas lagi2 itu pilihan,mayor,Strategi Kampanye,0.1896,sayang,3.0,"[0.9677, 0.0161, 0.0161]",sayang mayor termasuk,1
+224,setuju bangett banyak yang tidak bersyukur kemrin tidak banjir sekarang malah sibuk mencari pembelaan,pembelaan,Politik Uang,0.0,mencari,3.0,"[0.9677, 0.0161, 0.0161]",mencari pembelaan,1
+224,setuju bangett banyak yang tidak bersyukur kemrin tidak banjir sekarang malah sibuk mencari pembelaan,sekarang,Politik Uang,0.0,banjir,-4.0,"[0.0122, 0.0122, 0.9756]",banjir sekarang malah,1
+224,setuju bangett banyak yang tidak bersyukur kemrin tidak banjir sekarang malah sibuk mencari pembelaan,banjir,Politik Uang,0.0,bersyukur,-5.0,"[0.0098, 0.0098, 0.9804]",tidak banjir sekarang,1
+99,hellloooo suara rakyat ngerti suara rakyat bukan suaranya or dek ngopi dulu gih,rakyat,Politik Uang,0.0,suara,-2.0,"[0.0238, 0.0238, 0.9524]",suara rakyat ngerti,1
+99,hellloooo suara rakyat ngerti suara rakyat bukan suaranya or dek ngopi dulu gih,or,Politik Uang,0.0,suara,-2.0,"[0.0238, 0.0238, 0.9524]",nya or dek,1
+99,hellloooo suara rakyat ngerti suara rakyat bukan suaranya or dek ngopi dulu gih,suara,Politik Uang,0.0,ngerti,-1.0,"[0.0385, 0.1923, 0.7692]",hellloooo suara rakyat,1
+65,cari teman kok cara gitu ya pdhal sdh jelas gubernur baru,teman,Politik Uang,0.0,cari,-3.0,"[0.0161, 0.0161, 0.9677]",cari teman kok,1
+65,cari teman kok cara gitu ya pdhal sdh jelas gubernur baru,cari,Politik Uang,0.0,jelas,1.0,"[0.7692, 0.1923, 0.0385]",cari teman,1
+65,cari teman kok cara gitu ya pdhal sdh jelas gubernur baru,sdh,Politik Uang,0.0,pdhal,-2.0,"[0.0238, 0.0238, 0.9524]",pdhal sdh jelas,1
+65,cari teman kok cara gitu ya pdhal sdh jelas gubernur baru,cara,Politik Uang,0.0,cari,-3.0,"[0.0161, 0.0161, 0.9677]",kok cara gitu,1
+65,cari teman kok cara gitu ya pdhal sdh jelas gubernur baru,gubernur,Politik Uang,0.0,jelas,1.0,"[0.7692, 0.1923, 0.0385]",jelas gubernur baru,1
+5,agus tersingkir ahok anies rebutan suara ahy untuk kepentingan kelompok lewat,agus,Politik Uang,0.0,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",agus tersingkir,1
+5,agus tersingkir ahok anies rebutan suara ahy untuk kepentingan kelompok lewat,ahok,Tokoh dan Partai,0.2628,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",tersingkir ahok anies,1
+5,agus tersingkir ahok anies rebutan suara ahy untuk kepentingan kelompok lewat,kelompok,Pendukung/Pemilih,0.2023,kepentingan,5.0,"[0.9804, 0.0098, 0.0098]",kepentingan kelompok lewat,1
+165,meskipun kehilangan kesempatan untuk menduduki gubernur dki 20172022,kesempatan,Politik Uang,0.0,kehilangan,-4.0,"[0.0122, 0.0122, 0.9756]",kehilangan kesempatan untuk,1
+53,banyak konstituen risih sama mulutnya ahok tapi kalau diminta pilih anies dengan gerombolan khilafah dibelakangnya lebih memilih ahok,khilafah,Politik Uang,0.0,gerombolan,-4.0,"[0.0122, 0.0122, 0.9756]",gerombolan khilafah dibelakang,1
+53,banyak konstituen risih sama mulutnya ahok tapi kalau diminta pilih anies dengan gerombolan khilafah dibelakangnya lebih memilih ahok,ahok,Tokoh dan Partai,0.1859,mulut,-1.0,"[0.0385, 0.1923, 0.7692]",nya ahok tapi,1
+53,banyak konstituen risih sama mulutnya ahok tapi kalau diminta pilih anies dengan gerombolan khilafah dibelakangnya lebih memilih ahok,anies,Pendukung/Pemilih,0.143,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih anies dengan,1
+60,blunder itu ya dulu hina2 tapi sekarang butuh 17 suara dan harus ngemis minta sama orang yang dulu di hina2 jleb,suara,SARA,0.2167,butuh,-5.0,"[0.0098, 0.0098, 0.9804]",17 suara dan,1
+60,blunder itu ya dulu hina2 tapi sekarang butuh 17 suara dan harus ngemis minta sama orang yang dulu di hina2 jleb,orang,Strategi Kampanye,0.4701,minta,2.0,"[0.9524, 0.0238, 0.0238]",sama orang yang,1
+157,masih mau mencaci maki dan pepo memo nya kalian hrs mengemis minta suara 17 kpd orang2 yang selama ini kalian hina,maki,SARA,0.2167,mencaci,-5.0,"[0.0098, 0.0098, 0.9804]",mencaci maki dan,1
+157,masih mau mencaci maki dan pepo memo nya kalian hrs mengemis minta suara 17 kpd orang2 yang selama ini kalian hina,orang2,Strategi Kampanye,0.4701,suara,2.0,"[0.9524, 0.0238, 0.0238]",kpd orang2 yang,1
+157,masih mau mencaci maki dan pepo memo nya kalian hrs mengemis minta suara 17 kpd orang2 yang selama ini kalian hina,suara,Politik Uang,0.0,minta,2.0,"[0.9524, 0.0238, 0.0238]",minta suara 17,1
+88,golput lebih tinggi daripada pemilih ya nampaknya,pemilih,Pendukung/Pemilih,0.6068,tinggi,3.0,"[0.9677, 0.0161, 0.0161]",daripada pemilih ya,1
+121,kalau merhatiin relawan saat ini minta rehat itu karena ada hal yang ganjal mungkin harus ada islah dengan relawan dulu,hal,Strategi Kampanye,0.4701,ada,4.0,"[0.9756, 0.0122, 0.0122]",ada hal yang,1
+121,kalau merhatiin relawan saat ini minta rehat itu karena ada hal yang ganjal mungkin harus ada islah dengan relawan dulu,rehat,Politik Uang,0.0,minta,2.0,"[0.9524, 0.0238, 0.0238]",minta rehat itu,1
+121,kalau merhatiin relawan saat ini minta rehat itu karena ada hal yang ganjal mungkin harus ada islah dengan relawan dulu,islah,Pendukung/Pemilih,0.2023,ada,4.0,"[0.9756, 0.0122, 0.0122]",ada islah dengan,1
+175,pakar mantan sby ini surat anas urbaningrum dari jeruji besi sindiran buat mantan,sby,Tokoh dan Partai,0.1859,mantan,-3.0,"[0.0161, 0.0161, 0.9677]",mantan sby ini,1
+175,pakar mantan sby ini surat anas urbaningrum dari jeruji besi sindiran buat mantan,sindiran,Politik Uang,0.0,mantan,-3.0,"[0.0161, 0.0161, 0.9677]",besi sindiran buat,1
+175,pakar mantan sby ini surat anas urbaningrum dari jeruji besi sindiran buat mantan,mantan,Tokoh dan Partai,0.1859,pakar,-1.0,"[0.0385, 0.1923, 0.7692]",pakar mantan sby,1
+116,jangan tanya aku aku sekeluarga pemilih kalau program dp 0 nyata aku sekeluarga milih,sekeluarga,Pendukung/Pemilih,0.6068,nyata,4.0,"[0.9756, 0.0122, 0.0122]",aku sekeluarga pemilih,1
+116,jangan tanya aku aku sekeluarga pemilih kalau program dp 0 nyata aku sekeluarga milih,program,Politik Uang,0.0,nyata,4.0,"[0.9756, 0.0122, 0.0122]",kalau program dp,1
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi demi jadi gubernur,gubernur,Politik Uang,0.0,jadi,-1.0,"[0.0385, 0.1923, 0.7692]",jadi gubernur,1
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi demi jadi gubernur,aniessandiaga,Politik Uang,0.0,sylvi,1.2,"[0.8276, 0.1379, 0.0345]",sylvi aniessandiaga basukidjarot,0
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi demi jadi gubernur,basukidjarot,Politik Uang,0.0,sylvi,1.2,"[0.8276, 0.1379, 0.0345]",aniessandiaga basukidjarot debat,0
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi demi jadi gubernur,sylvi,Politik Uang,0.0,jual,-1.0,"[0.0385, 0.1923, 0.7692]",sylvi aniessandiaga,1
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi demi jadi gubernur,debat,Politik Uang,0.0,sylvi,1.2,"[0.8276, 0.1379, 0.0345]",basukidjarot debat pilkada,0
+234,sylvi aniessandiaga basukidjarot debat pilkada dki 2017 jangan jual mimpi demi jadi gubernur,pilkada,Politik Uang,0.0,debat,-3.0,"[0.0161, 0.0161, 0.9677]",debat pilkada dki,1
+7,ahhhh bukannya karena bang aji ada disitu yang bikin kalah,disitu,Strategi Kampanye,0.4701,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ada disitu yang,1
+7,ahhhh bukannya karena bang aji ada disitu yang bikin kalah,ahhhh,Politik Uang,0.0,ada,-4.0,"[0.0122, 0.0122, 0.9756]",ahhhh bukan,1
+7,ahhhh bukannya karena bang aji ada disitu yang bikin kalah,bang,Politik Uang,0.0,ada,-4.0,"[0.0122, 0.0122, 0.9756]",karena bang aji,1
+168,mungkin saya dengan rendah hati bisa meminta pendukung paslon 1 yang masih berat hati untuk melihat foto ini sejenak,pendukung,Pendukung/Pemilih,0.6068,meminta,1.0,"[0.7692, 0.1923, 0.0385]",meminta pendukung paslon,1
+168,mungkin saya dengan rendah hati bisa meminta pendukung paslon 1 yang masih berat hati untuk melihat foto ini sejenak,hati,Politik Uang,0.0,"berat,meminta",1.0,"[0.7692, 0.1923, 0.0385]",rendah hati bisa,1
+168,mungkin saya dengan rendah hati bisa meminta pendukung paslon 1 yang masih berat hati untuk melihat foto ini sejenak,paslon,Pendukung/Pemilih,0.6068,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung paslon 1,1
+168,mungkin saya dengan rendah hati bisa meminta pendukung paslon 1 yang masih berat hati untuk melihat foto ini sejenak,foto,Politik Uang,0.0,melihat,3.0,"[0.9677, 0.0161, 0.0161]",melihat foto ini,1
+38,anggap saja bisa sebulan kemudian pada dijual pindah tangan ke orang2 elit partai gerindra dan pks,tangan,Politik Uang,0.0,pindah,1.0,"[0.7692, 0.1923, 0.0385]",pindah tangan ke,1
+38,anggap saja bisa sebulan kemudian pada dijual pindah tangan ke orang2 elit partai gerindra dan pks,orang2,Politik Uang,0.0,pindah,1.0,"[0.7692, 0.1923, 0.0385]",ke orang2 elit,1
+42,antasari konferensi pers sby sby konferensi pers sby seperti rengekan anak kecil,sby,Tokoh dan Partai,0.1859,konferensi,2.0,"[0.9524, 0.0238, 0.0238]",pers sby sby,1
+42,antasari konferensi pers sby sby konferensi pers sby seperti rengekan anak kecil,pers,Tokoh dan Partai,0.1859,konferensi,2.0,"[0.9524, 0.0238, 0.0238]",konferensi pers sby,1
+246,tim yang tidak pernah tidur,tim,Strategi Kampanye,0.4701,tidur,-3.0,"[0.0161, 0.0161, 0.9677]",tim yang,1
+67,coba beretika bila ingin dukungan dari konstituen setia jangan menipu dengan membuat meme dan berita palsu rachland nashidik,konstituen,Politik Uang,0.0,dukungan,-4.0,"[0.0122, 0.0122, 0.9756]",dari konstituen setia,1
+67,coba beretika bila ingin dukungan dari konstituen setia jangan menipu dengan membuat meme dan berita palsu rachland nashidik,palsu,Politik Uang,0.0,berita,-4.0,"[0.0122, 0.0122, 0.9756]",berita palsu rachland,1
+129,kasihan tidak menyadari ada musuh dalam sarung selfienya sebagai motivasi terselubung hmmm,hmmm,Politik Uang,0.0,menyadari,-2.0,"[0.0238, 0.0238, 0.9524]",terselubung hmmm,1
+129,kasihan tidak menyadari ada musuh dalam sarung selfienya sebagai motivasi terselubung hmmm,musuh,Politik Uang,0.0,ada,-4.0,"[0.0122, 0.0122, 0.9756]",ada musuh dalam,1
+129,kasihan tidak menyadari ada musuh dalam sarung selfienya sebagai motivasi terselubung hmmm,motivasi,Politik Uang,0.0,ada,-4.0,"[0.0122, 0.0122, 0.9756]",sebagai motivasi terselubung,1
+129,kasihan tidak menyadari ada musuh dalam sarung selfienya sebagai motivasi terselubung hmmm,sarung,Politik Uang,0.0,ada,-4.0,"[0.0122, 0.0122, 0.9756]",dalam sarung selfie,1
+129,kasihan tidak menyadari ada musuh dalam sarung selfienya sebagai motivasi terselubung hmmm,kasihan,Politik Uang,0.0,menyadari,-2.0,"[0.0238, 0.0238, 0.9524]",kasihan tidak,1
+35,amieeennnnn dan tidak lupa dengan janji2 manis saat kampanye sang mayor sejati,saat,Strategi Kampanye,0.4701,kampanye,3.0,"[0.9677, 0.0161, 0.0161]",manis saat kampanye,1
+35,amieeennnnn dan tidak lupa dengan janji2 manis saat kampanye sang mayor sejati,janji2,Pendukung/Pemilih,0.2023,lupa,-1.0,"[0.0385, 0.1923, 0.7692]",dengan janji2 manis,1
+35,amieeennnnn dan tidak lupa dengan janji2 manis saat kampanye sang mayor sejati,kampanye,Strategi Kampanye,0.4701,lupa,-1.0,"[0.0385, 0.1923, 0.7692]",saat kampanye sang,1
+35,amieeennnnn dan tidak lupa dengan janji2 manis saat kampanye sang mayor sejati,mayor,Politik Uang,0.0,kampanye,3.0,"[0.9677, 0.0161, 0.0161]",sang mayor sejati,1
+173,pada pilkada dki ahy dan sby jadi target hoax dan fitnah yang dilakukan akunakun pendukung ahok,target,Politik Uang,0.0,jadi,1.0,"[0.7692, 0.1923, 0.0385]",jadi target hoax,1
+173,pada pilkada dki ahy dan sby jadi target hoax dan fitnah yang dilakukan akunakun pendukung ahok,ahok,Pendukung/Pemilih,0.4291,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahok,1
+173,pada pilkada dki ahy dan sby jadi target hoax dan fitnah yang dilakukan akunakun pendukung ahok,fitnah,Strategi Kampanye,0.4782,hoax,-5.0,"[0.0098, 0.0098, 0.9804]",dan fitnah yang,1
+173,pada pilkada dki ahy dan sby jadi target hoax dan fitnah yang dilakukan akunakun pendukung ahok,pilkada,Politik Uang,0.0,jadi,1.0,"[0.7692, 0.1923, 0.0385]",pada pilkada dki,1
+30,akibat pernyataan antasari suara ahy melorot pada pilkada dki,pernyataan,Politik Uang,0.0,melorot,1.0,"[0.7692, 0.1923, 0.0385]",akibat pernyataan antasari,1
+30,akibat pernyataan antasari suara ahy melorot pada pilkada dki,pilkada,Politik Uang,0.0,melorot,1.0,"[0.7692, 0.1923, 0.0385]",pada pilkada dki,1
+84,enam bulan kampanye pilkada di kubu ahy pendukung ahok sibuk serang program ahy tidak pernah mereka kampanye program ahok sendiri,pendukung,Pendukung/Pemilih,0.3503,kampanye,3.0,"[0.9677, 0.0161, 0.0161]",ahy pendukung ahok,1
+84,enam bulan kampanye pilkada di kubu ahy pendukung ahok sibuk serang program ahy tidak pernah mereka kampanye program ahok sendiri,program,Tokoh dan Partai,0.1859,"serang,kampanye",7.0,"[0.9859, 0.007, 0.007]",serang program ahy,2
+84,enam bulan kampanye pilkada di kubu ahy pendukung ahok sibuk serang program ahy tidak pernah mereka kampanye program ahok sendiri,ahok,Pendukung/Pemilih,0.4291,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahok sibuk,1
+84,enam bulan kampanye pilkada di kubu ahy pendukung ahok sibuk serang program ahy tidak pernah mereka kampanye program ahok sendiri,bulan,Strategi Kampanye,0.4701,kampanye,3.0,"[0.9677, 0.0161, 0.0161]",enam bulan kampanye,1
+84,enam bulan kampanye pilkada di kubu ahy pendukung ahok sibuk serang program ahy tidak pernah mereka kampanye program ahok sendiri,kampanye,Strategi Kampanye,0.4701,bulan,-1.0,"[0.0385, 0.1923, 0.7692]",bulan kampanye pilkada,1
+84,enam bulan kampanye pilkada di kubu ahy pendukung ahok sibuk serang program ahy tidak pernah mereka kampanye program ahok sendiri,serang,Politik Uang,0.0,sibuk,-4.0,"[0.0122, 0.0122, 0.9756]",sibuk serang program,1
+84,enam bulan kampanye pilkada di kubu ahy pendukung ahok sibuk serang program ahy tidak pernah mereka kampanye program ahok sendiri,pilkada,Strategi Kampanye,0.4701,kampanye,3.0,"[0.9677, 0.0161, 0.0161]",kampanye pilkada di,1
+137,ketika ahy kalah berpidato semua timnya terdiam menangis lalu setelah itu mereka melepaskan diri dari pilkada dki,ahy,Tokoh dan Partai,0.1859,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ketika ahy kalah,1
+137,ketika ahy kalah berpidato semua timnya terdiam menangis lalu setelah itu mereka melepaskan diri dari pilkada dki,pilkada,Politik Uang,0.0,melepaskan,-5.0,"[0.0098, 0.0098, 0.9804]",dari pilkada dki,1
+215,sejujurnya penilaian subyektif saya terlalu cepat bila ahy 2019 kalah di pilkada bukan modal tapi catatan negatif,ahy,Tokoh dan Partai,0.1859,kalah,4.0,"[0.9756, 0.0122, 0.0122]",bila ahy 2019,1
+215,sejujurnya penilaian subyektif saya terlalu cepat bila ahy 2019 kalah di pilkada bukan modal tapi catatan negatif,catatan,Politik Uang,0.0,kalah,4.0,"[0.9756, 0.0122, 0.0122]",tapi catatan negatif,1
+215,sejujurnya penilaian subyektif saya terlalu cepat bila ahy 2019 kalah di pilkada bukan modal tapi catatan negatif,pilkada,Politik Uang,0.0,kalah,4.0,"[0.9756, 0.0122, 0.0122]",di pilkada bukan,1
+249,tolak bajingan tengik ahy tukang sogok pemilih ini bangsat ahy ini sungguh berbahaya,bangsat,Tokoh dan Partai,0.1859,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",ini bangsat ahy,1
+249,tolak bajingan tengik ahy tukang sogok pemilih ini bangsat ahy ini sungguh berbahaya,bajingan,Politik Uang,0.0,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",tolak bajingan tengik,1
+249,tolak bajingan tengik ahy tukang sogok pemilih ini bangsat ahy ini sungguh berbahaya,tukang,Tokoh dan Partai,0.1859,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",ahy tukang sogok,1
+249,tolak bajingan tengik ahy tukang sogok pemilih ini bangsat ahy ini sungguh berbahaya,pemilih,Pendukung/Pemilih,0.6068,sogok,-4.0,"[0.0122, 0.0122, 0.9756]",sogok pemilih ini,1
+249,tolak bajingan tengik ahy tukang sogok pemilih ini bangsat ahy ini sungguh berbahaya,sogok,Pendukung/Pemilih,0.6068,tukang,-2.0,"[0.0238, 0.0238, 0.9524]",tukang sogok pemilih,1
+249,tolak bajingan tengik ahy tukang sogok pemilih ini bangsat ahy ini sungguh berbahaya,ahy,Tokoh dan Partai,0.1859,bangsat,-5.0,"[0.0098, 0.0098, 0.9804]",tengik ahy tukang,1
+248,tolak ahy yang berpolitik membawa agama,ahy,Strategi Kampanye,0.3324,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",tolak ahy yang,1
+45,astaga ini pendukung ahy tidak terima sekali dengan hasil surveyharusnya jadi tolak acuan untuk lebih semangat,pendukung,Pendukung/Pemilih,0.4291,terima,-2.0,"[0.0238, 0.0238, 0.9524]",ini pendukung ahy,1
+45,astaga ini pendukung ahy tidak terima sekali dengan hasil surveyharusnya jadi tolak acuan untuk lebih semangat,semangat,Politik Uang,0.0,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",lebih semangat,1
+45,astaga ini pendukung ahy tidak terima sekali dengan hasil surveyharusnya jadi tolak acuan untuk lebih semangat,hasil,Pendukung/Pemilih,0.2023,jadi,1.0,"[0.7692, 0.1923, 0.0385]",dengan hasil surveyharusnya,1
+45,astaga ini pendukung ahy tidak terima sekali dengan hasil surveyharusnya jadi tolak acuan untuk lebih semangat,astaga,Politik Uang,0.0,terima,-2.0,"[0.0238, 0.0238, 0.9524]",astaga ini,1
+45,astaga ini pendukung ahy tidak terima sekali dengan hasil surveyharusnya jadi tolak acuan untuk lebih semangat,acuan,Politik Uang,0.0,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",tolak acuan untuk,1
+45,astaga ini pendukung ahy tidak terima sekali dengan hasil surveyharusnya jadi tolak acuan untuk lebih semangat,ahy,Pendukung/Pemilih,0.4291,pendukung,-4.0,"[0.0122, 0.0122, 0.9756]",pendukung ahy tidak,1
+195,sahsah aja justru itu menjadi tolak ukur kedewasaan warga dki kalo ahy menang artinya pola pikir warga masih primitif,ukur,Politik Uang,0.0,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",tolak ukur kedewasaan,1
+195,sahsah aja justru itu menjadi tolak ukur kedewasaan warga dki kalo ahy menang artinya pola pikir warga masih primitif,warga,Politik Uang,0.0,pola,3.0,"[0.9677, 0.0161, 0.0161]",kedewasaan warga dki,1
+195,sahsah aja justru itu menjadi tolak ukur kedewasaan warga dki kalo ahy menang artinya pola pikir warga masih primitif,kedewasaan,Politik Uang,0.0,tolak,-4.0,"[0.0122, 0.0122, 0.9756]",ukur kedewasaan warga,1
+195,sahsah aja justru itu menjadi tolak ukur kedewasaan warga dki kalo ahy menang artinya pola pikir warga masih primitif,pikir,Politik Uang,0.0,pola,3.0,"[0.9677, 0.0161, 0.0161]",pola pikir warga,1
+195,sahsah aja justru itu menjadi tolak ukur kedewasaan warga dki kalo ahy menang artinya pola pikir warga masih primitif,pola,Politik Uang,0.0,primitif,3.0,"[0.9677, 0.0161, 0.0161]",nya pola pikir,1
+195,sahsah aja justru itu menjadi tolak ukur kedewasaan warga dki kalo ahy menang artinya pola pikir warga masih primitif,arti,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang arti nya,1
+232,suara warga cuma dihargai sembako tolak ahy sudah melakukan penyuapan kepada warga,warga,Politik Uang,0.0,suara,2.0,"[0.9524, 0.0238, 0.0238]",suara warga cuma,1
+214,sejak ahy tidak ikut pilkada lagi sudah tidak asyik ya,ahy,Tokoh dan Partai,0.1859,ikut,3.0,"[0.9677, 0.0161, 0.0161]",sejak ahy tidak,1
+214,sejak ahy tidak ikut pilkada lagi sudah tidak asyik ya,pilkada,Politik Uang,0.0,ikut,3.0,"[0.9677, 0.0161, 0.0161]",ikut pilkada lagi,1
+247,tinggal seleksi tendemnya di pilkada dki ahy kalah karena tendemnya salah pilih malah mengurangi kualitas ahy,seleksi,Politik Uang,0.0,tinggal,1.0,"[0.7692, 0.1923, 0.0385]",tinggal seleksi tendemnya,1
+247,tinggal seleksi tendemnya di pilkada dki ahy kalah karena tendemnya salah pilih malah mengurangi kualitas ahy,ahy,Tokoh dan Partai,0.1859,kualitas,4.0,"[0.9756, 0.0122, 0.0122]",dki ahy kalah,1
+247,tinggal seleksi tendemnya di pilkada dki ahy kalah karena tendemnya salah pilih malah mengurangi kualitas ahy,tendemnya,Politik Uang,0.0,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",seleksi tendemnya di,1
+242,ternyata segelintir pendukung ahy merasa ditikung di saat terakhir karena adanya tweet dari akun resmi parpol pendukung aniessandi,segelintir,Pendukung/Pemilih,0.6068,merasa,-2.0,"[0.0238, 0.0238, 0.9524]",ternyata segelintir pendukung,1
+242,ternyata segelintir pendukung ahy merasa ditikung di saat terakhir karena adanya tweet dari akun resmi parpol pendukung aniessandi,ahy,Pendukung/Pemilih,0.4291,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahy merasa,1
+242,ternyata segelintir pendukung ahy merasa ditikung di saat terakhir karena adanya tweet dari akun resmi parpol pendukung aniessandi,aniessandi,Pendukung/Pemilih,0.6068,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung aniessandi,1
+23,ahy menanggung akibat cuitan ayahnya yang tak produktif,cuitan,Politik Uang,0.0,menanggung,-2.0,"[0.0238, 0.0238, 0.9524]",akibat cuitan ayah,1
+23,ahy menanggung akibat cuitan ayahnya yang tak produktif,ahy,Tokoh dan Partai,0.1859,menanggung,-2.0,"[0.0238, 0.0238, 0.9524]",ahy menanggung,1
+210,sebenarnya reaksi pendukung ahy ini tak perlu bersikap baper seperti itu karena tak ada yang mau jadi pecundang di ajang pilkada,pendukung,Pendukung/Pemilih,0.4291,reaksi,-2.0,"[0.0238, 0.0238, 0.9524]",reaksi pendukung ahy,1
+210,sebenarnya reaksi pendukung ahy ini tak perlu bersikap baper seperti itu karena tak ada yang mau jadi pecundang di ajang pilkada,reaksi,Pendukung/Pemilih,0.6068,perlu,-2.0,"[0.0238, 0.0238, 0.9524]",sebenarnya reaksi pendukung,1
+210,sebenarnya reaksi pendukung ahy ini tak perlu bersikap baper seperti itu karena tak ada yang mau jadi pecundang di ajang pilkada,ahy,Pendukung/Pemilih,0.4291,pendukung,-4.0,"[0.0122, 0.0122, 0.9756]",pendukung ahy ini,1
+210,sebenarnya reaksi pendukung ahy ini tak perlu bersikap baper seperti itu karena tak ada yang mau jadi pecundang di ajang pilkada,pilkada,Politik Uang,0.0,ajang,-3.0,"[0.0161, 0.0161, 0.9677]",ajang pilkada,1
+77,dengan suara bergetar ahy minta maaf sudah kecewakan pendukungnya,suara,Pendukung/Pemilih,0.2023,minta,2.0,"[0.9524, 0.0238, 0.0238]",dengan suara bergetar,1
+77,dengan suara bergetar ahy minta maaf sudah kecewakan pendukungnya,ahy,Tokoh dan Partai,0.1859,minta,2.0,"[0.9524, 0.0238, 0.0238]",bergetar ahy minta,1
+19,mengenang pidato kekalahan,pidato,Politik Uang,0.0,mengenang,3.0,"[0.9677, 0.0161, 0.0161]",mengenang pidato kekalahan,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,antasari,SARA,0.2167,efek,3.0,"[0.9677, 0.0161, 0.0161]",dan antasari efek,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,efek,Politik Uang,0.0,debat,3.0,"[0.9677, 0.0161, 0.0161]",debat efek aksi,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,pertahanan,Tokoh dan Partai,0.1859,lini,4.0,"[0.9756, 0.0122, 0.0122]",lini pertahanan ahy,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,aksi,Politik Uang,0.0,efek,3.0,"[0.9677, 0.0161, 0.0161]",efek aksi 112,1
+146,lini pertahanan ahy rapuh debat efek aksi 112 efek dan antasari efek,ahy,Tokoh dan Partai,0.1859,lini,4.0,"[0.9756, 0.0122, 0.0122]",pertahanan ahy rapuh,1
+85,gagal di pilkada dki jakarta ahy diisukan maju ke pilgub jatim,pilkada,Politik Uang,0.0,gagal,-4.0,"[0.0122, 0.0122, 0.9756]",di pilkada dki,1
+57,berdasarkan survey sementara ahy masuk 3 besar selamat,survey,Politik Uang,0.0,berdasarkan,-4.0,"[0.0122, 0.0122, 0.9756]",berdasarkan survey sementara,1
+57,berdasarkan survey sementara ahy masuk 3 besar selamat,ahy,Tokoh dan Partai,0.1859,masuk,-3.0,"[0.0161, 0.0161, 0.9677]",sementara ahy masuk,1
+161,meninggalkan zona aman dan nyaman demi kemajuan jakarta dengan hasil yang tak sesuai harapan ahy,hasil,Strategi Kampanye,0.3324,meninggalkan,-4.0,"[0.0122, 0.0122, 0.9756]",dengan hasil yang,1
+161,meninggalkan zona aman dan nyaman demi kemajuan jakarta dengan hasil yang tak sesuai harapan ahy,harapan,Tokoh dan Partai,0.1859,sesuai,-3.0,"[0.0161, 0.0161, 0.9677]",sesuai harapan ahy,1
+161,meninggalkan zona aman dan nyaman demi kemajuan jakarta dengan hasil yang tak sesuai harapan ahy,zona,Politik Uang,0.0,meninggalkan,-4.0,"[0.0122, 0.0122, 0.9756]",meninggalkan zona aman,1
+128,kasihan ahy kalah walaupun sudah umroh dibantu doa 7 juta umatternyata allah itu netral tidak berpolitik,kasihan,Tokoh dan Partai,0.1859,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kasihan ahy,1
+128,kasihan ahy kalah walaupun sudah umroh dibantu doa 7 juta umatternyata allah itu netral tidak berpolitik,ahy,Tokoh dan Partai,0.1859,kasihan,4.0,"[0.9756, 0.0122, 0.0122]",kasihan ahy kalah,1
+128,kasihan ahy kalah walaupun sudah umroh dibantu doa 7 juta umatternyata allah itu netral tidak berpolitik,doa,Politik Uang,0.0,dibantu,2.0,"[0.9524, 0.0238, 0.0238]",dibantu doa 7,1
+118,jual baju bekas ahy baru 3 bulan pm for info,pm,Politik Uang,0.0,bulan,-1.0,"[0.0385, 0.1923, 0.7692]",bulan pm for,1
+118,jual baju bekas ahy baru 3 bulan pm for info,bulan,Politik Uang,0.0,jual,1.0,"[0.7692, 0.1923, 0.0385]",3 bulan pm,1
+118,jual baju bekas ahy baru 3 bulan pm for info,baju,Politik Uang,0.0,jual,1.0,"[0.7692, 0.1923, 0.0385]",jual baju bekas,1
+118,jual baju bekas ahy baru 3 bulan pm for info,bekas,Tokoh dan Partai,0.1859,jual,1.0,"[0.7692, 0.1923, 0.0385]",baju bekas ahy,1
+118,jual baju bekas ahy baru 3 bulan pm for info,ahy,Tokoh dan Partai,0.1859,bekas,4.0,"[0.9756, 0.0122, 0.0122]",bekas ahy baru,1
+28,ahy siap siap jadi vocalis band rock yaaaa lompat lompat mulu bang kerjaannya,vocalis,Politik Uang,0.0,jadi,1.0,"[0.7692, 0.1923, 0.0385]",jadi vocalis band,1
+28,ahy siap siap jadi vocalis band rock yaaaa lompat lompat mulu bang kerjaannya,kerjaan,Politik Uang,0.0,mulu,2.0,"[0.9524, 0.0238, 0.0238]",bang kerjaan nya,1
+28,ahy siap siap jadi vocalis band rock yaaaa lompat lompat mulu bang kerjaannya,ahy,Tokoh dan Partai,0.1859,siap,1.0,"[0.7692, 0.1923, 0.0385]",ahy siap,1
+28,ahy siap siap jadi vocalis band rock yaaaa lompat lompat mulu bang kerjaannya,bang,Politik Uang,0.0,mulu,2.0,"[0.9524, 0.0238, 0.0238]",mulu bang kerjaan,1
+126,kasian benar nasib ahy karir tinggi di tni harus tamat karena nafsu pepo selanjutnya paling cepat ikut parpol kalau tidak begitu dagang ak,nafsu,Politik Uang,0.0,cepat,-3.0,"[0.0161, 0.0161, 0.9677]",karena nafsu pepo,1
+126,kasian benar nasib ahy karir tinggi di tni harus tamat karena nafsu pepo selanjutnya paling cepat ikut parpol kalau tidak begitu dagang ak,kasian,Politik Uang,0.0,tamat,3.0,"[0.9677, 0.0161, 0.0161]",kasian benar,1
+126,kasian benar nasib ahy karir tinggi di tni harus tamat karena nafsu pepo selanjutnya paling cepat ikut parpol kalau tidak begitu dagang ak,parpol,Politik Uang,0.0,ikut,3.0,"[0.9677, 0.0161, 0.0161]",ikut parpol kalau,1
+126,kasian benar nasib ahy karir tinggi di tni harus tamat karena nafsu pepo selanjutnya paling cepat ikut parpol kalau tidak begitu dagang ak,nasib,Tokoh dan Partai,0.1859,tamat,3.0,"[0.9677, 0.0161, 0.0161]",benar nasib ahy,1
+115,jangan sampai sby berkata ahy kalah garagara antasari ya survey kan sudah menunjukan ahy terus merosot elektabilitasnya,elektabilitas,Politik Uang,0.0,merosot,-5.0,"[0.0098, 0.0098, 0.9804]",merosot elektabilitas nya,1
+115,jangan sampai sby berkata ahy kalah garagara antasari ya survey kan sudah menunjukan ahy terus merosot elektabilitasnya,ahy,Tokoh dan Partai,0.1859,kalah,4.0,"[0.9756, 0.0122, 0.0122]",berkata ahy kalah,1
+115,jangan sampai sby berkata ahy kalah garagara antasari ya survey kan sudah menunjukan ahy terus merosot elektabilitasnya,garagara,Politik Uang,0.0,kalah,4.0,"[0.9756, 0.0122, 0.0122]",kalah garagara antasari,1
+202,saya bertanya kepada bapak presiden tv saya rusak apa ya kok ahy tidak naik naik hasil qc sementara gpp,hasil,Politik Uang,0.0,naik,-1.0,"[0.0385, 0.1923, 0.7692]",naik hasil qc,1
+202,saya bertanya kepada bapak presiden tv saya rusak apa ya kok ahy tidak naik naik hasil qc sementara gpp,gpp,Politik Uang,0.0,naik,-1.0,"[0.0385, 0.1923, 0.7692]",sementara gpp,1
+182,mengenang pidato kekalahan,pidato,Politik Uang,0.0,mengenang,3.0,"[0.9677, 0.0161, 0.0161]",mengenang pidato kekalahan,1
+217,ahy memang kalah di pilkada tetapi menang di hati rakyat,rakyat,Politik Uang,0.0,hati,2.0,"[0.9524, 0.0238, 0.0238]",hati rakyat,1
+217,ahy memang kalah di pilkada tetapi menang di hati rakyat,hati,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",di hati rakyat,1
+217,ahy memang kalah di pilkada tetapi menang di hati rakyat,ahy,Tokoh dan Partai,0.1859,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy memang,1
+217,ahy memang kalah di pilkada tetapi menang di hati rakyat,pilkada,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",di pilkada tetapi,1
+98,heeebohhhhagus sylvi kalah di tps 6 tmpat menggunakan hak pilihnya,tps,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",di tps 6,1
+262,yang pilih semoga tidak ikut demokrat yaa kalau benar mau dukung ahok,ahok,Tokoh dan Partai,0.1859,dukung,4.0,"[0.9756, 0.0122, 0.0122]",dukung ahok,1
+262,yang pilih semoga tidak ikut demokrat yaa kalau benar mau dukung ahok,demokrat,Politik Uang,0.0,ikut,3.0,"[0.9677, 0.0161, 0.0161]",ikut demokrat yaa,1
+164,mesin robot sylvi lupa dimatiin jadi masih masuk trending topik,mesin,Politik Uang,0.0,lupa,1.0,"[0.7692, 0.1923, 0.0385]",mesin robot,1
+62,buat pendukung mari rapatkan barisan ke paslon buang issu miring paslon masih mau dipimpin seorang terdakwa simulut ember,mari,Pendukung/Pemilih,0.6068,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung mari rapatkan,1
+62,buat pendukung mari rapatkan barisan ke paslon buang issu miring paslon masih mau dipimpin seorang terdakwa simulut ember,issu,Politik Uang,0.0,buang,-3.0,"[0.0161, 0.0161, 0.9677]",buang issu miring,1
+93,harusnya rakyat menangis melihat kalah bukan dari aspek sebagai pribadi tapi demi kepentingan rakyat sendiri,rakyat,Politik Uang,0.0,"menangis,kepentingan",10.0,"[0.9901, 0.005, 0.005]",harusnya rakyat menangis,2
+93,harusnya rakyat menangis melihat kalah bukan dari aspek sebagai pribadi tapi demi kepentingan rakyat sendiri,pribadi,Politik Uang,0.0,aspek,3.0,"[0.9677, 0.0161, 0.0161]",sebagai pribadi tapi,1
+93,harusnya rakyat menangis melihat kalah bukan dari aspek sebagai pribadi tapi demi kepentingan rakyat sendiri,kepentingan,Politik Uang,0.0,aspek,3.0,"[0.9677, 0.0161, 0.0161]",demi kepentingan rakyat,1
+93,harusnya rakyat menangis melihat kalah bukan dari aspek sebagai pribadi tapi demi kepentingan rakyat sendiri,aspek,Politik Uang,0.0,melihat,-3.0,"[0.0161, 0.0161, 0.9677]",dari aspek sebagai,1
+16,ahy bisa kok menang pilgub dki bisa asal ngumpulin dulu 7 bola dragon ball rolling on the floor laughing rolling on the floor laughing,pilgub,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pilgub dki,1
+16,ahy bisa kok menang pilgub dki bisa asal ngumpulin dulu 7 bola dragon ball rolling on the floor laughing rolling on the floor laughing,ahy,Tokoh dan Partai,0.1859,menang,4.0,"[0.9756, 0.0122, 0.0122]",ahy bisa,1
+6,ah sekarang kalau lihat ahy jadi inget norman kamaru apakah ahy akan jualan bubur lalu naik haji smiling face with open mouth smiling eyes,haji,Politik Uang,0.0,naik,1.0,"[0.7692, 0.1923, 0.0385]",naik haji smiling,1
+6,ah sekarang kalau lihat ahy jadi inget norman kamaru apakah ahy akan jualan bubur lalu naik haji smiling face with open mouth smiling eyes,ahy,Tokoh dan Partai,0.1859,lihat,3.0,"[0.9677, 0.0161, 0.0161]",lihat ahy jadi,1
+21,ahy kemungkinan besar tersingkir persevering face persevering face hampir pasti dilanjuntukan di putaran kedua ahokdjarot vs aniessandi,persevering,Politik Uang,0.0,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",tersingkir persevering face,1
+21,ahy kemungkinan besar tersingkir persevering face persevering face hampir pasti dilanjuntukan di putaran kedua ahokdjarot vs aniessandi,ahy,Tokoh dan Partai,0.1859,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",ahy kemungkinan,1
+21,ahy kemungkinan besar tersingkir persevering face persevering face hampir pasti dilanjuntukan di putaran kedua ahokdjarot vs aniessandi,kemungkinan,Tokoh dan Partai,0.1859,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",ahy kemungkinan besar,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar dari saling hujat buka aib,islam,Politik Uang,0.0,umat,3.0,"[0.9677, 0.0161, 0.0161]",umat islam tertunda,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar dari saling hujat buka aib,aib,Politik Uang,0.0,hujat,-5.0,"[0.0098, 0.0098, 0.9804]",buka aib,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar dari saling hujat buka aib,ahy,Tokoh dan Partai,0.1859,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy kalah,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar dari saling hujat buka aib,sisi,Politik Uang,0.0,tertunda,-3.0,"[0.0161, 0.0161, 0.9677]",kalah sisi negatif,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar dari saling hujat buka aib,hujat,Politik Uang,0.0,terhindar,-4.0,"[0.0122, 0.0122, 0.9756]",saling hujat buka,1
+20,ahy kalah sisi negatif umat islam tertunda dalam menempatkan pemimpin sisi positif umat islam terhindar dari saling hujat buka aib,buka,Politik Uang,0.0,hujat,-5.0,"[0.0098, 0.0098, 0.9804]",hujat buka aib,1
+14,ahy ahy anda ngomong karakter anda tau yang barusan anda omongkan untuk melihat sisi negatif orang lain tongue oncoming fist,sisi,Politik Uang,0.0,melihat,3.0,"[0.9677, 0.0161, 0.0161]",melihat sisi negatif,1
+17,ahy hanya membicarakan negatif saja untuk jakarta tidak ada solusi yang tepat untuk mengatasi nol besar thumbs down,solusi,Strategi Kampanye,0.4701,ada,-4.0,"[0.0122, 0.0122, 0.9756]",ada solusi yang,1
+17,ahy hanya membicarakan negatif saja untuk jakarta tidak ada solusi yang tepat untuk mengatasi nol besar thumbs down,jakarta,Politik Uang,0.0,ada,-4.0,"[0.0122, 0.0122, 0.9756]",untuk jakarta tidak,1
+259,ya alloh tuhan yme ahy ternyata didukung senator beraura negatif,ahy,Tokoh dan Partai,0.1859,tuhan,3.0,"[0.9677, 0.0161, 0.0161]",yme ahy ternyata,1
+160,menemukan foto seperti ini ternyata lingkaran orang2 ahy penuh masalah semua integritas dan kwalitas yang negatif waspada waspada thumbs down,integritas,SARA,0.2167,masalah,-4.0,"[0.0122, 0.0122, 0.9756]",semua integritas dan,1
+160,menemukan foto seperti ini ternyata lingkaran orang2 ahy penuh masalah semua integritas dan kwalitas yang negatif waspada waspada thumbs down,foto,Politik Uang,0.0,menemukan,2.0,"[0.9524, 0.0238, 0.0238]",menemukan foto seperti,1
+254,wah si ahy 70 sentimennya negatif wkwkwkface with stuckout tounges,ahy,Tokoh dan Partai,0.1859,wah,3.0,"[0.9677, 0.0161, 0.0161]",si ahy 70,1
+221,senjata makan tuan aka karma 2 kicauan negatif sby diyakini pengaruhi elektabilitas ahy face with stuckout tounges,sby,Tokoh dan Partai,0.1859,kicauan,-4.0,"[0.0122, 0.0122, 0.9756]",negatif sby diyakini,1
+39,pingin lihat mas debat face with stuckout tounges,debat,Politik Uang,0.0,mas,2.4,"[0.96, 0.02, 0.02]",mas debat face,0
+39,pingin lihat mas debat face with stuckout tounges,pingin,Politik Uang,0.0,lihat,3.0,"[0.9677, 0.0161, 0.0161]",pingin lihat,1
+39,pingin lihat mas debat face with stuckout tounges,mas,Politik Uang,0.0,lihat,3.0,"[0.9677, 0.0161, 0.0161]",lihat mas debat,1
+166,2mesti nyuruh mantan pemilih buat pilih paslon face with open mouth thumbs up ok hand folded hands thinking face smiling face with sunglasses,2mesti,Politik Uang,0.0,nyuruh,-3.0,"[0.0161, 0.0161, 0.9677]",2mesti nyuruh,1
+166,2mesti nyuruh mantan pemilih buat pilih paslon face with open mouth thumbs up ok hand folded hands thinking face smiling face with sunglasses,buat,Pendukung/Pemilih,0.6068,mantan,-3.0,"[0.0161, 0.0161, 0.9677]",pemilih buat pilih,1
+166,2mesti nyuruh mantan pemilih buat pilih paslon face with open mouth thumbs up ok hand folded hands thinking face smiling face with sunglasses,pilih,Politik Uang,0.0,mantan,-3.0,"[0.0161, 0.0161, 0.9677]",buat pilih paslon,1
+166,2mesti nyuruh mantan pemilih buat pilih paslon face with open mouth thumbs up ok hand folded hands thinking face smiling face with sunglasses,pemilih,Pendukung/Pemilih,0.6068,mantan,-3.0,"[0.0161, 0.0161, 0.9677]",mantan pemilih buat,1
+166,2mesti nyuruh mantan pemilih buat pilih paslon face with open mouth thumbs up ok hand folded hands thinking face smiling face with sunglasses,paslon,Politik Uang,0.0,nyuruh,-3.0,"[0.0161, 0.0161, 0.9677]",pilih paslon face,1
+166,2mesti nyuruh mantan pemilih buat pilih paslon face with open mouth thumbs up ok hand folded hands thinking face smiling face with sunglasses,mantan,Pendukung/Pemilih,0.6068,nyuruh,-3.0,"[0.0161, 0.0161, 0.9677]",nyuruh mantan pemilih,1
+261,ya pastilah kan tidak suka sama ahok jadi pas udah kalah otomatis dukungannya lari ke mas aniessandi grimacing face,mas,Politik Uang,0.0,lari,-2.0,"[0.0238, 0.0238, 0.9524]",ke mas aniessandi,1
+261,ya pastilah kan tidak suka sama ahok jadi pas udah kalah otomatis dukungannya lari ke mas aniessandi grimacing face,ahok,Tokoh dan Partai,0.1859,suka,-3.0,"[0.0161, 0.0161, 0.9677]",sama ahok jadi,1
+261,ya pastilah kan tidak suka sama ahok jadi pas udah kalah otomatis dukungannya lari ke mas aniessandi grimacing face,dukungan,Politik Uang,0.0,lari,-2.0,"[0.0238, 0.0238, 0.9524]",otomatis dukungan nya,1
+261,ya pastilah kan tidak suka sama ahok jadi pas udah kalah otomatis dukungannya lari ke mas aniessandi grimacing face,aniessandi,Politik Uang,0.0,mas,3.0,"[0.9677, 0.0161, 0.0161]",mas aniessandi grimacing,0
+2,ada ahoker masih ngebully program face with tears of joy face with tears of joy face with tears of joy,ahoker,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",ada ahoker masih,1
+140,kirim ke aku saja kaosnya sejati smiling face with smiling eyes smiling face with smiling eyes smiling face with smiling eyes,smiling,Politik Uang,0.0,sejati,3.0,"[0.9677, 0.0161, 0.0161]",sejati smiling face,1
+140,kirim ke aku saja kaosnya sejati smiling face with smiling eyes smiling face with smiling eyes smiling face with smiling eyes,sejati,Politik Uang,0.0,kirim,2.0,"[0.9524, 0.0238, 0.0238]",kaosnya sejati smiling,1
+102,humorlagu kisah sedih ahy di balik lagu jatuh bangun frowning face frowning face,lagu,Politik Uang,0.0,balik,-3.0,"[0.0161, 0.0161, 0.9677]",balik lagu jatuh,1
+68,cuitan hati sbycuitan sby jokowi mantan mantan terindahpilgub dki 2017 tongue tongue,mantan,Politik Uang,0.0,mantan,-3.0,"[0.0161, 0.0161, 0.9677]",jokowi mantan mantan,1
+12,ahokers mendadak gak salah tuh sesuatu banget face with stuckout tongue closed eyes face with stuckout tongue closed eyes face with stuckout tongue closed eyes face with stuckout tongue closed eyes face with stuckout tongue closed eyes,ahokers,Politik Uang,0.0,mendadak,-5.3999999999999995,"[0.0091, 0.0091, 0.9818]",ahokers mendadak,0
+101,hoax kok tidakada habis2nya foto 4 hari sebelum pencoblosanfotonya tidak hoax tulisanya penuh dusta angry face,hari,Politik Uang,0.0,foto,3.0,"[0.9677, 0.0161, 0.0161]",4 hari sebelum,1
+101,hoax kok tidakada habis2nya foto 4 hari sebelum pencoblosanfotonya tidak hoax tulisanya penuh dusta angry face,kok,Politik Uang,0.0,hoax,-5.0,"[0.0098, 0.0098, 0.9804]",hoax kok tidakada,1
+73,deklarasi ini sepihak tanpa konsultasi dan persetujuan ahy,persetujuan,Tokoh dan Partai,0.2237,konsultasi,3.0,"[0.9677, 0.0161, 0.0161]",dan persetujuan ahy,1
+73,deklarasi ini sepihak tanpa konsultasi dan persetujuan ahy,konsultasi,SARA,0.2167,sepihak,-3.0,"[0.0161, 0.0161, 0.9677]",tanpa konsultasi dan,1
+73,deklarasi ini sepihak tanpa konsultasi dan persetujuan ahy,deklarasi,Politik Uang,0.0,sepihak,-3.0,"[0.0161, 0.0161, 0.9677]",deklarasi ini,1
+174,pak jangan biarkan pengorbanan dan perjuangan kita rezim koplak ini komando fire fire,komando,Politik Uang,0.0,biarkan,-1.0,"[0.0385, 0.1923, 0.7692]",ini komando fire,1
+174,pak jangan biarkan pengorbanan dan perjuangan kita rezim koplak ini komando fire fire,pengorbanan,SARA,0.2167,biarkan,-1.0,"[0.0385, 0.1923, 0.7692]",biarkan pengorbanan dan,1
+48,ayo pendukung ahy dukung penggembosmu tongue fire fire,ahy,Pendukung/Pemilih,0.4291,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahy dukung,1
+48,ayo pendukung ahy dukung penggembosmu tongue fire fire,pendukung,Pendukung/Pemilih,0.4291,ayo,4.0,"[0.9756, 0.0122, 0.0122]",ayo pendukung ahy,1
+48,ayo pendukung ahy dukung penggembosmu tongue fire fire,penggembosmu,Politik Uang,0.0,dukung,4.0,"[0.9756, 0.0122, 0.0122]",dukung penggembosmu tongue,1
+48,ayo pendukung ahy dukung penggembosmu tongue fire fire,ayo,Pendukung/Pemilih,0.6068,dukung,4.0,"[0.9756, 0.0122, 0.0122]",ayo pendukung,1
+231,suara rusak garagara nyanyian si aa peka ini moga sby bisa bikin dia jeblos penjara sampai pupus disana face with steam from nose,aa,Politik Uang,0.0,nyanyian,2.0,"[0.9524, 0.0238, 0.0238]",si aa peka,1
+231,suara rusak garagara nyanyian si aa peka ini moga sby bisa bikin dia jeblos penjara sampai pupus disana face with steam from nose,penjara,Politik Uang,0.0,jeblos,1.0,"[0.7692, 0.1923, 0.0385]",jeblos penjara sampai,1
+231,suara rusak garagara nyanyian si aa peka ini moga sby bisa bikin dia jeblos penjara sampai pupus disana face with steam from nose,nyanyian,Politik Uang,0.0,suara,2.0,"[0.9524, 0.0238, 0.0238]",garagara nyanyian si,1
+231,suara rusak garagara nyanyian si aa peka ini moga sby bisa bikin dia jeblos penjara sampai pupus disana face with steam from nose,garagara,Politik Uang,0.0,suara,2.0,"[0.9524, 0.0238, 0.0238]",rusak garagara nyanyian,1
+46,awas banyak mendadak baik metamorfosis dari kecebong brubah jd anjing penjilat ok hand clapping hands,awas,Politik Uang,0.0,mendadak,2.1,"[0.9545, 0.0227, 0.0227]",awas banyak,0
+46,awas banyak mendadak baik metamorfosis dari kecebong brubah jd anjing penjilat ok hand clapping hands,metamorfosis,Politik Uang,0.0,baik,3.0,"[0.9677, 0.0161, 0.0161]",baik metamorfosis dari,1
+216,sekarang tinggal tunggu sikap terhadap manuver agus clapping hands face with cold sweat face with cold sweat,manuver,Politik Uang,0.0,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",terhadap manuver agus,1
+216,sekarang tinggal tunggu sikap terhadap manuver agus clapping hands face with cold sweat face with cold sweat,sikap,Politik Uang,0.0,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",tunggu sikap terhadap,1
+82,doa ku semoga suaranya mas agussylvi beneran ke yakin kan mas agus aku pada mu,beneran,Politik Uang,0.0,mas,3.3,"[0.9706, 0.0147, 0.0147]",agussylvi beneran ke,0
+82,doa ku semoga suaranya mas agussylvi beneran ke yakin kan mas agus aku pada mu,agussylvi,Politik Uang,0.0,mas,3.3,"[0.9706, 0.0147, 0.0147]",mas agussylvi beneran,0
+82,doa ku semoga suaranya mas agussylvi beneran ke yakin kan mas agus aku pada mu,mas,Politik Uang,0.0,"beneran,doa",7.0,"[0.9859, 0.007, 0.007]",nya mas agussylvi,2
+237,terima kasih mas karenamu anak muda telah berani menyuarakan perubahan kami tetap bersamamu,kasih,Politik Uang,0.0,terima,2.0,"[0.9524, 0.0238, 0.0238]",terima kasih mas,1
+237,terima kasih mas karenamu anak muda telah berani menyuarakan perubahan kami tetap bersamamu,perubahan,Politik Uang,0.0,bersamamu,3.0,"[0.9677, 0.0161, 0.0161]",menyuarakan perubahan kami,1
+243,tersingkir dari kancah pilkada dki rupanya ada cara lain untuk mengangkat seseorang mendunia,kancah,Politik Uang,0.0,tersingkir,-5.0,"[0.0098, 0.0098, 0.9804]",dari kancah pilkada,1
+243,tersingkir dari kancah pilkada dki rupanya ada cara lain untuk mengangkat seseorang mendunia,cara,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",ada cara lain,1
+69,dalam pilkada dki ahy juga mampu menunjukkan kualitasnya sebagai seorang pemimpin muda yang berjiwa ksatria ahy mendunia,kualitas,Politik Uang,0.0,menunjukkan,-3.0,"[0.0161, 0.0161, 0.9677]",menunjukkan kualitas nya,1
+69,dalam pilkada dki ahy juga mampu menunjukkan kualitasnya sebagai seorang pemimpin muda yang berjiwa ksatria ahy mendunia,pemimpin,Politik Uang,0.0,kualitas,4.0,"[0.9756, 0.0122, 0.0122]",seorang pemimpin muda,1
+69,dalam pilkada dki ahy juga mampu menunjukkan kualitasnya sebagai seorang pemimpin muda yang berjiwa ksatria ahy mendunia,pilkada,Politik Uang,0.0,menunjukkan,-3.0,"[0.0161, 0.0161, 0.9677]",dalam pilkada dki,1
+18,12 ahy justru menitipkan pentingnya menjaga pluralisme kebangsaan dan kesatuan dalam persaingan pilkada persatuan lebih penting,pluralisme,Politik Uang,0.0,menjaga,-3.0,"[0.0161, 0.0161, 0.9677]",menjaga pluralisme kebangsaan,1
+18,12 ahy justru menitipkan pentingnya menjaga pluralisme kebangsaan dan kesatuan dalam persaingan pilkada persatuan lebih penting,persaingan,Politik Uang,0.0,menjaga,-3.0,"[0.0161, 0.0161, 0.9677]",dalam persaingan pilkada,1
+22,ahy memang kalah di pilkada tetapi menang di hati rakyat,rakyat,Politik Uang,0.0,hati,2.0,"[0.9524, 0.0238, 0.0238]",hati rakyat,1
+22,ahy memang kalah di pilkada tetapi menang di hati rakyat,hati,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",di hati rakyat,1
+22,ahy memang kalah di pilkada tetapi menang di hati rakyat,ahy,Tokoh dan Partai,0.1859,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy memang,1
+22,ahy memang kalah di pilkada tetapi menang di hati rakyat,pilkada,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",di pilkada tetapi,1
+71,dari pada pendukung ahok berantem terus mending kaya pendukung ahy membuat kopdar biar makin luas siapa tau jadi calon lagi,pendukung,Pendukung/Pemilih,0.4291,membuat,1.0,"[0.7692, 0.1923, 0.0385]",pada pendukung ahok,1
+71,dari pada pendukung ahok berantem terus mending kaya pendukung ahy membuat kopdar biar makin luas siapa tau jadi calon lagi,ahok,Pendukung/Pemilih,0.4291,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahok berantem,1
+71,dari pada pendukung ahok berantem terus mending kaya pendukung ahy membuat kopdar biar makin luas siapa tau jadi calon lagi,kopdar,Politik Uang,0.0,membuat,1.0,"[0.7692, 0.1923, 0.0385]",membuat kopdar biar,1
+71,dari pada pendukung ahok berantem terus mending kaya pendukung ahy membuat kopdar biar makin luas siapa tau jadi calon lagi,calon,Politik Uang,0.0,jadi,1.0,"[0.7692, 0.1923, 0.0385]",jadi calon lagi,1
+71,dari pada pendukung ahok berantem terus mending kaya pendukung ahy membuat kopdar biar makin luas siapa tau jadi calon lagi,ahy,Pendukung/Pemilih,0.4291,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahy membuat,1
+162,menurut ahy pilkada dki memberi hikmah pelajaran ujian dan tantangan yang dapat ia ambil semua itu dapat mematangkan karakternya,hikmah,Politik Uang,0.0,memberi,2.0,"[0.9524, 0.0238, 0.0238]",memberi hikmah pelajaran,1
+162,menurut ahy pilkada dki memberi hikmah pelajaran ujian dan tantangan yang dapat ia ambil semua itu dapat mematangkan karakternya,ujian,SARA,0.2167,hikmah,2.0,"[0.9524, 0.0238, 0.0238]",pelajaran ujian dan,1
+162,menurut ahy pilkada dki memberi hikmah pelajaran ujian dan tantangan yang dapat ia ambil semua itu dapat mematangkan karakternya,tantangan,Strategi Kampanye,0.4782,ujian,1.0,"[0.7692, 0.1923, 0.0385]",dan tantangan yang,1
+162,menurut ahy pilkada dki memberi hikmah pelajaran ujian dan tantangan yang dapat ia ambil semua itu dapat mematangkan karakternya,pelajaran,Politik Uang,0.0,hikmah,2.0,"[0.9524, 0.0238, 0.0238]",hikmah pelajaran ujian,1
+162,menurut ahy pilkada dki memberi hikmah pelajaran ujian dan tantangan yang dapat ia ambil semua itu dapat mematangkan karakternya,ahy,Tokoh dan Partai,0.1859,memberi,2.0,"[0.9524, 0.0238, 0.0238]",menurut ahy pilkada,1
+162,menurut ahy pilkada dki memberi hikmah pelajaran ujian dan tantangan yang dapat ia ambil semua itu dapat mematangkan karakternya,pilkada,Tokoh dan Partai,0.1859,memberi,2.0,"[0.9524, 0.0238, 0.0238]",ahy pilkada dki,1
+218,semangat terus pak ahy faktor kekalahan pada pilkada waktu kemarin itu adalah wakil pak ahy nanti maju lagi insyaalloh,pak,Tokoh dan Partai,0.1859,semangat,4.0,"[0.9756, 0.0122, 0.0122]",terus pak ahy,1
+218,semangat terus pak ahy faktor kekalahan pada pilkada waktu kemarin itu adalah wakil pak ahy nanti maju lagi insyaalloh,faktor,Tokoh dan Partai,0.1859,semangat,4.0,"[0.9756, 0.0122, 0.0122]",ahy faktor kekalahan,1
+218,semangat terus pak ahy faktor kekalahan pada pilkada waktu kemarin itu adalah wakil pak ahy nanti maju lagi insyaalloh,kekalahan,Politik Uang,0.0,faktor,-4.0,"[0.0122, 0.0122, 0.9756]",faktor kekalahan pada,1
+218,semangat terus pak ahy faktor kekalahan pada pilkada waktu kemarin itu adalah wakil pak ahy nanti maju lagi insyaalloh,pilkada,Politik Uang,0.0,faktor,-4.0,"[0.0122, 0.0122, 0.9756]",pada pilkada waktu,1
+120,kalau dilihat upaya demokrat mengenalkan ahy cukup berhasil di pilkada jakarta dan sekarang ahy sudah mulai blusukan ke seluruh indonesia,ahy,Tokoh dan Partai,0.1859,mulai,1.0,"[0.7692, 0.1923, 0.0385]",mengenalkan ahy cukup,1
+120,kalau dilihat upaya demokrat mengenalkan ahy cukup berhasil di pilkada jakarta dan sekarang ahy sudah mulai blusukan ke seluruh indonesia,pilkada,Politik Uang,0.0,berhasil,3.0,"[0.9677, 0.0161, 0.0161]",di pilkada jakarta,1
+184,pilihan warga jkt mayoritas bukan pada ahok tapi calon selain ahok terbukti di dua putaran pilkada dki mayoritas memilih ahy dan anies,warga,Politik Uang,0.0,pilihan,-5.0,"[0.0098, 0.0098, 0.9804]",pilihan warga jkt,1
+184,pilihan warga jkt mayoritas bukan pada ahok tapi calon selain ahok terbukti di dua putaran pilkada dki mayoritas memilih ahy dan anies,mayoritas,Politik Uang,0.0,pilihan,-5.0,"[0.0098, 0.0098, 0.9804]",jkt mayoritas bukan,1
+184,pilihan warga jkt mayoritas bukan pada ahok tapi calon selain ahok terbukti di dua putaran pilkada dki mayoritas memilih ahy dan anies,calon,Politik Uang,0.0,terbukti,3.0,"[0.9677, 0.0161, 0.0161]",tapi calon selain,1
+184,pilihan warga jkt mayoritas bukan pada ahok tapi calon selain ahok terbukti di dua putaran pilkada dki mayoritas memilih ahy dan anies,putaran,Politik Uang,0.0,terbukti,3.0,"[0.9677, 0.0161, 0.0161]",dua putaran pilkada,1
+145,lewat akun instagram ahy ucapkan selamat kepada paslon pemenang pilkada dki jakarta,paslon,Politik Uang,0.0,selamat,5.0,"[0.9804, 0.0098, 0.0098]",kepada paslon pemenang,1
+145,lewat akun instagram ahy ucapkan selamat kepada paslon pemenang pilkada dki jakarta,pilkada,Politik Uang,0.0,pemenang,3.0,"[0.9677, 0.0161, 0.0161]",pemenang pilkada dki,1
+163,menyeberangi selat malaka aiman kompastv yang mendapat kesempatan pertama mewawancarai ahy usai pilkada dki,kesempatan,Politik Uang,0.0,mendapat,3.0,"[0.9677, 0.0161, 0.0161]",mendapat kesempatan pertama,1
+163,menyeberangi selat malaka aiman kompastv yang mendapat kesempatan pertama mewawancarai ahy usai pilkada dki,selat,Politik Uang,0.0,menyeberangi,3.0,"[0.9677, 0.0161, 0.0161]",menyeberangi selat malaka,1
+197,salam kagum buat ahy masih muda berani pensiun dini berani menantang ahok di pilkada disaat semua pada takut termasuk,ahok,Tokoh dan Partai,0.1859,menantang,-4.0,"[0.0122, 0.0122, 0.9756]",menantang ahok di,1
+197,salam kagum buat ahy masih muda berani pensiun dini berani menantang ahok di pilkada disaat semua pada takut termasuk,dini,Politik Uang,0.0,pensiun,-3.0,"[0.0161, 0.0161, 0.9677]",pensiun dini berani,1
+197,salam kagum buat ahy masih muda berani pensiun dini berani menantang ahok di pilkada disaat semua pada takut termasuk,pilkada,Politik Uang,0.0,menantang,-4.0,"[0.0122, 0.0122, 0.9756]",di pilkada disaat,1
+185,pilkada dki berdoa ahy menang mudahmudahan anies sandi yang menang,mudahmudahan,Tokoh dan Partai,0.1859,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang mudahmudahan anies,1
+185,pilkada dki berdoa ahy menang mudahmudahan anies sandi yang menang,pilkada,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",pilkada dki,1
+228,soal mental kalah pilkada indonesia harus berguru pada sosok ahy,pilkada,Politik Uang,0.0,berguru,3.0,"[0.9677, 0.0161, 0.0161]",kalah pilkada indonesia,1
+228,soal mental kalah pilkada indonesia harus berguru pada sosok ahy,sosok,Tokoh dan Partai,0.1859,berguru,3.0,"[0.9677, 0.0161, 0.0161]",pada sosok ahy,1
+228,soal mental kalah pilkada indonesia harus berguru pada sosok ahy,mental,Politik Uang,0.0,soal,-1.0,"[0.0385, 0.1923, 0.7692]",soal mental kalah,1
+228,soal mental kalah pilkada indonesia harus berguru pada sosok ahy,soal,Politik Uang,0.0,berguru,3.0,"[0.9677, 0.0161, 0.0161]",soal mental,1
+148,lsi telah membuktikan kejujuran surveynya pada pilkada dki tahap1 ahokdjarot disurvey langsung kalah dan ahy menang 1 putaran,ahy,Tokoh dan Partai,0.2237,menang,4.0,"[0.9756, 0.0122, 0.0122]",dan ahy menang,1
+148,lsi telah membuktikan kejujuran surveynya pada pilkada dki tahap1 ahokdjarot disurvey langsung kalah dan ahy menang 1 putaran,kejujuran,Politik Uang,0.0,membuktikan,-4.0,"[0.0122, 0.0122, 0.9756]",membuktikan kejujuran surveynya,1
+148,lsi telah membuktikan kejujuran surveynya pada pilkada dki tahap1 ahokdjarot disurvey langsung kalah dan ahy menang 1 putaran,lsi,Politik Uang,0.0,membuktikan,-4.0,"[0.0122, 0.0122, 0.9756]",lsi telah,1
+148,lsi telah membuktikan kejujuran surveynya pada pilkada dki tahap1 ahokdjarot disurvey langsung kalah dan ahy menang 1 putaran,putaran,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",1 putaran,1
+213,sehabis pilkadapileg dan pilpres saya harap ahy menjadi ketua dpr,pilkadapileg,SARA,0.2167,harap,3.0,"[0.9677, 0.0161, 0.0161]",sehabis pilkadapileg dan,1
+213,sehabis pilkadapileg dan pilpres saya harap ahy menjadi ketua dpr,sehabis,Politik Uang,0.0,harap,3.0,"[0.9677, 0.0161, 0.0161]",sehabis pilkadapileg,1
+211,sebentar lagi kita lupakan kegilaan pilkada dki mari berlari bersama ahy kita mulai dari kepri 23 april,kepri,Politik Uang,0.0,mulai,1.0,"[0.7692, 0.1923, 0.0385]",dari kepri 23,1
+211,sebentar lagi kita lupakan kegilaan pilkada dki mari berlari bersama ahy kita mulai dari kepri 23 april,pilkada,Politik Uang,0.0,kegilaan,3.0,"[0.9677, 0.0161, 0.0161]",kegilaan pilkada dki,1
+203,saya bilang pasti menang karena bentuk keyakinan akan keberhasilan goal goal lain dari improvisasi politik pak sby pak ahydi pilkada dki,keyakinan,Politik Uang,0.0,bentuk,4.0,"[0.9756, 0.0122, 0.0122]",bentuk keyakinan akan,1
+203,saya bilang pasti menang karena bentuk keyakinan akan keberhasilan goal goal lain dari improvisasi politik pak sby pak ahydi pilkada dki,bentuk,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",karena bentuk keyakinan,1
+203,saya bilang pasti menang karena bentuk keyakinan akan keberhasilan goal goal lain dari improvisasi politik pak sby pak ahydi pilkada dki,keberhasilan,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",akan keberhasilan goal,1
+219,semoga anies menang pilkada dan ahy jadi presiden indonesia 2019 aamiin yra klop dah,indonesia,Politik Uang,0.0,presiden,3.0,"[0.9677, 0.0161, 0.0161]",presiden indonesia 2019,1
+219,semoga anies menang pilkada dan ahy jadi presiden indonesia 2019 aamiin yra klop dah,klop,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",yra klop dah,1
+219,semoga anies menang pilkada dan ahy jadi presiden indonesia 2019 aamiin yra klop dah,semoga,Tokoh dan Partai,0.1859,menang,4.0,"[0.9756, 0.0122, 0.0122]",semoga anies,1
+219,semoga anies menang pilkada dan ahy jadi presiden indonesia 2019 aamiin yra klop dah,presiden,Politik Uang,0.0,jadi,1.0,"[0.7692, 0.1923, 0.0385]",jadi presiden indonesia,1
+219,semoga anies menang pilkada dan ahy jadi presiden indonesia 2019 aamiin yra klop dah,pilkada,SARA,0.2167,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pilkada dan,1
+109,jadi tolong hargai sikap saya dan beberapa pendukung ahy yang memilih bersikap netral di putaran kedua pilkada dki 2017 ini,pendukung,Pendukung/Pemilih,0.4291,sikap,2.0,"[0.9524, 0.0238, 0.0238]",beberapa pendukung ahy,1
+109,jadi tolong hargai sikap saya dan beberapa pendukung ahy yang memilih bersikap netral di putaran kedua pilkada dki 2017 ini,ahy,Pendukung/Pemilih,0.3503,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung ahy yang,1
+186,pilkada rasa pilkades kata mas tidak ada ahy tidak rame,ahy,Tokoh dan Partai,0.1859,ada,-4.0,"[0.0122, 0.0122, 0.9756]",ada ahy tidak,1
+186,pilkada rasa pilkades kata mas tidak ada ahy tidak rame,mas,Politik Uang,0.0,kata,1.0,"[0.7692, 0.1923, 0.0385]",kata mas tidak,1
+186,pilkada rasa pilkades kata mas tidak ada ahy tidak rame,pilkada,Politik Uang,0.0,ada,-4.0,"[0.0122, 0.0122, 0.9756]",pilkada rasa,1
+79,di pilkada putaran pertama kemarin saya membuat kaos ahy sendiri untuk dibagibagikan dilingkungan saya utan kayu jaktim,kaos,Tokoh dan Partai,0.1859,membuat,1.0,"[0.7692, 0.1923, 0.0385]",membuat kaos ahy,1
+79,di pilkada putaran pertama kemarin saya membuat kaos ahy sendiri untuk dibagibagikan dilingkungan saya utan kayu jaktim,ahy,Tokoh dan Partai,0.1859,kaos,-4.0,"[0.0122, 0.0122, 0.9756]",kaos ahy sendiri,1
+79,di pilkada putaran pertama kemarin saya membuat kaos ahy sendiri untuk dibagibagikan dilingkungan saya utan kayu jaktim,pilkada,Politik Uang,0.0,membuat,1.0,"[0.7692, 0.1923, 0.0385]",di pilkada putaran,1
+244,tetap semangat dukung ahysylvi sampai pilkada terlaksana yakin dan tentukan pilihan anda kepada yang pro rakyat,rakyat,Politik Uang,0.0,pilihan,5.0,"[0.9804, 0.0098, 0.0098]",pro rakyat,1
+244,tetap semangat dukung ahysylvi sampai pilkada terlaksana yakin dan tentukan pilihan anda kepada yang pro rakyat,dukung,Politik Uang,0.0,semangat,4.0,"[0.9756, 0.0122, 0.0122]",semangat dukung ahysylvi,1
+244,tetap semangat dukung ahysylvi sampai pilkada terlaksana yakin dan tentukan pilihan anda kepada yang pro rakyat,tentukan,SARA,0.2167,yakin,3.0,"[0.9677, 0.0161, 0.0161]",dan tentukan pilihan,1
+196,salah satu cara ahysilvy menang pilkada itu mudah ibu silvy naik mio tidak memakai helm keliling komplek saat pemilihan dijamin pada segan,cara,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",satu cara ahysilvy,1
+196,salah satu cara ahysilvy menang pilkada itu mudah ibu silvy naik mio tidak memakai helm keliling komplek saat pemilihan dijamin pada segan,ibu,Politik Uang,0.0,naik,-1.0,"[0.0385, 0.1923, 0.7692]",mudah ibu silvy,1
+196,salah satu cara ahysilvy menang pilkada itu mudah ibu silvy naik mio tidak memakai helm keliling komplek saat pemilihan dijamin pada segan,mio,Politik Uang,0.0,naik,-1.0,"[0.0385, 0.1923, 0.7692]",naik mio tidak,1
+196,salah satu cara ahysilvy menang pilkada itu mudah ibu silvy naik mio tidak memakai helm keliling komplek saat pemilihan dijamin pada segan,pilkada,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pilkada itu,1
+150,betul pak kecil mampu mengalahkan yang besar,pak,Politik Uang,0.0,betul,2.0,"[0.9524, 0.0238, 0.0238]",betul pak kecil,1
+141,kita tunggu kualitas jiwa anies sandiapa ucapan atas peran suara loyalis ahysilvy dalam kemenangan pilkada ini,anies,Tokoh dan Partai,0.1859,kualitas,4.0,"[0.9756, 0.0122, 0.0122]",jiwa anies sandiapa,1
+141,kita tunggu kualitas jiwa anies sandiapa ucapan atas peran suara loyalis ahysilvy dalam kemenangan pilkada ini,ucapan,Politik Uang,0.0,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",sandiapa ucapan atas,1
+141,kita tunggu kualitas jiwa anies sandiapa ucapan atas peran suara loyalis ahysilvy dalam kemenangan pilkada ini,jiwa,Tokoh dan Partai,0.1859,kualitas,4.0,"[0.9756, 0.0122, 0.0122]",kualitas jiwa anies,1
+141,kita tunggu kualitas jiwa anies sandiapa ucapan atas peran suara loyalis ahysilvy dalam kemenangan pilkada ini,kualitas,Politik Uang,0.0,tunggu,1.0,"[0.7692, 0.1923, 0.0385]",tunggu kualitas jiwa,1
+141,kita tunggu kualitas jiwa anies sandiapa ucapan atas peran suara loyalis ahysilvy dalam kemenangan pilkada ini,ahysilvy,Politik Uang,0.0,suara,2.0,"[0.9524, 0.0238, 0.0238]",loyalis ahysilvy dalam,1
+239,terimakasih ahysilvy tanpa kalian jakarta tidak akan mempunyai gubernur baru,jakarta,Politik Uang,0.0,mempunyai,-4.0,"[0.0122, 0.0122, 0.9756]",kalian jakarta tidak,1
+239,terimakasih ahysilvy tanpa kalian jakarta tidak akan mempunyai gubernur baru,gubernur,Politik Uang,0.0,mempunyai,-4.0,"[0.0122, 0.0122, 0.9756]",mempunyai gubernur baru,1
+239,terimakasih ahysilvy tanpa kalian jakarta tidak akan mempunyai gubernur baru,ahysilvy,Politik Uang,0.0,terimakasih,-5.0,"[0.0098, 0.0098, 0.9804]",terimakasih ahysilvy tanpa,1
+114,jangan lupa pilih paslon,paslon,Politik Uang,0.0,pilih,2.0,"[0.9524, 0.0238, 0.0238]",pilih paslon,1
+123,kalau putaran 2 siap rapat kan barisan semua satu komando,komando,Politik Uang,0.0,rapat,1.0,"[0.7692, 0.1923, 0.0385]",satu komando,1
+123,kalau putaran 2 siap rapat kan barisan semua satu komando,barisan,Politik Uang,0.0,rapat,1.0,"[0.7692, 0.1923, 0.0385]",kan barisan semua,1
+123,kalau putaran 2 siap rapat kan barisan semua satu komando,putaran,Politik Uang,0.0,siap,1.0,"[0.7692, 0.1923, 0.0385]",kalau putaran 2,1
+263,youtubebxrzd69u61a tenang bening dan tulus mas agus mungkin di masa yg akan datang yaa mas,masa,Politik Uang,0.0,tenang,5.0,"[0.9804, 0.0098, 0.0098]",di masa yg,1
+263,youtubebxrzd69u61a tenang bening dan tulus mas agus mungkin di masa yg akan datang yaa mas,mas,Politik Uang,0.0,tenang,5.0,"[0.9804, 0.0098, 0.0098]",tulus mas agus,1
+152,mari beri masukan kritik yang membangun bagi yang kalah dalam pertandingan,mari,Politik Uang,0.0,beri,2.0,"[0.9524, 0.0238, 0.0238]",mari beri,1
+152,mari beri masukan kritik yang membangun bagi yang kalah dalam pertandingan,pertandingan,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",dalam pertandingan,1
+152,mari beri masukan kritik yang membangun bagi yang kalah dalam pertandingan,masukan,Politik Uang,0.0,beri,2.0,"[0.9524, 0.0238, 0.0238]",beri masukan kritik,1
+103,yuk fans dukung dan menangkan,yuk,Politik Uang,0.0,dukung,4.0,"[0.9756, 0.0122, 0.0122]",yuk fans,1
+103,yuk fans dukung dan menangkan,fans,Politik Uang,0.0,yuk,4.0,"[0.9756, 0.0122, 0.0122]",yuk fans dukung,1
+3,ada apa dengan knp disetiap acara nya massa membludakkrn rakyat melihat harapan utk ahy memimpin negara ini dimasa yg dtg,knp,Pendukung/Pemilih,0.2023,ada,4.0,"[0.9756, 0.0122, 0.0122]",dengan knp disetiap,1
+130,kekalahan adalah sukses yg tertunda bukan untuk disesali tapi dijadikan pengalaman tuk lebih baik lagi di masa depan,kekalahan,Politik Uang,0.0,sukses,-3.0,"[0.0161, 0.0161, 0.9677]",kekalahan adalah,1
+130,kekalahan adalah sukses yg tertunda bukan untuk disesali tapi dijadikan pengalaman tuk lebih baik lagi di masa depan,masa,Politik Uang,0.0,baik,3.0,"[0.9677, 0.0161, 0.0161]",di masa depan,1
+236,tandatangan petisi stop hoax dan fitnah serta mendukung gerakan kebebasan pers tanpa hoax dan fitnah,kebebasan,Politik Uang,0.0,gerakan,4.0,"[0.9756, 0.0122, 0.0122]",gerakan kebebasan pers,1
+236,tandatangan petisi stop hoax dan fitnah serta mendukung gerakan kebebasan pers tanpa hoax dan fitnah,fitnah,SARA,0.2167,hoax,-5.0,"[0.0098, 0.0098, 0.9804]",dan fitnah serta,1
+74,demokrat dengan cinta untuk nkri dan berbakti,nkri,SARA,0.2167,cinta,3.0,"[0.9677, 0.0161, 0.0161]",untuk nkri dan,1
+110,jagoan kalah duluan klu gitu dong jagoannya bukan ahok,duluan,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",kalah duluan klu,1
+110,jagoan kalah duluan klu gitu dong jagoannya bukan ahok,ahok,Tokoh dan Partai,0.1859,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",bukan ahok,1
+110,jagoan kalah duluan klu gitu dong jagoannya bukan ahok,jagoan,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",jagoan kalah,1
+183,pesan jangan lupa gembira dan cinta indonesia,indonesia,Politik Uang,0.0,cinta,-3.0,"[0.0161, 0.0161, 0.9677]",cinta indonesia,1
+183,pesan jangan lupa gembira dan cinta indonesia,cinta,SARA,0.2167,gembira,-5.0,"[0.0098, 0.0098, 0.9804]",dan cinta indonesia,1
+183,pesan jangan lupa gembira dan cinta indonesia,gembira,SARA,0.2167,lupa,-1.0,"[0.0385, 0.1923, 0.7692]",lupa gembira dan,1
+183,pesan jangan lupa gembira dan cinta indonesia,pesan,Politik Uang,0.0,lupa,-1.0,"[0.0385, 0.1923, 0.7692]",pesan jangan,1
+143,membaca strategi politik sby dalam pencalonan agus yudhoyono,yudhoyono,Politik Uang,0.0,agus,1.7999999999999998,"[0.9474, 0.0263, 0.0263]",agus yudhoyono,0
+143,membaca strategi politik sby dalam pencalonan agus yudhoyono,strategi,Strategi Kampanye,0.3659,membaca,4.0,"[0.9756, 0.0122, 0.0122]",membaca strategi politik,1
+72,datang tampak muka pulang tampak punggung terima kasih kepri,kasih,Politik Uang,0.0,terima,2.0,"[0.9524, 0.0238, 0.0238]",terima kasih kepri,1
+72,datang tampak muka pulang tampak punggung terima kasih kepri,kepri,Politik Uang,0.0,kasih,2.0,"[0.9524, 0.0238, 0.0238]",kasih kepri,1
+72,datang tampak muka pulang tampak punggung terima kasih kepri,punggung,Politik Uang,0.0,tampak,1.0,"[0.7692, 0.1923, 0.0385]",tampak punggung terima,1
+72,datang tampak muka pulang tampak punggung terima kasih kepri,muka,Politik Uang,0.0,tampak,1.0,"[0.7692, 0.1923, 0.0385]",tampak muka pulang,1
+33,aku pada pemimpin muda,pemimpin,Politik Uang,0.0,aku,2.0,"[0.9524, 0.0238, 0.0238]",pada pemimpin muda,1
+4,adalah inspirasi kaum muda gerakan indonesia muda menuju indonesia emas,emas,Politik Uang,0.0,inspirasi,-3.0,"[0.0161, 0.0161, 0.9677]",indonesia emas,1
+4,adalah inspirasi kaum muda gerakan indonesia muda menuju indonesia emas,kaum,Politik Uang,0.0,inspirasi,-3.0,"[0.0161, 0.0161, 0.9677]",inspirasi kaum muda,1
+4,adalah inspirasi kaum muda gerakan indonesia muda menuju indonesia emas,indonesia,Politik Uang,0.0,"gerakan,menuju",0.0,"[0.0, 1.0, 0.0]",gerakan indonesia muda,2
+223,setia pada sebab politik indonesia perlu ada regenerasi yg matang agar jgn ada lagi kutu loncat,sebab,Politik Uang,0.4021,setia,-4.0,"[0.0122, 0.0122, 0.9756]",pada sebab politik,1
+223,setia pada sebab politik indonesia perlu ada regenerasi yg matang agar jgn ada lagi kutu loncat,indonesia,Politik Uang,0.4021,sebab,3.0,"[0.9677, 0.0161, 0.0161]",politik indonesia perlu,1
+223,setia pada sebab politik indonesia perlu ada regenerasi yg matang agar jgn ada lagi kutu loncat,jgn,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",agar jgn ada,1
+223,setia pada sebab politik indonesia perlu ada regenerasi yg matang agar jgn ada lagi kutu loncat,politik,Politik Uang,0.4021,sebab,3.0,"[0.9677, 0.0161, 0.0161]",sebab politik indonesia,1
+223,setia pada sebab politik indonesia perlu ada regenerasi yg matang agar jgn ada lagi kutu loncat,setia,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",setia pada,1
+223,setia pada sebab politik indonesia perlu ada regenerasi yg matang agar jgn ada lagi kutu loncat,regenerasi,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",ada regenerasi yg,1
+258,wartawan tanya apa u pilkada 2018 mendatang mas akan ikut dijawab mas sampai skg belum terpikir u ikut pilkada lainnya,wartawan,Politik Uang,0.0,ikut,3.0,"[0.9677, 0.0161, 0.0161]",wartawan tanya,1
+258,wartawan tanya apa u pilkada 2018 mendatang mas akan ikut dijawab mas sampai skg belum terpikir u ikut pilkada lainnya,mas,Politik Uang,0.0,ikut,3.0,"[0.9677, 0.0161, 0.0161]",mendatang mas akan,1
+258,wartawan tanya apa u pilkada 2018 mendatang mas akan ikut dijawab mas sampai skg belum terpikir u ikut pilkada lainnya,pilkada,Politik Uang,0.0,ikut,3.0,"[0.9677, 0.0161, 0.0161]",u pilkada 2018,1
+153,mas agus kasih kuliah umum nih,kuliah,Politik Uang,0.0,kasih,2.0,"[0.9524, 0.0238, 0.0238]",kasih kuliah umum,1
+153,mas agus kasih kuliah umum nih,kasih,Politik Uang,0.0,mas,1.2,"[0.8276, 0.1379, 0.0345]",agus kasih kuliah,0
+153,mas agus kasih kuliah umum nih,nih,Politik Uang,0.0,kasih,2.0,"[0.9524, 0.0238, 0.0238]",umum nih,1
+142,kuliah umum mahasiswa perspektif untuk masa depan at umrah dompak,umrah,Politik Uang,0.0,kuliah,1.0,"[0.7692, 0.1923, 0.0385]",at umrah dompak,1
+142,kuliah umum mahasiswa perspektif untuk masa depan at umrah dompak,masa,Politik Uang,0.0,kuliah,1.0,"[0.7692, 0.1923, 0.0385]",untuk masa depan,1
+142,kuliah umum mahasiswa perspektif untuk masa depan at umrah dompak,mahasiswa,Politik Uang,0.0,kuliah,1.0,"[0.7692, 0.1923, 0.0385]",umum mahasiswa perspektif,1
+147,logikanya pemilih putaran ke1 dipastikan punya psikologis yang sama dengan pemilih paslon 3 mereka ingin gubernur baru di jakarta,pemilih,Pendukung/Pemilih,0.6068,sama,3.0,"[0.9677, 0.0161, 0.0161]",logikanya pemilih putaran,1
+230,suara pemilih pada putaran ke 1 terlihat memilih paslon no 3 pada puataran ke dua kali ini selamat jakarta punya gubernur baru,jakarta,Politik Uang,0.0,punya,3.0,"[0.9677, 0.0161, 0.0161]",selamat jakarta punya,1
+230,suara pemilih pada putaran ke 1 terlihat memilih paslon no 3 pada puataran ke dua kali ini selamat jakarta punya gubernur baru,putaran,Politik Uang,0.0,suara,2.0,"[0.9524, 0.0238, 0.0238]",pada putaran ke,1
+230,suara pemilih pada putaran ke 1 terlihat memilih paslon no 3 pada puataran ke dua kali ini selamat jakarta punya gubernur baru,gubernur,Politik Uang,0.0,punya,3.0,"[0.9677, 0.0161, 0.0161]",punya gubernur baru,1
+230,suara pemilih pada putaran ke 1 terlihat memilih paslon no 3 pada puataran ke dua kali ini selamat jakarta punya gubernur baru,pemilih,Pendukung/Pemilih,0.6068,suara,2.0,"[0.9524, 0.0238, 0.0238]",suara pemilih pada,1
+194,saat putaran pertama kita melihat bgm menunjukkan kelasnya sbg pemimpin yg berbesar hati,bgm,Politik Uang,0.0,melihat,3.0,"[0.9677, 0.0161, 0.0161]",melihat bgm menunjukkan,1
+194,saat putaran pertama kita melihat bgm menunjukkan kelasnya sbg pemimpin yg berbesar hati,kelas,Politik Uang,0.0,menunjukkan,-3.0,"[0.0161, 0.0161, 0.9677]",menunjukkan kelas nya,1
+194,saat putaran pertama kita melihat bgm menunjukkan kelasnya sbg pemimpin yg berbesar hati,sbg,Politik Uang,0.0,kelas,-3.0,"[0.0161, 0.0161, 0.9677]",nya sbg pemimpin,1
+194,saat putaran pertama kita melihat bgm menunjukkan kelasnya sbg pemimpin yg berbesar hati,putaran,Politik Uang,0.0,melihat,3.0,"[0.9677, 0.0161, 0.0161]",saat putaran pertama,1
+209,sebagian kecil pendukung ada yg dukung ahok basis massa mayoritas kemungkinan lebih pilih anies kunci kemenangan tipis bagi anies,anies,Tokoh dan Partai,0.1859,"pilih,kunci",1.0,"[0.7692, 0.1923, 0.0385]",pilih anies kunci,2
+209,sebagian kecil pendukung ada yg dukung ahok basis massa mayoritas kemungkinan lebih pilih anies kunci kemenangan tipis bagi anies,kemungkinan,Politik Uang,0.0,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",mayoritas kemungkinan lebih,1
+209,sebagian kecil pendukung ada yg dukung ahok basis massa mayoritas kemungkinan lebih pilih anies kunci kemenangan tipis bagi anies,kunci,Tokoh dan Partai,0.1859,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",anies kunci kemenangan,1
+209,sebagian kecil pendukung ada yg dukung ahok basis massa mayoritas kemungkinan lebih pilih anies kunci kemenangan tipis bagi anies,sebagian,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",sebagian kecil,1
+209,sebagian kecil pendukung ada yg dukung ahok basis massa mayoritas kemungkinan lebih pilih anies kunci kemenangan tipis bagi anies,kemenangan,Politik Uang,0.0,kunci,3.0,"[0.9677, 0.0161, 0.0161]",kunci kemenangan tipis,1
+49,bagaimana pun suara pendukung akan menentukan kemenangan salah satu paslon,pendukung,Pendukung/Pemilih,0.6068,suara,2.0,"[0.9524, 0.0238, 0.0238]",suara pendukung akan,1
+220,semoga pemilih di putaran 1 di kebon kacang dan kp bali beralih ke aniessandi,semoga,Pendukung/Pemilih,0.6068,beralih,-3.0,"[0.0161, 0.0161, 0.9677]",semoga pemilih,1
+220,semoga pemilih di putaran 1 di kebon kacang dan kp bali beralih ke aniessandi,aniessandi,Politik Uang,0.0,beralih,-3.0,"[0.0161, 0.0161, 0.9677]",ke aniessandi,1
+264,yuk fans dukung dan menangkan,yuk,Politik Uang,0.0,dukung,4.0,"[0.9756, 0.0122, 0.0122]",yuk fans,1
+264,yuk fans dukung dan menangkan,fans,Politik Uang,0.0,yuk,4.0,"[0.9756, 0.0122, 0.0122]",yuk fans dukung,1
+59,bismillah semoga esok hari jakarta memiliki pemimpin yang sesuai tuntunan alquran diridhai alloh swt,alquran,Politik Uang,0.0,tuntunan,-3.0,"[0.0161, 0.0161, 0.9677]",tuntunan alquran diridhai,1
+59,bismillah semoga esok hari jakarta memiliki pemimpin yang sesuai tuntunan alquran diridhai alloh swt,jakarta,Politik Uang,0.0,esok,1.0,"[0.7692, 0.1923, 0.0385]",hari jakarta memiliki,1
+59,bismillah semoga esok hari jakarta memiliki pemimpin yang sesuai tuntunan alquran diridhai alloh swt,esok,Politik Uang,0.0,bismillah,4.0,"[0.9756, 0.0122, 0.0122]",semoga esok hari,1
+59,bismillah semoga esok hari jakarta memiliki pemimpin yang sesuai tuntunan alquran diridhai alloh swt,hari,Politik Uang,0.0,esok,1.0,"[0.7692, 0.1923, 0.0385]",esok hari jakarta,1
+59,bismillah semoga esok hari jakarta memiliki pemimpin yang sesuai tuntunan alquran diridhai alloh swt,semoga,Politik Uang,0.0,bismillah,4.0,"[0.9756, 0.0122, 0.0122]",bismillah semoga esok,1
+61,bu sylvi adalah contoh keberanian betawi utk dalam bersikap ngga ngambang atau banci contoh perempuan betawi tulen,ngambang,Pendukung/Pemilih,0.2709,ngga,-2.0,"[0.0238, 0.0238, 0.9524]",ngga ngambang atau,1
+61,bu sylvi adalah contoh keberanian betawi utk dalam bersikap ngga ngambang atau banci contoh perempuan betawi tulen,banci,Pendukung/Pemilih,0.2709,ngga,-2.0,"[0.0238, 0.0238, 0.9524]",atau banci contoh,1
+61,bu sylvi adalah contoh keberanian betawi utk dalam bersikap ngga ngambang atau banci contoh perempuan betawi tulen,contoh,Politik Uang,0.0,ngga,-2.0,"[0.0238, 0.0238, 0.9524]",adalah contoh keberanian,1
+56,begitu tulus begitu menyenangkan insyaallah ada jalan bu,jalan,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",ada jalan bu,1
+56,begitu tulus begitu menyenangkan insyaallah ada jalan bu,insyaallah,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",menyenangkan insyaallah ada,1
+178,aku pada pemimpin muda,pemimpin,Politik Uang,0.0,aku,2.0,"[0.9524, 0.0238, 0.0238]",pada pemimpin muda,1
+199,salam wallahulmuwafiq ilaaqwamithoriq mencerminkan beliau nu sejak itu saya jatuh hati meski waktu itu saya,waktu,Politik Uang,0.0,jatuh,1.0,"[0.7692, 0.1923, 0.0385]",meski waktu itu,1
+199,salam wallahulmuwafiq ilaaqwamithoriq mencerminkan beliau nu sejak itu saya jatuh hati meski waktu itu saya,hati,Politik Uang,0.0,jatuh,1.0,"[0.7692, 0.1923, 0.0385]",jatuh hati meski,1
+206,suka berjiwa,suka,Politik Uang,0.0,berjiwa,3.0,"[0.9677, 0.0161, 0.0161]",suka berjiwa,1
+26,ahy r1 2019 boleh kalah di pilgub,pilgub,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",di pilgub,1
+26,ahy r1 2019 boleh kalah di pilgub,ahy,Tokoh dan Partai,0.1859,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahy r1,1
+257,walaupun kau kalahkami tetap bangga sekali padamu jalanmu masih panjangkesuksesan yang lebih baik menantimu disaat yang tepat,panjangkesuksesan,Strategi Kampanye,0.4701,bangga,3.0,"[0.9677, 0.0161, 0.0161]",masih panjangkesuksesan yang,1
+190,prananda sebut demokrat sejati saya kagum dan salut,demokrat,Politik Uang,0.0,kagum,3.0,"[0.9677, 0.0161, 0.0161]",sebut demokrat sejati,1
+31,aku dari dulu agus harimurti yudhoyono lovers dari dulu annisa larasati pohan lovers bukan mendadak,yudhoyono,Politik Uang,0.0,agus,0.3,"[0.3871, 0.5484, 0.0645]",harimurti yudhoyono lovers,0
+31,aku dari dulu agus harimurti yudhoyono lovers dari dulu annisa larasati pohan lovers bukan mendadak,dulu,Politik Uang,0.0,aku,2.0,"[0.9524, 0.0238, 0.0238]",dari dulu agus,1
+31,aku dari dulu agus harimurti yudhoyono lovers dari dulu annisa larasati pohan lovers bukan mendadak,harimurti,Politik Uang,0.0,agus,0.3,"[0.3871, 0.5484, 0.0645]",agus harimurti yudhoyono,0
+31,aku dari dulu agus harimurti yudhoyono lovers dari dulu annisa larasati pohan lovers bukan mendadak,annisa,Politik Uang,0.0,agus,0.3,"[0.3871, 0.5484, 0.0645]",dulu annisa larasati,0
+51,bangga melihat pernyataan ini ksatria,bangga,Politik Uang,0.0,melihat,3.0,"[0.9677, 0.0161, 0.0161]",bangga melihat,1
+51,bangga melihat pernyataan ini ksatria,ksatria,Politik Uang,0.0,melihat,3.0,"[0.9677, 0.0161, 0.0161]",ini ksatria,1
+119,juga bagus programnya mengenai persija,persija,Strategi Kampanye,0.2351,bagus,2.0,"[0.9524, 0.0238, 0.0238]",mengenai persija,1
+119,juga bagus programnya mengenai persija,program,Politik Uang,0.0,bagus,2.0,"[0.9524, 0.0238, 0.0238]",bagus program nya,1
+187,pingin lihat mas debat face with stuckout tounges,debat,Politik Uang,0.0,mas,2.4,"[0.96, 0.02, 0.02]",mas debat face,0
+187,pingin lihat mas debat face with stuckout tounges,pingin,Politik Uang,0.0,lihat,3.0,"[0.9677, 0.0161, 0.0161]",pingin lihat,1
+187,pingin lihat mas debat face with stuckout tounges,mas,Politik Uang,0.0,lihat,3.0,"[0.9677, 0.0161, 0.0161]",lihat mas debat,1
+151,marasa beruntung sekali sign of the horns,marasa,Politik Uang,0.0,beruntung,4.0,"[0.9756, 0.0122, 0.0122]",marasa beruntung,1
+256,walaupun aku pendukung anies sandi ok hand tapi bangga dengan jiwa besar ahy silvy masih ada 2019 prabowo ahy folded hands folded hands,jiwa,Pendukung/Pemilih,0.2023,bangga,3.0,"[0.9677, 0.0161, 0.0161]",dengan jiwa besar,1
+256,walaupun aku pendukung anies sandi ok hand tapi bangga dengan jiwa besar ahy silvy masih ada 2019 prabowo ahy folded hands folded hands,anies,Pendukung/Pemilih,0.4291,pendukung,4.0,"[0.9756, 0.0122, 0.0122]",pendukung anies sandi,1
+256,walaupun aku pendukung anies sandi ok hand tapi bangga dengan jiwa besar ahy silvy masih ada 2019 prabowo ahy folded hands folded hands,prabowo,Tokoh dan Partai,0.1859,ada,4.0,"[0.9756, 0.0122, 0.0122]",2019 prabowo ahy,1
+256,walaupun aku pendukung anies sandi ok hand tapi bangga dengan jiwa besar ahy silvy masih ada 2019 prabowo ahy folded hands folded hands,ahy,Tokoh dan Partai,0.1859,ada,4.0,"[0.9756, 0.0122, 0.0122]",besar ahy silvy,1
+29,ahy sylvi selalu menang dalam hati kami pendukungnya dengan adanya ahysylvi membuat panik dan ketar ketir luar biasa di kubu sana folded hands folded hands,pendukung,Pendukung/Pemilih,0.6068,hati,2.0,"[0.9524, 0.0238, 0.0238]",kami pendukung nya,1
+29,ahy sylvi selalu menang dalam hati kami pendukungnya dengan adanya ahysylvi membuat panik dan ketar ketir luar biasa di kubu sana folded hands folded hands,ketar,SARA,0.2167,panik,-4.0,"[0.0122, 0.0122, 0.9756]",dan ketar ketir,1
+29,ahy sylvi selalu menang dalam hati kami pendukungnya dengan adanya ahysylvi membuat panik dan ketar ketir luar biasa di kubu sana folded hands folded hands,panik,SARA,0.2167,membuat,1.0,"[0.7692, 0.1923, 0.0385]",membuat panik dan,1
+29,ahy sylvi selalu menang dalam hati kami pendukungnya dengan adanya ahysylvi membuat panik dan ketar ketir luar biasa di kubu sana folded hands folded hands,kubu,Politik Uang,0.0,panik,-4.0,"[0.0122, 0.0122, 0.9756]",di kubu sana,1
+29,ahy sylvi selalu menang dalam hati kami pendukungnya dengan adanya ahysylvi membuat panik dan ketar ketir luar biasa di kubu sana folded hands folded hands,ahysylvi,Politik Uang,0.0,membuat,1.0,"[0.7692, 0.1923, 0.0385]",nya ahysylvi membuat,1
+29,ahy sylvi selalu menang dalam hati kami pendukungnya dengan adanya ahysylvi membuat panik dan ketar ketir luar biasa di kubu sana folded hands folded hands,ketir,Politik Uang,0.0,ketar,-3.0,"[0.0161, 0.0161, 0.9677]",ketar ketir luar,1
+29,ahy sylvi selalu menang dalam hati kami pendukungnya dengan adanya ahysylvi membuat panik dan ketar ketir luar biasa di kubu sana folded hands folded hands,hati,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",dalam hati kami,1
+29,ahy sylvi selalu menang dalam hati kami pendukungnya dengan adanya ahysylvi membuat panik dan ketar ketir luar biasa di kubu sana folded hands folded hands,ahy,Tokoh dan Partai,0.1859,menang,4.0,"[0.9756, 0.0122, 0.0122]",ahy sylvi,1
+156,masih banyak yang bisa diperbuat ahy silvy untuk kemaslahatan bangsa ini,bangsa,Politik Uang,0.0,kemaslahatan,4.0,"[0.9756, 0.0122, 0.0122]",kemaslahatan bangsa ini,1
+97,heboh pentolan band coldplay asal inggris chris martin memberikan dukungan pada pasangan agussylvi di pilkada jakarta 2017,pentolan,Politik Uang,0.0,heboh,1.0,"[0.7692, 0.1923, 0.0385]",heboh pentolan band,1
+97,heboh pentolan band coldplay asal inggris chris martin memberikan dukungan pada pasangan agussylvi di pilkada jakarta 2017,pasangan,Politik Uang,0.0,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",pada pasangan agussylvi,1
+133,kemenangan yang tertunda belajar dari segala kekalahanpernyataan yang bijaksana,kemenangan,Strategi Kampanye,0.4701,belajar,3.0,"[0.9677, 0.0161, 0.0161]",kemenangan yang,1
+133,kemenangan yang tertunda belajar dari segala kekalahanpernyataan yang bijaksana,kekalahanpernyataan,Strategi Kampanye,0.4701,belajar,3.0,"[0.9677, 0.0161, 0.0161]",segala kekalahanpernyataan yang,1
+188,politik santun dan bermartabat folded hands,santun,Tokoh dan Partai,0.3103,politik,-1.0,"[0.0385, 0.1923, 0.7692]",politik santun dan,1
+96,mengenang pidato kekalahan,pidato,Politik Uang,0.0,mengenang,3.0,"[0.9677, 0.0161, 0.0161]",mengenang pidato kekalahan,1
+89,gunawan dan freely anggota dprd talaud ini mau pasang spanduk ahy di perbtasan indonesiafilipina lanjutkan,spanduk,Tokoh dan Partai,0.1859,pasang,4.0,"[0.9756, 0.0122, 0.0122]",pasang spanduk ahy,1
+89,gunawan dan freely anggota dprd talaud ini mau pasang spanduk ahy di perbtasan indonesiafilipina lanjutkan,talaud,Politik Uang,0.0,anggota,-3.0,"[0.0161, 0.0161, 0.9677]",dprd talaud ini,1
+89,gunawan dan freely anggota dprd talaud ini mau pasang spanduk ahy di perbtasan indonesiafilipina lanjutkan,dprd,Politik Uang,0.0,anggota,-3.0,"[0.0161, 0.0161, 0.9677]",anggota dprd talaud,1
+89,gunawan dan freely anggota dprd talaud ini mau pasang spanduk ahy di perbtasan indonesiafilipina lanjutkan,gunawan,SARA,0.2167,mau,5.0,"[0.9804, 0.0098, 0.0098]",gunawan dan,1
+201,sambutan hangat buat pendukung yang mau bergabung dengan kami smiling face with smiling eyes folded hands,pendukung,Pendukung/Pemilih,0.4291,sambutan,3.0,"[0.9677, 0.0161, 0.0161]",buat pendukung yang,1
+70,12 dan sby di puji dan dibela tanpa mereka merasa malu dan merasa bersalah demi mengharapkan dukungan politik dan massa demokrat,massa,SARA,0.2167,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dan massa demokrat,1
+70,12 dan sby di puji dan dibela tanpa mereka merasa malu dan merasa bersalah demi mengharapkan dukungan politik dan massa demokrat,politik,Tokoh dan Partai,0.3103,dukungan,4.0,"[0.9756, 0.0122, 0.0122]",dukungan politik dan,1
+204,saya juga dan tidak pernah nyesal dukung beliau face blowing a kiss face blowing a kiss malah bngga sekali kehadirannya di republik ini,republik,Politik Uang,0.0,kehadiran,3.0,"[0.9677, 0.0161, 0.0161]",di republik ini,1
+204,saya juga dan tidak pernah nyesal dukung beliau face blowing a kiss face blowing a kiss malah bngga sekali kehadirannya di republik ini,dukung,Politik Uang,0.0,nyesal,4.0,"[0.9756, 0.0122, 0.0122]",nyesal dukung beliau,1
+207,saya yakin rencana dan keputusan allah selalu benar dan selalu lebih baik dari keputusan manusia smiling face with smiling eyes smiling face with smiling eyes,allah,Politik Uang,0.0,rencana,2.0,"[0.9524, 0.0238, 0.0238]",keputusan allah selalu,1
+207,saya yakin rencana dan keputusan allah selalu benar dan selalu lebih baik dari keputusan manusia smiling face with smiling eyes smiling face with smiling eyes,manusia,Politik Uang,0.0,keputusan,4.0,"[0.9756, 0.0122, 0.0122]",keputusan manusia smiling,1
+207,saya yakin rencana dan keputusan allah selalu benar dan selalu lebih baik dari keputusan manusia smiling face with smiling eyes smiling face with smiling eyes,keputusan,SARA,0.2167,"baik,rencana",5.0,"[0.9804, 0.0098, 0.0098]",dan keputusan allah,2
+207,saya yakin rencana dan keputusan allah selalu benar dan selalu lebih baik dari keputusan manusia smiling face with smiling eyes smiling face with smiling eyes,rencana,SARA,0.2167,benar,2.0,"[0.9524, 0.0238, 0.0238]",yakin rencana dan,1
+154,mas tetap semangat pendukung jangan tidur maju terus insyaallah menang,pendukung,Pendukung/Pemilih,0.6068,tidur,-3.0,"[0.0161, 0.0161, 0.9677]",semangat pendukung jangan,1
+154,mas tetap semangat pendukung jangan tidur maju terus insyaallah menang,insyaallah,Politik Uang,0.0,menang,-4.0,"[0.0122, 0.0122, 0.9756]",terus insyaallah menang,1
+154,mas tetap semangat pendukung jangan tidur maju terus insyaallah menang,mas,Politik Uang,0.0,semangat,-4.0,"[0.0122, 0.0122, 0.9756]",mas tetap,1
+159,membaca strategi politik sby dalam pencalonan agus yudhoyono,yudhoyono,Politik Uang,0.0,agus,1.7999999999999998,"[0.9474, 0.0263, 0.0263]",agus yudhoyono,0
+159,membaca strategi politik sby dalam pencalonan agus yudhoyono,strategi,Strategi Kampanye,0.3659,membaca,4.0,"[0.9756, 0.0122, 0.0122]",membaca strategi politik,1
+170,nunggu skenario selanjutnya,skenario,Politik Uang,0.0,nunggu,1.0,"[0.7692, 0.1923, 0.0385]",nunggu skenario selanjutnya,1
+113,jangan kira skenario ahy cuma untuk menang pilgub saja ahy sudah pikirkan matang skenario jika kalah kalah pun dia menang sejatinya smiling face with smiling eyes smiling face with smiling eyes,smiling,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",nya smiling face,1
+113,jangan kira skenario ahy cuma untuk menang pilgub saja ahy sudah pikirkan matang skenario jika kalah kalah pun dia menang sejatinya smiling face with smiling eyes smiling face with smiling eyes,sejati,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang sejati nya,1
+113,jangan kira skenario ahy cuma untuk menang pilgub saja ahy sudah pikirkan matang skenario jika kalah kalah pun dia menang sejatinya smiling face with smiling eyes smiling face with smiling eyes,pilgub,Politik Uang,0.0,menang,4.0,"[0.9756, 0.0122, 0.0122]",menang pilgub saja,1
+113,jangan kira skenario ahy cuma untuk menang pilgub saja ahy sudah pikirkan matang skenario jika kalah kalah pun dia menang sejatinya smiling face with smiling eyes smiling face with smiling eyes,skenario,Tokoh dan Partai,0.1859,cuma,3.0,"[0.9677, 0.0161, 0.0161]",kira skenario ahy,1
+63,bukan kah sdh menunjukkan jiwa besar dalam hasil pilkada yang sulit sungguh tidak sulit untuk deklarasi ini,jiwa,Politik Uang,0.0,menunjukkan,3.0,"[0.9677, 0.0161, 0.0161]",menunjukkan jiwa besar,1
+63,bukan kah sdh menunjukkan jiwa besar dalam hasil pilkada yang sulit sungguh tidak sulit untuk deklarasi ini,deklarasi,Politik Uang,0.0,sulit,-1.5,"[0.0299, 0.0746, 0.8955]",untuk deklarasi ini,0
+63,bukan kah sdh menunjukkan jiwa besar dalam hasil pilkada yang sulit sungguh tidak sulit untuk deklarasi ini,pilkada,Strategi Kampanye,0.4701,hasil,-3.0,"[0.0161, 0.0161, 0.9677]",hasil pilkada yang,1
+66,catat warga dki bakal segera merasa kehilangan ahok,ahok,Tokoh dan Partai,0.1859,kehilangan,-4.0,"[0.0122, 0.0122, 0.9756]",kehilangan ahok,1
+66,catat warga dki bakal segera merasa kehilangan ahok,kehilangan,Tokoh dan Partai,0.1859,merasa,-2.0,"[0.0238, 0.0238, 0.9524]",merasa kehilangan ahok,1
+66,catat warga dki bakal segera merasa kehilangan ahok,catat,Politik Uang,0.0,merasa,-2.0,"[0.0238, 0.0238, 0.9524]",catat warga,1
+91,hari ini kalah di besok kalah dipengadilan,hari,Politik Uang,0.0,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",hari ini,1
+212,sedih kehilangan sosok gubenur yang jujur dan pekerja keras untuk melayani warganya,sosok,Politik Uang,0.0,kehilangan,-4.0,"[0.0122, 0.0122, 0.9756]",kehilangan sosok gubenur,1
+212,sedih kehilangan sosok gubenur yang jujur dan pekerja keras untuk melayani warganya,warga,Politik Uang,0.0,melayani,3.0,"[0.9677, 0.0161, 0.0161]",melayani warga nya,1
+212,sedih kehilangan sosok gubenur yang jujur dan pekerja keras untuk melayani warganya,kehilangan,Politik Uang,0.0,sedih,-5.0,"[0.0098, 0.0098, 0.9804]",sedih kehilangan sosok,1
+8,ahok kalah telak diseluruh tps yang berada di wilayah fpi,ahok,Tokoh dan Partai,0.1859,kalah,-4.0,"[0.0122, 0.0122, 0.9756]",ahok kalah,1
+8,ahok kalah telak diseluruh tps yang berada di wilayah fpi,wilayah,Politik Uang,0.0,berada,4.0,"[0.9756, 0.0122, 0.0122]",di wilayah fpi,1
+10,ahok menang tipis di tps tempat habib rizieq mencoblos,tps,Politik Uang,0.0,mencoblos,-3.0,"[0.0161, 0.0161, 0.9677]",di tps tempat,1
+10,ahok menang tipis di tps tempat habib rizieq mencoblos,ahok,Tokoh dan Partai,0.1859,menang,4.0,"[0.9756, 0.0122, 0.0122]",ahok menang,1
+10,ahok menang tipis di tps tempat habib rizieq mencoblos,habib,Politik Uang,0.0,tempat,-3.0,"[0.0161, 0.0161, 0.9677]",tempat habib rizieq,1
+10,ahok menang tipis di tps tempat habib rizieq mencoblos,tempat,Politik Uang,0.0,mencoblos,-3.0,"[0.0161, 0.0161, 0.9677]",tps tempat habib,1
+144,langsung deh cuitan curang lah black campaign lah nongol katanya legowo itu demokrasi bukan namanya hahaa,demokrasi,Politik Uang,0.0,kata,1.0,"[0.7692, 0.1923, 0.0385]",itu demokrasi bukan,1
+144,langsung deh cuitan curang lah black campaign lah nongol katanya legowo itu demokrasi bukan namanya hahaa,hahaa,Politik Uang,0.0,kata,1.0,"[0.7692, 0.1923, 0.0385]",namanya hahaa,1
+94,hasil tps rt 011010 rw 002 di kelurahan pela mampang saya sedih lihatnya,hasil,Politik Uang,0.0,sedih,-5.0,"[0.0098, 0.0098, 0.9804]",hasil tps,1
+94,hasil tps rt 011010 rw 002 di kelurahan pela mampang saya sedih lihatnya,tps,Politik Uang,0.0,hasil,3.0,"[0.9677, 0.0161, 0.0161]",hasil tps rt,1
+94,hasil tps rt 011010 rw 002 di kelurahan pela mampang saya sedih lihatnya,pela,Politik Uang,0.0,mampang,-0.6,"[0.05, 0.35, 0.6]",kelurahan pela mampang,0
+94,hasil tps rt 011010 rw 002 di kelurahan pela mampang saya sedih lihatnya,kelurahan,Politik Uang,0.0,hasil,3.0,"[0.9677, 0.0161, 0.0161]",di kelurahan pela,1
+155,masa tenang aja masih ada yang curang apalagi pemilihan yaa hati2 aja awasin tuh yang kemarin ketahuan bagi2 sembako,pemilihan,Politik Uang,0.0,curang,-5.0,"[0.0098, 0.0098, 0.9804]",apalagi pemilihan yaa,1
+155,masa tenang aja masih ada yang curang apalagi pemilihan yaa hati2 aja awasin tuh yang kemarin ketahuan bagi2 sembako,masa,Politik Uang,0.0,ada,4.0,"[0.9756, 0.0122, 0.0122]",masa tenang,1
+155,masa tenang aja masih ada yang curang apalagi pemilihan yaa hati2 aja awasin tuh yang kemarin ketahuan bagi2 sembako,sembako,Politik Uang,0.0,ketahuan,-5.0,"[0.0098, 0.0098, 0.9804]",bagi2 sembako,1
+235,syukur lembar c6 sudah di tangan tidak sabar mau colok matanya ahok,tangan,Politik Uang,0.0,syukur,5.0,"[0.9804, 0.0098, 0.0098]",di tangan tidak,1
+235,syukur lembar c6 sudah di tangan tidak sabar mau colok matanya ahok,ahok,Tokoh dan Partai,0.1859,colok,-2.0,"[0.0238, 0.0238, 0.9524]",nya ahok,1
+235,syukur lembar c6 sudah di tangan tidak sabar mau colok matanya ahok,syukur,Politik Uang,0.0,mau,-5.0,"[0.0098, 0.0098, 0.9804]",syukur lembar,1
+235,syukur lembar c6 sudah di tangan tidak sabar mau colok matanya ahok,lembar,Politik Uang,0.0,syukur,5.0,"[0.9804, 0.0098, 0.0098]",syukur lembar c6,1
+108,itu kan rejeki kasihan mereka yang sudah dukung tapi tidak dapat,kasihan,Politik Uang,0.0,rejeki,4.0,"[0.9756, 0.0122, 0.0122]",rejeki kasihan mereka,1
+13,tim yang tidak pernah tidur,tim,Strategi Kampanye,0.4701,tidur,-3.0,"[0.0161, 0.0161, 0.9677]",tim yang,1
+136,kepada warga yang merayakannya terima sembakonya jangan pilih pemberinya,warga,Strategi Kampanye,0.4701,pilih,2.0,"[0.9524, 0.0238, 0.0238]",kepada warga yang,1
+136,kepada warga yang merayakannya terima sembakonya jangan pilih pemberinya,pemberi,Politik Uang,0.0,pilih,2.0,"[0.9524, 0.0238, 0.0238]",pilih pemberi nya,1
+125,kalau saya warga dki maka saya akan ikut pesan rasulullah saw untuk menyerahkan segala sesuatu pada ahlinya cc,rasulullah,Politik Uang,0.0,pesan,2.0,"[0.9524, 0.0238, 0.0238]",pesan rasulullah saw,1
+125,kalau saya warga dki maka saya akan ikut pesan rasulullah saw untuk menyerahkan segala sesuatu pada ahlinya cc,warga,Politik Uang,0.0,ikut,-3.0,"[0.0161, 0.0161, 0.9677]",saya warga dki,1
+125,kalau saya warga dki maka saya akan ikut pesan rasulullah saw untuk menyerahkan segala sesuatu pada ahlinya cc,pesan,Politik Uang,0.0,ikut,-3.0,"[0.0161, 0.0161, 0.9677]",ikut pesan rasulullah,1
+106,ini hoaks ingat muktamar nu sudah wajibkan nahdliyin pilih pemimpin muslim,pemimpin,Politik Uang,0.0,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih pemimpin muslim,1
+55,beberkan kronologi pengusiran dirinya setelah sholat jumat,pengusiran,Politik Uang,0.0,kronologi,-1.0,"[0.0385, 0.1923, 0.7692]",kronologi pengusiran diri,1
+55,beberkan kronologi pengusiran dirinya setelah sholat jumat,jumat,Politik Uang,0.0,sholat,5.0,"[0.9804, 0.0098, 0.0098]",sholat jumat,1
+90,hanya iblis yang ingin menghalanghalangi manusia yang mau beribadah di masjid tetap semangat ya pak djarot,pak,Politik Uang,0.0,semangat,4.0,"[0.9756, 0.0122, 0.0122]",ya pak djarot,1
+90,hanya iblis yang ingin menghalanghalangi manusia yang mau beribadah di masjid tetap semangat ya pak djarot,iblis,Strategi Kampanye,0.4701,semangat,4.0,"[0.9756, 0.0122, 0.0122]",hanya iblis yang,1
+81,dilarang pilih cagub nonmuslim habib pilih djarot,pilih,Politik Uang,0.0,dilarang,-3.0,"[0.0161, 0.0161, 0.9677]",dilarang pilih cagub,1
+81,dilarang pilih cagub nonmuslim habib pilih djarot,cagub,Politik Uang,0.0,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih cagub nonmuslim,1
+81,dilarang pilih cagub nonmuslim habib pilih djarot,djarot,Politik Uang,0.0,pilih,-2.0,"[0.0238, 0.0238, 0.9524]",pilih djarot,1
+36,aneh dan aneh umat usir,umat,Politik Uang,0.0,aneh,4.0,"[0.9756, 0.0122, 0.0122]",aneh umat usir,1
+36,aneh dan aneh umat usir,usir,Politik Uang,0.0,umat,3.0,"[0.9677, 0.0161, 0.0161]",umat usir,1
+36,aneh dan aneh umat usir,aneh,SARA,0.2167,aneh,4.0,"[0.9756, 0.0122, 0.0122]",aneh dan,1
+50,bagi2 sembako gratis tim itu melanggar pasal 73 ayat 1 uu no10 thn 2016,ayat,Politik Uang,0.0,pasal,-4.0,"[0.0122, 0.0122, 0.9756]",73 ayat 1,1
+50,bagi2 sembako gratis tim itu melanggar pasal 73 ayat 1 uu no10 thn 2016,pasal,Politik Uang,0.0,melanggar,-5.0,"[0.0098, 0.0098, 0.9804]",melanggar pasal 73,1
+50,bagi2 sembako gratis tim itu melanggar pasal 73 ayat 1 uu no10 thn 2016,uu,Politik Uang,0.0,pasal,-4.0,"[0.0122, 0.0122, 0.9756]",1 uu no10,1
+50,bagi2 sembako gratis tim itu melanggar pasal 73 ayat 1 uu no10 thn 2016,sembako,Politik Uang,0.0,melanggar,-5.0,"[0.0098, 0.0098, 0.9804]",bagi2 sembako gratis,1

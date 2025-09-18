@@ -1,0 +1,108 @@
+EVALUATION SUMMARY
+==================================================
+Total tweets evaluated: 297
+Sentiment pairs calculated: 287
+Sentiment calculation note: Only calculated for overlapping aspects between gold and predicted
+
+PER-CLASS METRICS (ASPECT DETECTION):
+--------------------------------------------------
+Anggaran                  Precision: 1.0000  Recall: 0.1667  F1: 0.2857
+Kebijakan Menteri         Precision: 0.9333  Recall: 0.4000  F1: 0.5600
+Umum                      Precision: 0.9784  Recall: 0.9544  F1: 0.9663
+
+ASPECT DETECTION SUMMARY:
+F1 macro: 0.6040
+F1 micro: 0.9258
+
+SENTIMENT ANALYSIS RESULTS:
+--------------------------------------------------
+Sentiment pairs evaluated: 287
+Sentiment Macro F1 (argmax): 0.5973
+Sentiment Micro F1 (argmax): 0.6864
+Sentiment Weighted F1 (argmax): 0.6525
+Sentiment MSE: 0.1408
+Sentiment Log Loss: 0.7412
+Sentiment Brier Score: 0.7322
+Baseline Brier Score: 1.1345
+
+COMBINED METRICS:
+--------------------------------------------------
+Exact match (aspect+sentiment): 0.5960
+Fixed sentiment order: ['neg', 'neu', 'pos']
+
+SENTIMENT CLASSIFICATION REPORT:
+--------------------------------------------------
+              precision    recall  f1-score   support
+
+         neg       0.73      0.83      0.78       127
+         neu       0.46      0.18      0.26        65
+         pos       0.68      0.83      0.75        95
+
+    accuracy                           0.69       287
+   macro avg       0.62      0.62      0.60       287
+weighted avg       0.65      0.69      0.65       287
+
+CUSTOM CONFUSION MATRIX (with 'none'):
+--------------------------------------------------
+Anggaran,Kebijakan Menteri,Umum,none
+Anggaran,1,0,1,4
+Kebijakan Menteri,0,14,5,16
+Umum,0,1,272,12
+none,0,0,0,0
+
+MULTILABEL CONFUSION MATRICES:
+--------------------------------------------------
+
+Aspect: Anggaran
+[[291   0]
+ [  5   1]]
+
+Aspect: Kebijakan Menteri
+[[261   1]
+ [ 21  14]]
+
+Aspect: Umum
+[[  6   6]
+ [ 13 272]]
+
+MISMATCHED PREDICTIONS (first 50):
+--------------------------------------------------
+Tweet 4: GOLD=Umum PRED=none
+Tweet 9: GOLD=Kebijakan Menteri PRED=Umum
+Tweet 20: GOLD=Anggaran PRED=none
+Tweet 24: GOLD=Kebijakan Menteri PRED=Umum
+Tweet 30: GOLD=Kebijakan Menteri PRED=none
+Tweet 39: GOLD=Kebijakan Menteri PRED=none
+Tweet 41: GOLD=Kebijakan Menteri PRED=none
+Tweet 52: GOLD=Kebijakan Menteri PRED=none
+Tweet 74: GOLD=Kebijakan Menteri PRED=Umum
+Tweet 79: GOLD=Umum PRED=none
+Tweet 87: GOLD=Umum PRED=none
+Tweet 88: GOLD=Umum PRED=none
+Tweet 107: GOLD=Kebijakan Menteri PRED=none
+Tweet 110: GOLD=Kebijakan Menteri PRED=none
+Tweet 115: GOLD=Umum PRED=none
+Tweet 140: GOLD=Anggaran PRED=none
+Tweet 144: GOLD=Kebijakan Menteri PRED=none
+Tweet 147: GOLD=Anggaran PRED=Umum
+Tweet 158: GOLD=Umum PRED=none
+Tweet 168: GOLD=Anggaran PRED=none
+Tweet 178: GOLD=Kebijakan Menteri PRED=Umum
+Tweet 179: GOLD=Kebijakan Menteri PRED=none
+Tweet 186: GOLD=Umum PRED=none
+Tweet 189: GOLD=Kebijakan Menteri PRED=none
+Tweet 193: GOLD=Kebijakan Menteri PRED=none
+Tweet 197: GOLD=Kebijakan Menteri PRED=Umum
+Tweet 199: GOLD=Umum PRED=Kebijakan Menteri
+Tweet 208: GOLD=Umum PRED=none
+Tweet 209: GOLD=Kebijakan Menteri PRED=none
+Tweet 220: GOLD=Umum PRED=none
+Tweet 236: GOLD=Kebijakan Menteri PRED=none
+Tweet 242: GOLD=Kebijakan Menteri PRED=none
+Tweet 255: GOLD=Kebijakan Menteri PRED=none
+Tweet 263: GOLD=Kebijakan Menteri PRED=none
+Tweet 267: GOLD=Anggaran PRED=none
+Tweet 281: GOLD=Umum PRED=none
+Tweet 285: GOLD=Umum PRED=none
+Tweet 287: GOLD=Kebijakan Menteri PRED=none
+Tweet 291: GOLD=Umum PRED=none

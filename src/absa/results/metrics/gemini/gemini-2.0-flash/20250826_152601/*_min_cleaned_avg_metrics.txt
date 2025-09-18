@@ -1,0 +1,5 @@
+EVALUATION SUMMARY (averaged across 3 runs)
+Dataset: * (min_cleaned)
+F1 macro (avg): 
+Sentiment Brier Score (avg): 
+Baseline Brier Score: 
