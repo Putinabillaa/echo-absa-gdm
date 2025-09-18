@@ -1,4 +1,0 @@
-EVALUATION SUMMARY (averaged across 3 runs)
-Dataset: * (normalized)
-F1 macro (avg): 
-Sentiment Brier Score (avg): 
