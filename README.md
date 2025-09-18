@@ -30,7 +30,7 @@ Results show that a zero-shot generative LLM (Gemini-2.5-flash) achieves the hig
 Clone the repo and install dependencies:
 
 ```bash
-git clone https://github.com/<your-username>/echo-absa-gdm.git
+git clone https://github.com/Putinabillaa/echo-absa-gdm.git
 cd echo-absa-gdm
 pip install .
 ```
@@ -48,7 +48,7 @@ Run the full pipeline from the command line:
 ```bash
 main \
   --community_input data/corpus_final/for_echo_chamber_detection/example.csv \
-  --absa_aspect data/corpus_final/for_absa/aspects.csv \
+  --absa_aspect data/corpus_final/for_echo_chamber_detection/aspects.csv \
   --workdir pipeline_out \
   --model gemini \
   --model_name gemini-2.5-flash \
@@ -88,7 +88,7 @@ Access at: **[http://localhost:8080/](http://localhost:8080/)**
 
 ```
 data/                # Datasets and lexicons
-doc/                 # Full thesis document and explanation
+doc/                 # Full thesis document
 src/
   absa/              # ABSA models + metrics
   gdm/               # Group Decision Making consensus
